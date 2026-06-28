@@ -1,5 +1,6 @@
-from clone_repo import clone_repository
-from file_scanner import scan_python_files
+from ingestion.clone_repo import clone_repository
+from ingestion.file_scanner import scan_python_files
+from ingestion.ast_parser import parse_python_file
 
 
 def main():
@@ -10,16 +11,10 @@ def main():
 
     files = scan_python_files(repo_path)
 
-    print("\nPython Files Found\n")
-
-    print("=" * 40)
+    print(f"\nFound {len(files)} Python files.\n")
 
     for file in files:
-        print(file)
-
-    print("=" * 40)
-
-    print(f"\nTotal Python Files: {len(files)}")
+        parse_python_file(file)
 
 
 if __name__ == "__main__":
