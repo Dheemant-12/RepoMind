@@ -1,6 +1,8 @@
+import json
+
 from ingestion.clone_repo import clone_repository
 from ingestion.file_scanner import scan_python_files
-from ingestion.ast_parser import parse_python_file
+from ingestion.function_extractor import extract_functions
 
 
 def main():
@@ -9,12 +11,21 @@ def main():
 
     repo_path = clone_repository(repo)
 
-    files = scan_python_files(repo_path)
+    python_files = scan_python_files(repo_path)
 
-    print(f"\nFound {len(files)} Python files.\n")
+    all_functions = []
 
-    for file in files:
-        parse_python_file(file)
+    for file in python_files:
+
+        functions = extract_functions(file)
+
+        all_functions.extend(functions)
+
+    with open("functions.json", "w", encoding="utf-8") as f:
+        json.dump(all_functions, f, indent=4)
+
+    print(f"\n✅ Extracted {len(all_functions)} functions")
+    print("✅ Saved to functions.json")
 
 
 if __name__ == "__main__":

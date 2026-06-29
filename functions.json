@@ -1,0 +1,56 @@
+[
+    {
+        "name": "root",
+        "file_path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmpkc705u0a\\api\\main.py",
+        "start_line": 11,
+        "end_line": 16,
+        "arguments": [],
+        "source_code": "def root():\n    return {\n        \"project\": \"RepoMind\",\n        \"version\": \"0.1.0\",\n        \"status\": \"running\"\n    }"
+    },
+    {
+        "name": "health",
+        "file_path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmpkc705u0a\\api\\main.py",
+        "start_line": 20,
+        "end_line": 23,
+        "arguments": [],
+        "source_code": "def health():\n    return {\n        \"status\": \"ok\"\n    }"
+    },
+    {
+        "name": "parse_python_file",
+        "file_path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmpkc705u0a\\ingestion\\ast_parser.py",
+        "start_line": 4,
+        "end_line": 26,
+        "arguments": [
+            "file_path"
+        ],
+        "source_code": "def parse_python_file(file_path: str):\n    \"\"\"\n    Parse a Python file and print all classes and functions.\n    \"\"\"\n\n    with open(file_path, \"r\", encoding=\"utf-8\") as f:\n        source = f.read()\n\n    tree = ast.parse(source)\n\n    print(f\"\\n\ud83d\udcc4 File: {file_path}\")\n    print(\"=\" * 60)\n\n    for node in ast.walk(tree):\n\n        if isinstance(node, ast.ClassDef):\n            print(f\"\ud83c\udfdb\ufe0f  Class: {node.name}\")\n\n        elif isinstance(node, ast.FunctionDef):\n            print(f\"\u2699\ufe0f  Function: {node.name}\")\n\n        elif isinstance(node, ast.AsyncFunctionDef):\n            print(f\"\u26a1 Async Function: {node.name}\")"
+    },
+    {
+        "name": "clone_repository",
+        "file_path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmpkc705u0a\\ingestion\\clone_repo.py",
+        "start_line": 6,
+        "end_line": 21,
+        "arguments": [
+            "repo_url"
+        ],
+        "source_code": "def clone_repository(repo_url: str) -> str:\n    \"\"\"\n    Clone a GitHub repository into a temporary directory.\n\n    Returns:\n        Local path of cloned repository.\n    \"\"\"\n\n    temp_dir = tempfile.mkdtemp()\n\n    Repo.clone_from(repo_url, temp_dir)\n\n    print(f\"Repository cloned successfully.\")\n    print(f\"Location: {temp_dir}\")\n\n    return temp_dir"
+    },
+    {
+        "name": "scan_python_files",
+        "file_path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmpkc705u0a\\ingestion\\file_scanner.py",
+        "start_line": 13,
+        "end_line": 32,
+        "arguments": [
+            "repo_path"
+        ],
+        "source_code": "def scan_python_files(repo_path: str):\n\n    python_files = []\n\n    for root, dirs, files in os.walk(repo_path):\n\n        dirs[:] = [\n            d for d in dirs\n            if d not in IGNORE_FOLDERS\n        ]\n\n        for file in files:\n\n            if file.endswith(\".py\"):\n\n                full_path = os.path.join(root, file)\n\n                python_files.append(full_path)\n\n    return python_files"
+    },
+    {
+        "name": "main",
+        "file_path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmpkc705u0a\\ingestion\\test_ingestion.py",
+        "start_line": 6,
+        "end_line": 17,
+        "arguments": [],
+        "source_code": "def main():\n\n    repo = input(\"Enter GitHub Repository URL:\\n\")\n\n    repo_path = clone_repository(repo)\n\n    files = scan_python_files(repo_path)\n\n    print(f\"\\nFound {len(files)} Python files.\\n\")\n\n    for file in files:\n        parse_python_file(file)"
+    }
+]
