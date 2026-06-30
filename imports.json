@@ -1,0 +1,162 @@
+[
+    {
+        "file_path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmpzvcj1z_t\\api\\main.py",
+        "imports": [
+            {
+                "module": "fastapi",
+                "name": "FastAPI",
+                "alias": null
+            }
+        ],
+        "import_map": {
+            "FastAPI": "fastapi.FastAPI"
+        }
+    },
+    {
+        "file_path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmpzvcj1z_t\\api\\__init__.py",
+        "imports": [],
+        "import_map": {}
+    },
+    {
+        "file_path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmpzvcj1z_t\\graph\\neo4j_test.py",
+        "imports": [
+            {
+                "module": "neo4j",
+                "name": "GraphDatabase",
+                "alias": null
+            }
+        ],
+        "import_map": {
+            "GraphDatabase": "neo4j.GraphDatabase"
+        }
+    },
+    {
+        "file_path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmpzvcj1z_t\\graph\\__init__.py",
+        "imports": [],
+        "import_map": {}
+    },
+    {
+        "file_path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmpzvcj1z_t\\ingestion\\ast_parser.py",
+        "imports": [
+            {
+                "module": "ast",
+                "name": null,
+                "alias": null
+            }
+        ],
+        "import_map": {
+            "ast": "ast"
+        }
+    },
+    {
+        "file_path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmpzvcj1z_t\\ingestion\\class_extractor.py",
+        "imports": [
+            {
+                "module": "ast",
+                "name": null,
+                "alias": null
+            }
+        ],
+        "import_map": {
+            "ast": "ast"
+        }
+    },
+    {
+        "file_path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmpzvcj1z_t\\ingestion\\clone_repo.py",
+        "imports": [
+            {
+                "module": "git",
+                "name": "Repo",
+                "alias": null
+            },
+            {
+                "module": "tempfile",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "os",
+                "name": null,
+                "alias": null
+            }
+        ],
+        "import_map": {
+            "Repo": "git.Repo",
+            "tempfile": "tempfile",
+            "os": "os"
+        }
+    },
+    {
+        "file_path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmpzvcj1z_t\\ingestion\\file_scanner.py",
+        "imports": [
+            {
+                "module": "os",
+                "name": null,
+                "alias": null
+            }
+        ],
+        "import_map": {
+            "os": "os"
+        }
+    },
+    {
+        "file_path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmpzvcj1z_t\\ingestion\\function_extractor.py",
+        "imports": [
+            {
+                "module": "ast",
+                "name": null,
+                "alias": null
+            }
+        ],
+        "import_map": {
+            "ast": "ast"
+        }
+    },
+    {
+        "file_path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmpzvcj1z_t\\ingestion\\test_ingestion.py",
+        "imports": [
+            {
+                "module": "json",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "ingestion.clone_repo",
+                "name": "clone_repository",
+                "alias": null
+            },
+            {
+                "module": "ingestion.file_scanner",
+                "name": "scan_python_files",
+                "alias": null
+            },
+            {
+                "module": "ingestion.function_extractor",
+                "name": "extract_functions",
+                "alias": null
+            },
+            {
+                "module": "ingestion.class_extractor",
+                "name": "extract_classes",
+                "alias": null
+            }
+        ],
+        "import_map": {
+            "json": "json",
+            "clone_repository": "ingestion.clone_repo.clone_repository",
+            "scan_python_files": "ingestion.file_scanner.scan_python_files",
+            "extract_functions": "ingestion.function_extractor.extract_functions",
+            "extract_classes": "ingestion.class_extractor.extract_classes"
+        }
+    },
+    {
+        "file_path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmpzvcj1z_t\\ingestion\\__init__.py",
+        "imports": [],
+        "import_map": {}
+    },
+    {
+        "file_path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmpzvcj1z_t\\vector\\__init__.py",
+        "imports": [],
+        "import_map": {}
+    }
+]
