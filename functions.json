@@ -1,7 +1,7 @@
 [
     {
         "name": "root",
-        "file_path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmpkc705u0a\\api\\main.py",
+        "file_path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmph3nray7d\\api\\main.py",
         "start_line": 11,
         "end_line": 16,
         "arguments": [],
@@ -9,7 +9,7 @@
     },
     {
         "name": "health",
-        "file_path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmpkc705u0a\\api\\main.py",
+        "file_path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmph3nray7d\\api\\main.py",
         "start_line": 20,
         "end_line": 23,
         "arguments": [],
@@ -17,7 +17,7 @@
     },
     {
         "name": "parse_python_file",
-        "file_path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmpkc705u0a\\ingestion\\ast_parser.py",
+        "file_path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmph3nray7d\\ingestion\\ast_parser.py",
         "start_line": 4,
         "end_line": 26,
         "arguments": [
@@ -27,7 +27,7 @@
     },
     {
         "name": "clone_repository",
-        "file_path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmpkc705u0a\\ingestion\\clone_repo.py",
+        "file_path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmph3nray7d\\ingestion\\clone_repo.py",
         "start_line": 6,
         "end_line": 21,
         "arguments": [
@@ -37,7 +37,7 @@
     },
     {
         "name": "scan_python_files",
-        "file_path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmpkc705u0a\\ingestion\\file_scanner.py",
+        "file_path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmph3nray7d\\ingestion\\file_scanner.py",
         "start_line": 13,
         "end_line": 32,
         "arguments": [
@@ -46,11 +46,21 @@
         "source_code": "def scan_python_files(repo_path: str):\n\n    python_files = []\n\n    for root, dirs, files in os.walk(repo_path):\n\n        dirs[:] = [\n            d for d in dirs\n            if d not in IGNORE_FOLDERS\n        ]\n\n        for file in files:\n\n            if file.endswith(\".py\"):\n\n                full_path = os.path.join(root, file)\n\n                python_files.append(full_path)\n\n    return python_files"
     },
     {
+        "name": "extract_functions",
+        "file_path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmph3nray7d\\ingestion\\function_extractor.py",
+        "start_line": 4,
+        "end_line": 35,
+        "arguments": [
+            "file_path"
+        ],
+        "source_code": "def extract_functions(file_path: str):\n    \"\"\"\n    Extract all functions from a Python file.\n    \"\"\"\n\n    with open(file_path, \"r\", encoding=\"utf-8\") as f:\n        source = f.read()\n\n    lines = source.splitlines()\n\n    tree = ast.parse(source)\n\n    functions = []\n\n    for node in ast.walk(tree):\n\n        if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef)):\n\n            function_data = {\n                \"name\": node.name,\n                \"file_path\": file_path,\n                \"start_line\": node.lineno,\n                \"end_line\": node.end_lineno,\n                \"arguments\": [arg.arg for arg in node.args.args],\n                \"source_code\": \"\\n\".join(\n                    lines[node.lineno - 1: node.end_lineno]\n                ),\n            }\n\n            functions.append(function_data)\n\n    return functions"
+    },
+    {
         "name": "main",
-        "file_path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmpkc705u0a\\ingestion\\test_ingestion.py",
-        "start_line": 6,
-        "end_line": 17,
+        "file_path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmph3nray7d\\ingestion\\test_ingestion.py",
+        "start_line": 8,
+        "end_line": 28,
         "arguments": [],
-        "source_code": "def main():\n\n    repo = input(\"Enter GitHub Repository URL:\\n\")\n\n    repo_path = clone_repository(repo)\n\n    files = scan_python_files(repo_path)\n\n    print(f\"\\nFound {len(files)} Python files.\\n\")\n\n    for file in files:\n        parse_python_file(file)"
+        "source_code": "def main():\n\n    repo = input(\"Enter GitHub Repository URL:\\n\")\n\n    repo_path = clone_repository(repo)\n\n    python_files = scan_python_files(repo_path)\n\n    all_functions = []\n\n    for file in python_files:\n\n        functions = extract_functions(file)\n\n        all_functions.extend(functions)\n\n    with open(\"functions.json\", \"w\", encoding=\"utf-8\") as f:\n        json.dump(all_functions, f, indent=4)\n\n    print(f\"\\n\u2705 Extracted {len(all_functions)} functions\")\n    print(\"\u2705 Saved to functions.json\")"
     }
 ]
