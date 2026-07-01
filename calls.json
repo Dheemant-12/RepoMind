@@ -1,0 +1,118 @@
+[
+    {
+        "function": "root",
+        "file_path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmps6ubxufo\\api\\main.py",
+        "calls": [
+            "app.get"
+        ]
+    },
+    {
+        "function": "health",
+        "file_path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmps6ubxufo\\api\\main.py",
+        "calls": [
+            "app.get"
+        ]
+    },
+    {
+        "function": "parse_python_file",
+        "file_path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmps6ubxufo\\ingestion\\ast_parser.py",
+        "calls": [
+            "open",
+            "f.read",
+            "ast.parse",
+            "print",
+            "print",
+            "ast.walk",
+            "isinstance",
+            "print",
+            "isinstance",
+            "print",
+            "isinstance",
+            "print"
+        ]
+    },
+    {
+        "function": "extract_classes",
+        "file_path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmps6ubxufo\\ingestion\\class_extractor.py",
+        "calls": [
+            "open",
+            "f.read",
+            "ast.parse",
+            "ast.walk",
+            "isinstance",
+            "isinstance",
+            "bases.append",
+            "isinstance",
+            "bases.append",
+            "bases.append",
+            "ast.dump",
+            "isinstance",
+            "methods.append",
+            "classes.append"
+        ]
+    },
+    {
+        "function": "clone_repository",
+        "file_path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmps6ubxufo\\ingestion\\clone_repo.py",
+        "calls": [
+            "tempfile.mkdtemp",
+            "Repo.clone_from",
+            "print",
+            "print"
+        ]
+    },
+    {
+        "function": "scan_python_files",
+        "file_path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmps6ubxufo\\ingestion\\file_scanner.py",
+        "calls": [
+            "os.walk",
+            "file.endswith",
+            "os.path.join",
+            "python_files.append"
+        ]
+    },
+    {
+        "function": "extract_functions",
+        "file_path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmps6ubxufo\\ingestion\\function_extractor.py",
+        "calls": [
+            "open",
+            "f.read",
+            "source.splitlines",
+            "ast.parse",
+            "ast.walk",
+            "isinstance",
+            "join",
+            "functions.append"
+        ]
+    },
+    {
+        "function": "extract_imports",
+        "file_path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmps6ubxufo\\ingestion\\import_extractor.py",
+        "calls": [
+            "open",
+            "f.read",
+            "ast.parse",
+            "ast.walk",
+            "isinstance",
+            "imports.append",
+            "isinstance",
+            "imports.append"
+        ]
+    },
+    {
+        "function": "main",
+        "file_path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmps6ubxufo\\ingestion\\test_ingestion.py",
+        "calls": [
+            "input",
+            "clone_repository",
+            "scan_python_files",
+            "all_imports.append",
+            "extract_imports",
+            "open",
+            "json.dump",
+            "print",
+            "len",
+            "print"
+        ]
+    }
+]
