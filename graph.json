@@ -119,7 +119,419 @@
                 "arguments": [],
                 "source_code": "def main():\n\n    repo = input(\"Enter GitHub Repository URL:\\n\")\n\n    repo_path = clone_repository(repo)\n\n    python_files = scan_python_files(repo_path)\n\n    all_imports = []\n\n    for file in python_files:\n        all_imports.append(extract_imports(file))\n\n    with open(\"imports.json\", \"w\", encoding=\"utf-8\") as f:\n        json.dump(all_imports, f, indent=4)\n\n    print(f\"\\n\u2705 Processed {len(all_imports)} Python files\")\n    print(\"\u2705 Saved imports.json\")"
             }
+        },
+        {
+            "id": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmps6ubxufo\\api\\main.py",
+            "type": "File",
+            "properties": {
+                "path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmps6ubxufo\\api\\main.py"
+            }
+        },
+        {
+            "id": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmps6ubxufo\\ingestion\\ast_parser.py",
+            "type": "File",
+            "properties": {
+                "path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmps6ubxufo\\ingestion\\ast_parser.py"
+            }
+        },
+        {
+            "id": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmps6ubxufo\\ingestion\\class_extractor.py",
+            "type": "File",
+            "properties": {
+                "path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmps6ubxufo\\ingestion\\class_extractor.py"
+            }
+        },
+        {
+            "id": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmps6ubxufo\\ingestion\\clone_repo.py",
+            "type": "File",
+            "properties": {
+                "path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmps6ubxufo\\ingestion\\clone_repo.py"
+            }
+        },
+        {
+            "id": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmps6ubxufo\\ingestion\\file_scanner.py",
+            "type": "File",
+            "properties": {
+                "path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmps6ubxufo\\ingestion\\file_scanner.py"
+            }
+        },
+        {
+            "id": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmps6ubxufo\\ingestion\\function_extractor.py",
+            "type": "File",
+            "properties": {
+                "path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmps6ubxufo\\ingestion\\function_extractor.py"
+            }
+        },
+        {
+            "id": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmps6ubxufo\\ingestion\\import_extractor.py",
+            "type": "File",
+            "properties": {
+                "path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmps6ubxufo\\ingestion\\import_extractor.py"
+            }
+        },
+        {
+            "id": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmps6ubxufo\\ingestion\\test_ingestion.py",
+            "type": "File",
+            "properties": {
+                "path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmps6ubxufo\\ingestion\\test_ingestion.py"
+            }
         }
     ],
-    "edges": []
+    "edges": [
+        {
+            "source": "root",
+            "target": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmps6ubxufo\\api\\main.py",
+            "relation": "DEFINED_IN"
+        },
+        {
+            "source": "health",
+            "target": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmps6ubxufo\\api\\main.py",
+            "relation": "DEFINED_IN"
+        },
+        {
+            "source": "parse_python_file",
+            "target": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmps6ubxufo\\ingestion\\ast_parser.py",
+            "relation": "DEFINED_IN"
+        },
+        {
+            "source": "extract_classes",
+            "target": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmps6ubxufo\\ingestion\\class_extractor.py",
+            "relation": "DEFINED_IN"
+        },
+        {
+            "source": "clone_repository",
+            "target": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmps6ubxufo\\ingestion\\clone_repo.py",
+            "relation": "DEFINED_IN"
+        },
+        {
+            "source": "scan_python_files",
+            "target": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmps6ubxufo\\ingestion\\file_scanner.py",
+            "relation": "DEFINED_IN"
+        },
+        {
+            "source": "extract_functions",
+            "target": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmps6ubxufo\\ingestion\\function_extractor.py",
+            "relation": "DEFINED_IN"
+        },
+        {
+            "source": "extract_imports",
+            "target": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmps6ubxufo\\ingestion\\import_extractor.py",
+            "relation": "DEFINED_IN"
+        },
+        {
+            "source": "main",
+            "target": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmps6ubxufo\\ingestion\\test_ingestion.py",
+            "relation": "DEFINED_IN"
+        },
+        {
+            "source": "root",
+            "target": "app.get",
+            "relation": "CALLS"
+        },
+        {
+            "source": "health",
+            "target": "app.get",
+            "relation": "CALLS"
+        },
+        {
+            "source": "parse_python_file",
+            "target": "open",
+            "relation": "CALLS"
+        },
+        {
+            "source": "parse_python_file",
+            "target": "f.read",
+            "relation": "CALLS"
+        },
+        {
+            "source": "parse_python_file",
+            "target": "ast.parse",
+            "relation": "CALLS"
+        },
+        {
+            "source": "parse_python_file",
+            "target": "print",
+            "relation": "CALLS"
+        },
+        {
+            "source": "parse_python_file",
+            "target": "print",
+            "relation": "CALLS"
+        },
+        {
+            "source": "parse_python_file",
+            "target": "ast.walk",
+            "relation": "CALLS"
+        },
+        {
+            "source": "parse_python_file",
+            "target": "isinstance",
+            "relation": "CALLS"
+        },
+        {
+            "source": "parse_python_file",
+            "target": "print",
+            "relation": "CALLS"
+        },
+        {
+            "source": "parse_python_file",
+            "target": "isinstance",
+            "relation": "CALLS"
+        },
+        {
+            "source": "parse_python_file",
+            "target": "print",
+            "relation": "CALLS"
+        },
+        {
+            "source": "parse_python_file",
+            "target": "isinstance",
+            "relation": "CALLS"
+        },
+        {
+            "source": "parse_python_file",
+            "target": "print",
+            "relation": "CALLS"
+        },
+        {
+            "source": "extract_classes",
+            "target": "open",
+            "relation": "CALLS"
+        },
+        {
+            "source": "extract_classes",
+            "target": "f.read",
+            "relation": "CALLS"
+        },
+        {
+            "source": "extract_classes",
+            "target": "ast.parse",
+            "relation": "CALLS"
+        },
+        {
+            "source": "extract_classes",
+            "target": "ast.walk",
+            "relation": "CALLS"
+        },
+        {
+            "source": "extract_classes",
+            "target": "isinstance",
+            "relation": "CALLS"
+        },
+        {
+            "source": "extract_classes",
+            "target": "isinstance",
+            "relation": "CALLS"
+        },
+        {
+            "source": "extract_classes",
+            "target": "bases.append",
+            "relation": "CALLS"
+        },
+        {
+            "source": "extract_classes",
+            "target": "isinstance",
+            "relation": "CALLS"
+        },
+        {
+            "source": "extract_classes",
+            "target": "bases.append",
+            "relation": "CALLS"
+        },
+        {
+            "source": "extract_classes",
+            "target": "bases.append",
+            "relation": "CALLS"
+        },
+        {
+            "source": "extract_classes",
+            "target": "ast.dump",
+            "relation": "CALLS"
+        },
+        {
+            "source": "extract_classes",
+            "target": "isinstance",
+            "relation": "CALLS"
+        },
+        {
+            "source": "extract_classes",
+            "target": "methods.append",
+            "relation": "CALLS"
+        },
+        {
+            "source": "extract_classes",
+            "target": "classes.append",
+            "relation": "CALLS"
+        },
+        {
+            "source": "clone_repository",
+            "target": "tempfile.mkdtemp",
+            "relation": "CALLS"
+        },
+        {
+            "source": "clone_repository",
+            "target": "Repo.clone_from",
+            "relation": "CALLS"
+        },
+        {
+            "source": "clone_repository",
+            "target": "print",
+            "relation": "CALLS"
+        },
+        {
+            "source": "clone_repository",
+            "target": "print",
+            "relation": "CALLS"
+        },
+        {
+            "source": "scan_python_files",
+            "target": "os.walk",
+            "relation": "CALLS"
+        },
+        {
+            "source": "scan_python_files",
+            "target": "file.endswith",
+            "relation": "CALLS"
+        },
+        {
+            "source": "scan_python_files",
+            "target": "os.path.join",
+            "relation": "CALLS"
+        },
+        {
+            "source": "scan_python_files",
+            "target": "python_files.append",
+            "relation": "CALLS"
+        },
+        {
+            "source": "extract_functions",
+            "target": "open",
+            "relation": "CALLS"
+        },
+        {
+            "source": "extract_functions",
+            "target": "f.read",
+            "relation": "CALLS"
+        },
+        {
+            "source": "extract_functions",
+            "target": "source.splitlines",
+            "relation": "CALLS"
+        },
+        {
+            "source": "extract_functions",
+            "target": "ast.parse",
+            "relation": "CALLS"
+        },
+        {
+            "source": "extract_functions",
+            "target": "ast.walk",
+            "relation": "CALLS"
+        },
+        {
+            "source": "extract_functions",
+            "target": "isinstance",
+            "relation": "CALLS"
+        },
+        {
+            "source": "extract_functions",
+            "target": "join",
+            "relation": "CALLS"
+        },
+        {
+            "source": "extract_functions",
+            "target": "functions.append",
+            "relation": "CALLS"
+        },
+        {
+            "source": "extract_imports",
+            "target": "open",
+            "relation": "CALLS"
+        },
+        {
+            "source": "extract_imports",
+            "target": "f.read",
+            "relation": "CALLS"
+        },
+        {
+            "source": "extract_imports",
+            "target": "ast.parse",
+            "relation": "CALLS"
+        },
+        {
+            "source": "extract_imports",
+            "target": "ast.walk",
+            "relation": "CALLS"
+        },
+        {
+            "source": "extract_imports",
+            "target": "isinstance",
+            "relation": "CALLS"
+        },
+        {
+            "source": "extract_imports",
+            "target": "imports.append",
+            "relation": "CALLS"
+        },
+        {
+            "source": "extract_imports",
+            "target": "isinstance",
+            "relation": "CALLS"
+        },
+        {
+            "source": "extract_imports",
+            "target": "imports.append",
+            "relation": "CALLS"
+        },
+        {
+            "source": "main",
+            "target": "input",
+            "relation": "CALLS"
+        },
+        {
+            "source": "main",
+            "target": "clone_repository",
+            "relation": "CALLS"
+        },
+        {
+            "source": "main",
+            "target": "scan_python_files",
+            "relation": "CALLS"
+        },
+        {
+            "source": "main",
+            "target": "all_imports.append",
+            "relation": "CALLS"
+        },
+        {
+            "source": "main",
+            "target": "extract_imports",
+            "relation": "CALLS"
+        },
+        {
+            "source": "main",
+            "target": "open",
+            "relation": "CALLS"
+        },
+        {
+            "source": "main",
+            "target": "json.dump",
+            "relation": "CALLS"
+        },
+        {
+            "source": "main",
+            "target": "print",
+            "relation": "CALLS"
+        },
+        {
+            "source": "main",
+            "target": "len",
+            "relation": "CALLS"
+        },
+        {
+            "source": "main",
+            "target": "print",
+            "relation": "CALLS"
+        }
+    ]
 }
