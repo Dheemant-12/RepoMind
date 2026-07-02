@@ -1,0 +1,125 @@
+{
+    "nodes": [
+        {
+            "id": "root",
+            "type": "Function",
+            "properties": {
+                "name": "root",
+                "file_path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmps6ubxufo\\api\\main.py",
+                "start_line": 11,
+                "end_line": 16,
+                "arguments": [],
+                "source_code": "def root():\n    return {\n        \"project\": \"RepoMind\",\n        \"version\": \"0.1.0\",\n        \"status\": \"running\"\n    }"
+            }
+        },
+        {
+            "id": "health",
+            "type": "Function",
+            "properties": {
+                "name": "health",
+                "file_path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmps6ubxufo\\api\\main.py",
+                "start_line": 20,
+                "end_line": 23,
+                "arguments": [],
+                "source_code": "def health():\n    return {\n        \"status\": \"ok\"\n    }"
+            }
+        },
+        {
+            "id": "parse_python_file",
+            "type": "Function",
+            "properties": {
+                "name": "parse_python_file",
+                "file_path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmps6ubxufo\\ingestion\\ast_parser.py",
+                "start_line": 4,
+                "end_line": 26,
+                "arguments": [
+                    "file_path"
+                ],
+                "source_code": "def parse_python_file(file_path: str):\n    \"\"\"\n    Parse a Python file and print all classes and functions.\n    \"\"\"\n\n    with open(file_path, \"r\", encoding=\"utf-8\") as f:\n        source = f.read()\n\n    tree = ast.parse(source)\n\n    print(f\"\\n\ud83d\udcc4 File: {file_path}\")\n    print(\"=\" * 60)\n\n    for node in ast.walk(tree):\n\n        if isinstance(node, ast.ClassDef):\n            print(f\"\ud83c\udfdb\ufe0f  Class: {node.name}\")\n\n        elif isinstance(node, ast.FunctionDef):\n            print(f\"\u2699\ufe0f  Function: {node.name}\")\n\n        elif isinstance(node, ast.AsyncFunctionDef):\n            print(f\"\u26a1 Async Function: {node.name}\")"
+            }
+        },
+        {
+            "id": "extract_classes",
+            "type": "Function",
+            "properties": {
+                "name": "extract_classes",
+                "file_path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmps6ubxufo\\ingestion\\class_extractor.py",
+                "start_line": 4,
+                "end_line": 47,
+                "arguments": [
+                    "file_path"
+                ],
+                "source_code": "def extract_classes(file_path: str):\n    \"\"\"\n    Extract all classes from a Python file.\n    \"\"\"\n\n    with open(file_path, \"r\", encoding=\"utf-8\") as f:\n        source = f.read()\n\n    tree = ast.parse(source)\n\n    classes = []\n\n    for node in ast.walk(tree):\n\n        if isinstance(node, ast.ClassDef):\n\n            bases = []\n\n            for base in node.bases:\n\n                if isinstance(base, ast.Name):\n                    bases.append(base.id)\n\n                elif isinstance(base, ast.Attribute):\n                    bases.append(base.attr)\n\n                else:\n                    bases.append(ast.dump(base))\n\n            methods = []\n\n            for item in node.body:\n\n                if isinstance(item, (ast.FunctionDef, ast.AsyncFunctionDef)):\n                    methods.append(item.name)\n\n            classes.append({\n                \"name\": node.name,\n                \"file_path\": file_path,\n                \"base_classes\": bases,\n                \"methods\": methods\n            })\n\n    return classes"
+            }
+        },
+        {
+            "id": "clone_repository",
+            "type": "Function",
+            "properties": {
+                "name": "clone_repository",
+                "file_path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmps6ubxufo\\ingestion\\clone_repo.py",
+                "start_line": 6,
+                "end_line": 21,
+                "arguments": [
+                    "repo_url"
+                ],
+                "source_code": "def clone_repository(repo_url: str) -> str:\n    \"\"\"\n    Clone a GitHub repository into a temporary directory.\n\n    Returns:\n        Local path of cloned repository.\n    \"\"\"\n\n    temp_dir = tempfile.mkdtemp()\n\n    Repo.clone_from(repo_url, temp_dir)\n\n    print(f\"Repository cloned successfully.\")\n    print(f\"Location: {temp_dir}\")\n\n    return temp_dir"
+            }
+        },
+        {
+            "id": "scan_python_files",
+            "type": "Function",
+            "properties": {
+                "name": "scan_python_files",
+                "file_path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmps6ubxufo\\ingestion\\file_scanner.py",
+                "start_line": 13,
+                "end_line": 32,
+                "arguments": [
+                    "repo_path"
+                ],
+                "source_code": "def scan_python_files(repo_path: str):\n\n    python_files = []\n\n    for root, dirs, files in os.walk(repo_path):\n\n        dirs[:] = [\n            d for d in dirs\n            if d not in IGNORE_FOLDERS\n        ]\n\n        for file in files:\n\n            if file.endswith(\".py\"):\n\n                full_path = os.path.join(root, file)\n\n                python_files.append(full_path)\n\n    return python_files"
+            }
+        },
+        {
+            "id": "extract_functions",
+            "type": "Function",
+            "properties": {
+                "name": "extract_functions",
+                "file_path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmps6ubxufo\\ingestion\\function_extractor.py",
+                "start_line": 4,
+                "end_line": 35,
+                "arguments": [
+                    "file_path"
+                ],
+                "source_code": "def extract_functions(file_path: str):\n    \"\"\"\n    Extract all functions from a Python file.\n    \"\"\"\n\n    with open(file_path, \"r\", encoding=\"utf-8\") as f:\n        source = f.read()\n\n    lines = source.splitlines()\n\n    tree = ast.parse(source)\n\n    functions = []\n\n    for node in ast.walk(tree):\n\n        if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef)):\n\n            function_data = {\n                \"name\": node.name,\n                \"file_path\": file_path,\n                \"start_line\": node.lineno,\n                \"end_line\": node.end_lineno,\n                \"arguments\": [arg.arg for arg in node.args.args],\n                \"source_code\": \"\\n\".join(\n                    lines[node.lineno - 1: node.end_lineno]\n                ),\n            }\n\n            functions.append(function_data)\n\n    return functions"
+            }
+        },
+        {
+            "id": "extract_imports",
+            "type": "Function",
+            "properties": {
+                "name": "extract_imports",
+                "file_path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmps6ubxufo\\ingestion\\import_extractor.py",
+                "start_line": 4,
+                "end_line": 54,
+                "arguments": [
+                    "file_path"
+                ],
+                "source_code": "def extract_imports(file_path: str):\n    \"\"\"\n    Extract all imports from a Python file and build an import map.\n    \"\"\"\n\n    with open(file_path, \"r\", encoding=\"utf-8\") as f:\n        source = f.read()\n\n    tree = ast.parse(source)\n\n    imports = []\n    import_map = {}\n\n    for node in ast.walk(tree):\n\n        # import module\n        if isinstance(node, ast.Import):\n\n            for alias in node.names:\n\n                imports.append({\n                    \"module\": alias.name,\n                    \"name\": None,\n                    \"alias\": alias.asname\n                })\n\n                local_name = alias.asname if alias.asname else alias.name\n                import_map[local_name] = alias.name\n\n        # from module import object\n        elif isinstance(node, ast.ImportFrom):\n\n            module = node.module\n\n            for alias in node.names:\n\n                imports.append({\n                    \"module\": module,\n                    \"name\": alias.name,\n                    \"alias\": alias.asname\n                })\n\n                local_name = alias.asname if alias.asname else alias.name\n\n                import_map[local_name] = f\"{module}.{alias.name}\"\n\n    return {\n        \"file_path\": file_path,\n        \"imports\": imports,\n        \"import_map\": import_map\n    }"
+            }
+        },
+        {
+            "id": "main",
+            "type": "Function",
+            "properties": {
+                "name": "main",
+                "file_path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmps6ubxufo\\ingestion\\test_ingestion.py",
+                "start_line": 8,
+                "end_line": 25,
+                "arguments": [],
+                "source_code": "def main():\n\n    repo = input(\"Enter GitHub Repository URL:\\n\")\n\n    repo_path = clone_repository(repo)\n\n    python_files = scan_python_files(repo_path)\n\n    all_imports = []\n\n    for file in python_files:\n        all_imports.append(extract_imports(file))\n\n    with open(\"imports.json\", \"w\", encoding=\"utf-8\") as f:\n        json.dump(all_imports, f, indent=4)\n\n    print(f\"\\n\u2705 Processed {len(all_imports)} Python files\")\n    print(\"\u2705 Saved imports.json\")"
+            }
+        }
+    ],
+    "edges": []
+}
