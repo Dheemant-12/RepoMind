@@ -5,22 +5,31 @@ graph = build_graph()
 
 graph = add_relationships(graph)
 
-print("=" * 40)
+graph.save()
+
+print("=" * 50)
+
+print("GRAPH SUMMARY")
+
+print("=" * 50)
 
 print(f"Nodes : {len(graph.nodes)}")
 print(f"Edges : {len(graph.edges)}")
 
-graph.save()
+print("\nNode Types")
 
-print("\nSample Relationships:\n")
+counts = {}
 
-for edge in graph.edges[:10]:
-    print(
-        edge.source,
-        "--",
-        edge.relation,
-        "-->",
-        edge.target
-    )
+for node in graph.nodes:
 
-print("\n✅ graph.json updated")
+    counts[node.type] = counts.get(node.type, 0) + 1
+
+for key, value in counts.items():
+
+    print(f"{key}: {value}")
+
+print("\nLookup Test")
+
+print(graph.get_node("main"))
+
+print("\nGraph generated successfully.")

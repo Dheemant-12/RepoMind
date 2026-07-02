@@ -1,5 +1,4 @@
 import json
-
 from graph.graph_models import GraphNode, GraphEdge
 
 
@@ -10,33 +9,47 @@ class RepoGraph:
         self.nodes = []
         self.edges = []
 
+        self.node_lookup = {}
+
     def add_node(self, node):
 
+        if node.id in self.node_lookup:
+            return
+
         self.nodes.append(node)
+        self.node_lookup[node.id] = node
 
     def add_edge(self, edge):
 
         self.edges.append(edge)
+
+    def get_node(self, node_id):
+
+        return self.node_lookup.get(node_id)
 
     def save(self, filename="graph.json"):
 
         data = {
 
             "nodes": [
+
                 {
                     "id": n.id,
                     "type": n.type,
                     "properties": n.properties
                 }
+
                 for n in self.nodes
             ],
 
             "edges": [
+
                 {
                     "source": e.source,
                     "target": e.target,
                     "relation": e.relation
                 }
+
                 for e in self.edges
             ]
         }
