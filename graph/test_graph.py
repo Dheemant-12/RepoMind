@@ -11,13 +11,11 @@ analyzer = ImpactAnalyzer(graph)
 result = analyzer.analyze("clone_repository")
 
 print("=" * 50)
-
-print("IMPACT ANALYSIS")
-
+print("MULTI-LEVEL IMPACT ANALYSIS")
 print("=" * 50)
-
-print()
 
 for key, value in result.items():
 
-    print(f"{key}: {value}")
+    print(f"\n{key}")
+
+    print(value)
