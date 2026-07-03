@@ -1,39 +1,23 @@
 from graph.graph_builder import build_graph
 from graph.relationship_builder import add_relationships
-from graph.query_engine import GraphQueryEngine
+from graph.impact_analyzer import ImpactAnalyzer
 
 graph = build_graph()
 
 graph = add_relationships(graph)
 
-engine = GraphQueryEngine(graph)
+analyzer = ImpactAnalyzer(graph)
+
+result = analyzer.analyze("clone_repository")
 
 print("=" * 50)
-print("REPOMIND QUERY ENGINE")
+
+print("IMPACT ANALYSIS")
+
 print("=" * 50)
 
-print("\nFind Function\n")
+print()
 
-function = engine.find_function("main")
+for key, value in result.items():
 
-if function:
-    print(function.properties)
-
-print("\nFunctions Called by 'main'\n")
-
-print(engine.get_called_functions("main"))
-
-print("\nWho Calls 'main'\n")
-
-print(engine.get_callers("main"))
-
-print("\nFunctions In Same File\n")
-
-if function:
-
-    file_path = function.properties["file_path"]
-
-    for func in engine.get_functions_in_file(file_path):
-        print("-", func.id)
-
-print("\nDone.")
+    print(f"{key}: {value}")
