@@ -1,35 +1,39 @@
 from graph.graph_builder import build_graph
 from graph.relationship_builder import add_relationships
+from graph.query_engine import GraphQueryEngine
 
 graph = build_graph()
 
 graph = add_relationships(graph)
 
-graph.save()
+engine = GraphQueryEngine(graph)
 
 print("=" * 50)
-
-print("GRAPH SUMMARY")
-
+print("REPOMIND QUERY ENGINE")
 print("=" * 50)
 
-print(f"Nodes : {len(graph.nodes)}")
-print(f"Edges : {len(graph.edges)}")
+print("\nFind Function\n")
 
-print("\nNode Types")
+function = engine.find_function("main")
 
-counts = {}
+if function:
+    print(function.properties)
 
-for node in graph.nodes:
+print("\nFunctions Called by 'main'\n")
 
-    counts[node.type] = counts.get(node.type, 0) + 1
+print(engine.get_called_functions("main"))
 
-for key, value in counts.items():
+print("\nWho Calls 'main'\n")
 
-    print(f"{key}: {value}")
+print(engine.get_callers("main"))
 
-print("\nLookup Test")
+print("\nFunctions In Same File\n")
 
-print(graph.get_node("main"))
+if function:
 
-print("\nGraph generated successfully.")
+    file_path = function.properties["file_path"]
+
+    for func in engine.get_functions_in_file(file_path):
+        print("-", func.id)
+
+print("\nDone.")
