@@ -490,12 +490,12 @@
         },
         {
             "source": "main",
-            "target": "clone_repository",
+            "target": "ingestion.clone_repo.clone_repository",
             "relation": "CALLS"
         },
         {
             "source": "main",
-            "target": "scan_python_files",
+            "target": "ingestion.file_scanner.scan_python_files",
             "relation": "CALLS"
         },
         {
@@ -505,7 +505,7 @@
         },
         {
             "source": "main",
-            "target": "extract_imports",
+            "target": "ingestion.import_extractor.extract_imports",
             "relation": "CALLS"
         },
         {

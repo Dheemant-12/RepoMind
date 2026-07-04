@@ -1,21 +1,34 @@
 from graph.graph_builder import build_graph
 from graph.relationship_builder import add_relationships
-from graph.impact_analyzer import ImpactAnalyzer
 
 graph = build_graph()
 
 graph = add_relationships(graph)
 
-analyzer = ImpactAnalyzer(graph)
+print("=" * 60)
+print("RESOLVED GRAPH")
+print("=" * 60)
 
-result = analyzer.analyze("clone_repository")
+print(f"\nNodes : {len(graph.nodes)}")
+print(f"Edges : {len(graph.edges)}")
 
-print("=" * 50)
-print("MULTI-LEVEL IMPACT ANALYSIS")
-print("=" * 50)
+print("\nResolved CALLS Edges:\n")
 
-for key, value in result.items():
+count = 0
 
-    print(f"\n{key}")
+for edge in graph.edges:
 
-    print(value)
+    if edge.relation == "CALLS":
+
+        print(
+            f"{edge.source}  --->  {edge.target}"
+        )
+
+        count += 1
+
+        if count == 20:
+            break
+
+graph.save()
+
+print("\n✅ graph.json updated")

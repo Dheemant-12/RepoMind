@@ -1,9 +1,12 @@
 import json
 
-from graph.graph_models import GraphEdge
+from graph.graph_models import GraphEdge, GraphNode
+from graph.resolver import CallResolver
 
 
 def add_relationships(graph):
+
+    resolver = CallResolver()
 
     with open("functions.json", encoding="utf-8") as f:
         functions = json.load(f)
@@ -13,8 +16,7 @@ def add_relationships(graph):
 
     file_nodes = set()
 
-    # ---------- File Nodes + DEFINED_IN ----------
-
+    # File Nodes
     for function in functions:
 
         file_path = function["file_path"]
@@ -22,14 +24,10 @@ def add_relationships(graph):
         if file_path not in file_nodes:
 
             graph.add_node(
-                type(
-                    graph.nodes[0]
-                )(
+                GraphNode(
                     file_path,
                     "File",
-                    {
-                        "path": file_path
-                    }
+                    {"path": file_path}
                 )
             )
 
@@ -43,18 +41,22 @@ def add_relationships(graph):
             )
         )
 
-    # ---------- CALLS ----------
-
+    # CALLS (Resolved)
     for function in calls:
 
         caller = function["function"]
 
-        for called in function["calls"]:
+        for raw_call in function["calls"]:
+
+            resolved = resolver.resolve(
+                function["file_path"],
+                raw_call
+            )
 
             graph.add_edge(
                 GraphEdge(
                     caller,
-                    called,
+                    resolved,
                     "CALLS"
                 )
             )
