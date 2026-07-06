@@ -1,1 +1,1870 @@
-[]
+[
+    {
+        "name": "Config",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\examples\\aliases\\aliases.py",
+        "base_classes": [],
+        "methods": [
+            "__init__",
+            "add_alias",
+            "read_config",
+            "write_config"
+        ]
+    },
+    {
+        "name": "AliasedGroup",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\examples\\aliases\\aliases.py",
+        "base_classes": [
+            "Group"
+        ],
+        "methods": [
+            "get_command",
+            "resolve_command"
+        ]
+    },
+    {
+        "name": "Environment",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\examples\\complex\\complex\\cli.py",
+        "base_classes": [],
+        "methods": [
+            "__init__",
+            "log",
+            "vlog"
+        ]
+    },
+    {
+        "name": "ComplexCLI",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\examples\\complex\\complex\\cli.py",
+        "base_classes": [
+            "Group"
+        ],
+        "methods": [
+            "list_commands",
+            "get_command"
+        ]
+    },
+    {
+        "name": "Repo",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\examples\\repo\\repo.py",
+        "base_classes": [],
+        "methods": [
+            "__init__",
+            "set_config",
+            "__repr__"
+        ]
+    },
+    {
+        "name": "URL",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\examples\\validation\\validation.py",
+        "base_classes": [
+            "Subscript(value=Attribute(value=Name(id='click', ctx=Load()), attr='ParamType', ctx=Load()), slice=Attribute(value=Name(id='urlparse', ctx=Load()), attr='ParseResult', ctx=Load()), ctx=Load())"
+        ],
+        "methods": [
+            "convert"
+        ]
+    },
+    {
+        "name": "ParameterSource",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\core.py",
+        "base_classes": [
+            "IntEnum"
+        ],
+        "methods": []
+    },
+    {
+        "name": "Context",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\core.py",
+        "base_classes": [],
+        "methods": [
+            "__init__",
+            "protected_args",
+            "to_info_dict",
+            "__enter__",
+            "__exit__",
+            "scope",
+            "meta",
+            "make_formatter",
+            "with_resource",
+            "call_on_close",
+            "close",
+            "_close_with_exception_info",
+            "command_path",
+            "find_root",
+            "find_object",
+            "ensure_object",
+            "_default_map_has",
+            "lookup_default",
+            "lookup_default",
+            "lookup_default",
+            "fail",
+            "abort",
+            "exit",
+            "get_usage",
+            "get_help",
+            "_make_sub_context",
+            "invoke",
+            "invoke",
+            "invoke",
+            "forward",
+            "set_parameter_source",
+            "get_parameter_source"
+        ]
+    },
+    {
+        "name": "Command",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\core.py",
+        "base_classes": [],
+        "methods": [
+            "__init__",
+            "to_info_dict",
+            "__repr__",
+            "get_usage",
+            "get_params",
+            "format_usage",
+            "collect_usage_pieces",
+            "get_help_option_names",
+            "get_help_option",
+            "make_parser",
+            "get_help",
+            "get_short_help_str",
+            "format_help",
+            "format_help_text",
+            "format_options",
+            "format_arguments",
+            "format_epilog",
+            "make_context",
+            "parse_args",
+            "invoke",
+            "shell_complete",
+            "main",
+            "main",
+            "main",
+            "_main_shell_completion",
+            "__call__"
+        ]
+    },
+    {
+        "name": "_FakeSubclassCheck",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\core.py",
+        "base_classes": [
+            "type"
+        ],
+        "methods": [
+            "__subclasscheck__",
+            "__instancecheck__"
+        ]
+    },
+    {
+        "name": "_BaseCommand",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\core.py",
+        "base_classes": [
+            "Command"
+        ],
+        "methods": []
+    },
+    {
+        "name": "Group",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\core.py",
+        "base_classes": [
+            "Command"
+        ],
+        "methods": [
+            "__init__",
+            "to_info_dict",
+            "add_command",
+            "command",
+            "command",
+            "command",
+            "group",
+            "group",
+            "group",
+            "result_callback",
+            "get_command",
+            "list_commands",
+            "collect_usage_pieces",
+            "format_options",
+            "format_commands",
+            "parse_args",
+            "invoke",
+            "resolve_command",
+            "shell_complete"
+        ]
+    },
+    {
+        "name": "_MultiCommand",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\core.py",
+        "base_classes": [
+            "Group"
+        ],
+        "methods": []
+    },
+    {
+        "name": "CommandCollection",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\core.py",
+        "base_classes": [
+            "Group"
+        ],
+        "methods": [
+            "__init__",
+            "add_source",
+            "get_command",
+            "list_commands"
+        ]
+    },
+    {
+        "name": "Parameter",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\core.py",
+        "base_classes": [
+            "ABC"
+        ],
+        "methods": [
+            "__init__",
+            "to_info_dict",
+            "__repr__",
+            "_parse_decls",
+            "human_readable_name",
+            "make_metavar",
+            "get_default",
+            "get_default",
+            "get_default",
+            "add_to_parser",
+            "consume_value",
+            "type_cast_value",
+            "value_is_missing",
+            "process_value",
+            "resolve_envvar_value",
+            "value_from_envvar",
+            "handle_parse_result",
+            "get_help_record",
+            "get_usage_pieces",
+            "get_error_hint",
+            "shell_complete"
+        ]
+    },
+    {
+        "name": "Option",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\core.py",
+        "base_classes": [
+            "Parameter"
+        ],
+        "methods": [
+            "__init__",
+            "to_info_dict",
+            "get_default",
+            "get_error_hint",
+            "_parse_decls",
+            "add_to_parser",
+            "get_help_record",
+            "get_help_extra",
+            "prompt_for_value",
+            "resolve_envvar_value",
+            "value_from_envvar",
+            "consume_value",
+            "process_value"
+        ]
+    },
+    {
+        "name": "Argument",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\core.py",
+        "base_classes": [
+            "Parameter"
+        ],
+        "methods": [
+            "__init__",
+            "to_info_dict",
+            "human_readable_name",
+            "make_metavar",
+            "_parse_decls",
+            "get_usage_pieces",
+            "get_help_record",
+            "get_error_hint",
+            "add_to_parser"
+        ]
+    },
+    {
+        "name": "ClickException",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\exceptions.py",
+        "base_classes": [
+            "Exception"
+        ],
+        "methods": [
+            "__init__",
+            "format_message",
+            "__str__",
+            "show"
+        ]
+    },
+    {
+        "name": "UsageError",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\exceptions.py",
+        "base_classes": [
+            "ClickException"
+        ],
+        "methods": [
+            "__init__",
+            "show"
+        ]
+    },
+    {
+        "name": "BadParameter",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\exceptions.py",
+        "base_classes": [
+            "UsageError"
+        ],
+        "methods": [
+            "__init__",
+            "format_message"
+        ]
+    },
+    {
+        "name": "MissingParameter",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\exceptions.py",
+        "base_classes": [
+            "BadParameter"
+        ],
+        "methods": [
+            "__init__",
+            "format_message",
+            "__str__"
+        ]
+    },
+    {
+        "name": "NoSuchOption",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\exceptions.py",
+        "base_classes": [
+            "UsageError"
+        ],
+        "methods": [
+            "__init__",
+            "format_message"
+        ]
+    },
+    {
+        "name": "NoSuchCommand",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\exceptions.py",
+        "base_classes": [
+            "UsageError"
+        ],
+        "methods": [
+            "__init__",
+            "format_message"
+        ]
+    },
+    {
+        "name": "BadOptionUsage",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\exceptions.py",
+        "base_classes": [
+            "UsageError"
+        ],
+        "methods": [
+            "__init__"
+        ]
+    },
+    {
+        "name": "BadArgumentUsage",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\exceptions.py",
+        "base_classes": [
+            "UsageError"
+        ],
+        "methods": []
+    },
+    {
+        "name": "NoArgsIsHelpError",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\exceptions.py",
+        "base_classes": [
+            "UsageError"
+        ],
+        "methods": [
+            "__init__",
+            "show"
+        ]
+    },
+    {
+        "name": "FileError",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\exceptions.py",
+        "base_classes": [
+            "ClickException"
+        ],
+        "methods": [
+            "__init__",
+            "format_message"
+        ]
+    },
+    {
+        "name": "Abort",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\exceptions.py",
+        "base_classes": [
+            "RuntimeError"
+        ],
+        "methods": []
+    },
+    {
+        "name": "Exit",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\exceptions.py",
+        "base_classes": [
+            "RuntimeError"
+        ],
+        "methods": [
+            "__init__"
+        ]
+    },
+    {
+        "name": "HelpFormatter",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\formatting.py",
+        "base_classes": [],
+        "methods": [
+            "__init__",
+            "write",
+            "indent",
+            "dedent",
+            "write_usage",
+            "write_heading",
+            "write_paragraph",
+            "write_text",
+            "write_dl",
+            "section",
+            "indentation",
+            "getvalue"
+        ]
+    },
+    {
+        "name": "_Option",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\parser.py",
+        "base_classes": [],
+        "methods": [
+            "__init__",
+            "takes_value",
+            "process"
+        ]
+    },
+    {
+        "name": "_Argument",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\parser.py",
+        "base_classes": [],
+        "methods": [
+            "__init__",
+            "process"
+        ]
+    },
+    {
+        "name": "_ParsingState",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\parser.py",
+        "base_classes": [],
+        "methods": [
+            "__init__"
+        ]
+    },
+    {
+        "name": "_OptionParser",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\parser.py",
+        "base_classes": [],
+        "methods": [
+            "__init__",
+            "add_option",
+            "add_argument",
+            "parse_args",
+            "_process_args_for_args",
+            "_process_args_for_options",
+            "_match_long_opt",
+            "_match_short_opt",
+            "_get_value_from_state",
+            "_process_opts"
+        ]
+    },
+    {
+        "name": "CompletionItem",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\shell_completion.py",
+        "base_classes": [
+            "Subscript(value=Attribute(value=Name(id='t', ctx=Load()), attr='Generic', ctx=Load()), slice=Name(id='_ValueT_co', ctx=Load()), ctx=Load())"
+        ],
+        "methods": [
+            "__init__",
+            "__getattr__"
+        ]
+    },
+    {
+        "name": "_SourceVarsDict",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\shell_completion.py",
+        "base_classes": [
+            "TypedDict"
+        ],
+        "methods": []
+    },
+    {
+        "name": "ShellComplete",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\shell_completion.py",
+        "base_classes": [],
+        "methods": [
+            "__init__",
+            "func_name",
+            "source_vars",
+            "source",
+            "get_completion_args",
+            "get_completions",
+            "format_completion",
+            "complete"
+        ]
+    },
+    {
+        "name": "BashComplete",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\shell_completion.py",
+        "base_classes": [
+            "ShellComplete"
+        ],
+        "methods": [
+            "_check_version",
+            "source",
+            "get_completion_args",
+            "format_completion"
+        ]
+    },
+    {
+        "name": "ZshComplete",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\shell_completion.py",
+        "base_classes": [
+            "ShellComplete"
+        ],
+        "methods": [
+            "get_completion_args",
+            "format_completion"
+        ]
+    },
+    {
+        "name": "FishComplete",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\shell_completion.py",
+        "base_classes": [
+            "ShellComplete"
+        ],
+        "methods": [
+            "get_completion_args",
+            "format_completion"
+        ]
+    },
+    {
+        "name": "EchoingStdin",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\testing.py",
+        "base_classes": [],
+        "methods": [
+            "__init__",
+            "__getattr__",
+            "_echo",
+            "read",
+            "read1",
+            "readline",
+            "readlines",
+            "__iter__",
+            "__repr__"
+        ]
+    },
+    {
+        "name": "_FDCapture",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\testing.py",
+        "base_classes": [],
+        "methods": [
+            "__init__",
+            "start",
+            "stop"
+        ]
+    },
+    {
+        "name": "BytesIOCopy",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\testing.py",
+        "base_classes": [
+            "BytesIO"
+        ],
+        "methods": [
+            "__init__",
+            "flush",
+            "write"
+        ]
+    },
+    {
+        "name": "StreamMixer",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\testing.py",
+        "base_classes": [],
+        "methods": [
+            "__init__"
+        ]
+    },
+    {
+        "name": "_NamedTextIOWrapper",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\testing.py",
+        "base_classes": [
+            "TextIOWrapper"
+        ],
+        "methods": [
+            "__init__",
+            "close",
+            "fileno",
+            "name",
+            "mode"
+        ]
+    },
+    {
+        "name": "Result",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\testing.py",
+        "base_classes": [],
+        "methods": [
+            "__init__",
+            "output",
+            "stdout",
+            "stderr",
+            "__repr__"
+        ]
+    },
+    {
+        "name": "CliRunner",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\testing.py",
+        "base_classes": [],
+        "methods": [
+            "__init__",
+            "get_default_prog_name",
+            "make_env",
+            "isolation",
+            "invoke",
+            "isolated_filesystem"
+        ]
+    },
+    {
+        "name": "ParamTypeInfoDict",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\types.py",
+        "base_classes": [
+            "TypedDict"
+        ],
+        "methods": []
+    },
+    {
+        "name": "ParamType",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\types.py",
+        "base_classes": [
+            "Subscript(value=Attribute(value=Name(id='t', ctx=Load()), attr='Generic', ctx=Load()), slice=Name(id='_ValueT_co', ctx=Load()), ctx=Load())",
+            "ABC"
+        ],
+        "methods": [
+            "to_info_dict",
+            "__call__",
+            "get_metavar",
+            "get_missing_message",
+            "convert",
+            "split_envvar_value",
+            "fail",
+            "shell_complete"
+        ]
+    },
+    {
+        "name": "CompositeParamType",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\types.py",
+        "base_classes": [
+            "Subscript(value=Name(id='ParamType', ctx=Load()), slice=Name(id='_ValueT_co', ctx=Load()), ctx=Load())"
+        ],
+        "methods": [
+            "arity"
+        ]
+    },
+    {
+        "name": "FuncParamType",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\types.py",
+        "base_classes": [
+            "Subscript(value=Name(id='ParamType', ctx=Load()), slice=Name(id='_ValueT_co', ctx=Load()), ctx=Load())",
+            "Subscript(value=Attribute(value=Name(id='t', ctx=Load()), attr='Generic', ctx=Load()), slice=Tuple(elts=[Name(id='_ValueT_contra', ctx=Load()), Name(id='_ValueT_co', ctx=Load())], ctx=Load()), ctx=Load())"
+        ],
+        "methods": [
+            "__init__",
+            "to_info_dict",
+            "convert"
+        ]
+    },
+    {
+        "name": "UnprocessedParamType",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\types.py",
+        "base_classes": [
+            "Subscript(value=Name(id='ParamType', ctx=Load()), slice=Attribute(value=Name(id='t', ctx=Load()), attr='Any', ctx=Load()), ctx=Load())"
+        ],
+        "methods": [
+            "convert",
+            "__repr__"
+        ]
+    },
+    {
+        "name": "StringParamType",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\types.py",
+        "base_classes": [
+            "Subscript(value=Name(id='ParamType', ctx=Load()), slice=Name(id='str', ctx=Load()), ctx=Load())"
+        ],
+        "methods": [
+            "convert",
+            "__repr__"
+        ]
+    },
+    {
+        "name": "Choice",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\types.py",
+        "base_classes": [
+            "Subscript(value=Name(id='ParamType', ctx=Load()), slice=Name(id='_ValueT_co', ctx=Load()), ctx=Load())",
+            "Subscript(value=Attribute(value=Name(id='t', ctx=Load()), attr='Generic', ctx=Load()), slice=Name(id='_ValueT_co', ctx=Load()), ctx=Load())"
+        ],
+        "methods": [
+            "__init__",
+            "to_info_dict",
+            "_normalized_mapping",
+            "normalize_choice",
+            "get_metavar",
+            "get_missing_message",
+            "convert",
+            "get_invalid_choice_message",
+            "__repr__",
+            "shell_complete"
+        ]
+    },
+    {
+        "name": "DateTimeInfoDict",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\types.py",
+        "base_classes": [
+            "ParamTypeInfoDict"
+        ],
+        "methods": []
+    },
+    {
+        "name": "DateTime",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\types.py",
+        "base_classes": [
+            "Subscript(value=Name(id='ParamType', ctx=Load()), slice=Name(id='datetime', ctx=Load()), ctx=Load())"
+        ],
+        "methods": [
+            "__init__",
+            "to_info_dict",
+            "get_metavar",
+            "_try_to_convert_date",
+            "convert",
+            "__repr__"
+        ]
+    },
+    {
+        "name": "_NumberParamTypeBase",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\types.py",
+        "base_classes": [
+            "Subscript(value=Name(id='ParamType', ctx=Load()), slice=Name(id='_ValueT_co', ctx=Load()), ctx=Load())",
+            "Subscript(value=Attribute(value=Name(id='t', ctx=Load()), attr='Generic', ctx=Load()), slice=Tuple(elts=[Name(id='_ValueT_contra', ctx=Load()), Name(id='_ValueT_co', ctx=Load())], ctx=Load()), ctx=Load())"
+        ],
+        "methods": [
+            "convert"
+        ]
+    },
+    {
+        "name": "_NumberRangeBase",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\types.py",
+        "base_classes": [
+            "Subscript(value=Name(id='_NumberParamTypeBase', ctx=Load()), slice=Tuple(elts=[Name(id='_ValueT_contra', ctx=Load()), Name(id='_FloatValueT_co', ctx=Load())], ctx=Load()), ctx=Load())",
+            "Subscript(value=Attribute(value=Name(id='t', ctx=Load()), attr='Generic', ctx=Load()), slice=Tuple(elts=[Name(id='_ValueT_contra', ctx=Load()), Name(id='_FloatValueT_co', ctx=Load())], ctx=Load()), ctx=Load())"
+        ],
+        "methods": [
+            "__init__",
+            "to_info_dict",
+            "convert",
+            "_clamp",
+            "_describe_range",
+            "__repr__"
+        ]
+    },
+    {
+        "name": "IntParamType",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\types.py",
+        "base_classes": [
+            "Subscript(value=Name(id='_NumberParamTypeBase', ctx=Load()), slice=Tuple(elts=[BinOp(left=Attribute(value=Name(id='t', ctx=Load()), attr='SupportsInt', ctx=Load()), op=BitOr(), right=Attribute(value=Name(id='t', ctx=Load()), attr='SupportsIndex', ctx=Load())), Name(id='int', ctx=Load())], ctx=Load()), ctx=Load())"
+        ],
+        "methods": [
+            "__repr__"
+        ]
+    },
+    {
+        "name": "IntRange",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\types.py",
+        "base_classes": [
+            "Subscript(value=Name(id='_NumberRangeBase', ctx=Load()), slice=Tuple(elts=[Name(id='int', ctx=Load()), Name(id='int', ctx=Load())], ctx=Load()), ctx=Load())",
+            "IntParamType"
+        ],
+        "methods": [
+            "_clamp"
+        ]
+    },
+    {
+        "name": "FloatParamType",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\types.py",
+        "base_classes": [
+            "Subscript(value=Name(id='_NumberParamTypeBase', ctx=Load()), slice=Tuple(elts=[BinOp(left=Attribute(value=Name(id='t', ctx=Load()), attr='SupportsFloat', ctx=Load()), op=BitOr(), right=Attribute(value=Name(id='t', ctx=Load()), attr='SupportsIndex', ctx=Load())), Name(id='float', ctx=Load())], ctx=Load()), ctx=Load())"
+        ],
+        "methods": [
+            "__repr__"
+        ]
+    },
+    {
+        "name": "FloatRange",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\types.py",
+        "base_classes": [
+            "Subscript(value=Name(id='_NumberRangeBase', ctx=Load()), slice=Tuple(elts=[Name(id='float', ctx=Load()), Name(id='float', ctx=Load())], ctx=Load()), ctx=Load())",
+            "FloatParamType"
+        ],
+        "methods": [
+            "__init__",
+            "_clamp"
+        ]
+    },
+    {
+        "name": "BoolParamType",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\types.py",
+        "base_classes": [
+            "Subscript(value=Name(id='ParamType', ctx=Load()), slice=Name(id='bool', ctx=Load()), ctx=Load())"
+        ],
+        "methods": [
+            "str_to_bool",
+            "convert",
+            "__repr__"
+        ]
+    },
+    {
+        "name": "UUIDParameterType",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\types.py",
+        "base_classes": [
+            "Subscript(value=Name(id='ParamType', ctx=Load()), slice=Attribute(value=Name(id='uuid', ctx=Load()), attr='UUID', ctx=Load()), ctx=Load())"
+        ],
+        "methods": [
+            "convert",
+            "__repr__"
+        ]
+    },
+    {
+        "name": "FileInfoDict",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\types.py",
+        "base_classes": [
+            "ParamTypeInfoDict"
+        ],
+        "methods": []
+    },
+    {
+        "name": "File",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\types.py",
+        "base_classes": [
+            "Subscript(value=Name(id='ParamType', ctx=Load()), slice=Subscript(value=Attribute(value=Name(id='t', ctx=Load()), attr='IO', ctx=Load()), slice=Attribute(value=Name(id='t', ctx=Load()), attr='Any', ctx=Load()), ctx=Load()), ctx=Load())"
+        ],
+        "methods": [
+            "__init__",
+            "to_info_dict",
+            "resolve_lazy_flag",
+            "convert",
+            "shell_complete"
+        ]
+    },
+    {
+        "name": "PathInfoDict",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\types.py",
+        "base_classes": [
+            "ParamTypeInfoDict"
+        ],
+        "methods": []
+    },
+    {
+        "name": "Path",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\types.py",
+        "base_classes": [
+            "Subscript(value=Name(id='ParamType', ctx=Load()), slice=BinOp(left=BinOp(left=Name(id='str', ctx=Load()), op=BitOr(), right=Name(id='bytes', ctx=Load())), op=BitOr(), right=Subscript(value=Attribute(value=Name(id='os', ctx=Load()), attr='PathLike', ctx=Load()), slice=Name(id='str', ctx=Load()), ctx=Load())), ctx=Load())"
+        ],
+        "methods": [
+            "__init__",
+            "to_info_dict",
+            "coerce_path_result",
+            "convert",
+            "shell_complete"
+        ]
+    },
+    {
+        "name": "TupleInfoDict",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\types.py",
+        "base_classes": [
+            "ParamTypeInfoDict"
+        ],
+        "methods": []
+    },
+    {
+        "name": "Tuple",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\types.py",
+        "base_classes": [
+            "Subscript(value=Name(id='CompositeParamType', ctx=Load()), slice=Subscript(value=Name(id='tuple', ctx=Load()), slice=Tuple(elts=[Attribute(value=Name(id='t', ctx=Load()), attr='Any', ctx=Load()), Constant(value=Ellipsis)], ctx=Load()), ctx=Load()), ctx=Load())"
+        ],
+        "methods": [
+            "__init__",
+            "to_info_dict",
+            "name",
+            "arity",
+            "convert"
+        ]
+    },
+    {
+        "name": "OptionHelpExtra",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\types.py",
+        "base_classes": [
+            "TypedDict"
+        ],
+        "methods": []
+    },
+    {
+        "name": "FuncParamTypeInfoDict",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\types.py",
+        "base_classes": [
+            "ParamTypeInfoDict",
+            "Subscript(value=Attribute(value=Name(id='t', ctx=Load()), attr='Generic', ctx=Load()), slice=Tuple(elts=[Name(id='_ValueT_contra', ctx=Load()), Name(id='_ValueT_co', ctx=Load())], ctx=Load()), ctx=Load())"
+        ],
+        "methods": []
+    },
+    {
+        "name": "FuncParamTypeInfoDict",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\types.py",
+        "base_classes": [
+            "ParamTypeInfoDict"
+        ],
+        "methods": []
+    },
+    {
+        "name": "ChoiceInfoDict",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\types.py",
+        "base_classes": [
+            "ParamTypeInfoDict",
+            "Subscript(value=Attribute(value=Name(id='t', ctx=Load()), attr='Generic', ctx=Load()), slice=Name(id='_ValueT_co', ctx=Load()), ctx=Load())"
+        ],
+        "methods": []
+    },
+    {
+        "name": "ChoiceInfoDict",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\types.py",
+        "base_classes": [
+            "ParamTypeInfoDict"
+        ],
+        "methods": []
+    },
+    {
+        "name": "NumberRangeInfoDict",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\types.py",
+        "base_classes": [
+            "ParamTypeInfoDict",
+            "Subscript(value=Attribute(value=Name(id='t', ctx=Load()), attr='Generic', ctx=Load()), slice=Name(id='_FloatValueT_co', ctx=Load()), ctx=Load())"
+        ],
+        "methods": []
+    },
+    {
+        "name": "NumberRangeInfoDict",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\types.py",
+        "base_classes": [
+            "ParamTypeInfoDict"
+        ],
+        "methods": []
+    },
+    {
+        "name": "LazyFile",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\utils.py",
+        "base_classes": [],
+        "methods": [
+            "__init__",
+            "__getattr__",
+            "__repr__",
+            "open",
+            "close",
+            "close_intelligently",
+            "__enter__",
+            "__exit__",
+            "__iter__"
+        ]
+    },
+    {
+        "name": "KeepOpenFile",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\utils.py",
+        "base_classes": [],
+        "methods": [
+            "__init__",
+            "__getattr__",
+            "__enter__",
+            "__exit__",
+            "__repr__",
+            "__iter__"
+        ]
+    },
+    {
+        "name": "PacifyFlushWrapper",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\utils.py",
+        "base_classes": [],
+        "methods": [
+            "__init__",
+            "flush",
+            "__getattr__"
+        ]
+    },
+    {
+        "name": "_NonClosingTextIOWrapper",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\_compat.py",
+        "base_classes": [
+            "TextIOWrapper"
+        ],
+        "methods": [
+            "__init__",
+            "__del__",
+            "isatty"
+        ]
+    },
+    {
+        "name": "_FixupStream",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\_compat.py",
+        "base_classes": [],
+        "methods": [
+            "__init__",
+            "__getattr__",
+            "read1",
+            "readable",
+            "writable",
+            "seekable"
+        ]
+    },
+    {
+        "name": "_AtomicFile",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\_compat.py",
+        "base_classes": [],
+        "methods": [
+            "__init__",
+            "name",
+            "close",
+            "__getattr__",
+            "__enter__",
+            "__exit__",
+            "__repr__"
+        ]
+    },
+    {
+        "name": "_BufferedTextPagerStream",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\_termui_impl.py",
+        "base_classes": [
+            "Protocol"
+        ],
+        "methods": []
+    },
+    {
+        "name": "ProgressBar",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\_termui_impl.py",
+        "base_classes": [
+            "Subscript(value=Attribute(value=Name(id='t', ctx=Load()), attr='Generic', ctx=Load()), slice=Name(id='V', ctx=Load()), ctx=Load())"
+        ],
+        "methods": [
+            "__init__",
+            "__enter__",
+            "__exit__",
+            "__iter__",
+            "__next__",
+            "render_finish",
+            "pct",
+            "time_per_iteration",
+            "eta",
+            "format_eta",
+            "format_pos",
+            "format_pct",
+            "format_bar",
+            "format_progress_line",
+            "render_progress",
+            "make_step",
+            "update",
+            "finish",
+            "generator"
+        ]
+    },
+    {
+        "name": "MaybeStripAnsi",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\_termui_impl.py",
+        "base_classes": [
+            "TextIOWrapper"
+        ],
+        "methods": [
+            "__init__",
+            "write"
+        ]
+    },
+    {
+        "name": "Editor",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\_termui_impl.py",
+        "base_classes": [],
+        "methods": [
+            "__init__",
+            "get_editor",
+            "edit_files",
+            "edit",
+            "edit",
+            "edit"
+        ]
+    },
+    {
+        "name": "TextWrapper",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\_textwrap.py",
+        "base_classes": [
+            "TextWrapper"
+        ],
+        "methods": [
+            "_handle_long_word",
+            "_wrap_chunks",
+            "extra_indent",
+            "indent_only"
+        ]
+    },
+    {
+        "name": "Sentinel",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\_utils.py",
+        "base_classes": [
+            "Enum"
+        ],
+        "methods": [
+            "__repr__"
+        ]
+    },
+    {
+        "name": "_WindowsConsoleRawIOBase",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\_winconsole.py",
+        "base_classes": [
+            "RawIOBase"
+        ],
+        "methods": [
+            "__init__",
+            "isatty"
+        ]
+    },
+    {
+        "name": "_WindowsConsoleReader",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\_winconsole.py",
+        "base_classes": [
+            "_WindowsConsoleRawIOBase"
+        ],
+        "methods": [
+            "readable",
+            "readinto"
+        ]
+    },
+    {
+        "name": "_WindowsConsoleWriter",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\_winconsole.py",
+        "base_classes": [
+            "_WindowsConsoleRawIOBase"
+        ],
+        "methods": [
+            "writable",
+            "_get_error_message",
+            "write"
+        ]
+    },
+    {
+        "name": "ConsoleStream",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\_winconsole.py",
+        "base_classes": [],
+        "methods": [
+            "__init__",
+            "name",
+            "write",
+            "writelines",
+            "__getattr__",
+            "isatty",
+            "__repr__"
+        ]
+    },
+    {
+        "name": "Py_buffer",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\_winconsole.py",
+        "base_classes": [
+            "Structure"
+        ],
+        "methods": []
+    },
+    {
+        "name": "CustomArgument",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_arguments.py",
+        "base_classes": [
+            "Argument"
+        ],
+        "methods": []
+    },
+    {
+        "name": "CustomArgument",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_arguments.py",
+        "base_classes": [
+            "Argument"
+        ],
+        "methods": [
+            "type_cast_value"
+        ]
+    },
+    {
+        "name": "MyEnum",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_basic.py",
+        "base_classes": [
+            "str",
+            "Enum"
+        ],
+        "methods": []
+    },
+    {
+        "name": "MyClass",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_basic.py",
+        "base_classes": [],
+        "methods": [
+            "__init__",
+            "__str__"
+        ]
+    },
+    {
+        "name": "OptParseCommand",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_commands.py",
+        "base_classes": [
+            "Command"
+        ],
+        "methods": [
+            "__init__",
+            "parse_args",
+            "get_usage",
+            "get_help",
+            "invoke"
+        ]
+    },
+    {
+        "name": "AliasedGroup",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_commands.py",
+        "base_classes": [
+            "Group"
+        ],
+        "methods": [
+            "get_command",
+            "resolve_command"
+        ]
+    },
+    {
+        "name": "CustomCommand",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_command_decorators.py",
+        "base_classes": [
+            "Command"
+        ],
+        "methods": []
+    },
+    {
+        "name": "CustomGroup",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_command_decorators.py",
+        "base_classes": [
+            "Group"
+        ],
+        "methods": []
+    },
+    {
+        "name": "JupyterKernelFakeStream",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_compat.py",
+        "base_classes": [],
+        "methods": []
+    },
+    {
+        "name": "Foo",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_context.py",
+        "base_classes": [],
+        "methods": [
+            "__init__"
+        ]
+    },
+    {
+        "name": "Foo",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_context.py",
+        "base_classes": [],
+        "methods": [
+            "__init__"
+        ]
+    },
+    {
+        "name": "Foo",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_context.py",
+        "base_classes": [],
+        "methods": [
+            "__init__"
+        ]
+    },
+    {
+        "name": "Foo",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_context.py",
+        "base_classes": [],
+        "methods": []
+    },
+    {
+        "name": "ParameterInternalCheck",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_context.py",
+        "base_classes": [
+            "Option"
+        ],
+        "methods": [
+            "process_value"
+        ]
+    },
+    {
+        "name": "NonExitingOption",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_context.py",
+        "base_classes": [
+            "Option"
+        ],
+        "methods": [
+            "reset_state",
+            "set_state",
+            "__init__"
+        ]
+    },
+    {
+        "name": "ExitingOption",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_context.py",
+        "base_classes": [
+            "NonExitingOption"
+        ],
+        "methods": [
+            "set_state"
+        ]
+    },
+    {
+        "name": "DebugLoggerOption",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_context.py",
+        "base_classes": [
+            "Option"
+        ],
+        "methods": [
+            "reset_loggers",
+            "set_level",
+            "__init__"
+        ]
+    },
+    {
+        "name": "TestContext",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_context.py",
+        "base_classes": [
+            "Subscript(value=Name(id='AbstractContextManager', ctx=Load()), slice=Subscript(value=Name(id='list', ctx=Load()), slice=Name(id='int', ctx=Load()), ctx=Load()), ctx=Load())"
+        ],
+        "methods": [
+            "__init__",
+            "__enter__",
+            "__exit__"
+        ]
+    },
+    {
+        "name": "TestException",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_context.py",
+        "base_classes": [
+            "Exception"
+        ],
+        "methods": []
+    },
+    {
+        "name": "TestContext",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_context.py",
+        "base_classes": [
+            "Subscript(value=Name(id='AbstractContextManager', ctx=Load()), slice=Subscript(value=Name(id='list', ctx=Load()), slice=Name(id='int', ctx=Load()), ctx=Load()), ctx=Load())"
+        ],
+        "methods": [
+            "__init__",
+            "__enter__",
+            "__exit__"
+        ]
+    },
+    {
+        "name": "TestException",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_context.py",
+        "base_classes": [
+            "Exception"
+        ],
+        "methods": []
+    },
+    {
+        "name": "Foo",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_context.py",
+        "base_classes": [],
+        "methods": []
+    },
+    {
+        "name": "CustomContext",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_custom_classes.py",
+        "base_classes": [
+            "Context"
+        ],
+        "methods": []
+    },
+    {
+        "name": "CustomCommand",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_custom_classes.py",
+        "base_classes": [
+            "Command"
+        ],
+        "methods": []
+    },
+    {
+        "name": "CustomContext",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_custom_classes.py",
+        "base_classes": [
+            "Context"
+        ],
+        "methods": []
+    },
+    {
+        "name": "CustomCommand",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_custom_classes.py",
+        "base_classes": [
+            "Command"
+        ],
+        "methods": []
+    },
+    {
+        "name": "CustomFormatter",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_custom_classes.py",
+        "base_classes": [
+            "HelpFormatter"
+        ],
+        "methods": [
+            "write_heading"
+        ]
+    },
+    {
+        "name": "CustomContext",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_custom_classes.py",
+        "base_classes": [
+            "Context"
+        ],
+        "methods": []
+    },
+    {
+        "name": "CustomCommand",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_custom_classes.py",
+        "base_classes": [
+            "Command"
+        ],
+        "methods": []
+    },
+    {
+        "name": "CustomGroup",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_custom_classes.py",
+        "base_classes": [
+            "Group"
+        ],
+        "methods": []
+    },
+    {
+        "name": "CustomSubGroup",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_custom_classes.py",
+        "base_classes": [
+            "Group"
+        ],
+        "methods": []
+    },
+    {
+        "name": "CustomGroup",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_custom_classes.py",
+        "base_classes": [
+            "Group"
+        ],
+        "methods": []
+    },
+    {
+        "name": "CustomGroup",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_custom_classes.py",
+        "base_classes": [
+            "Group"
+        ],
+        "methods": []
+    },
+    {
+        "name": "_Marker",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_defaults.py",
+        "base_classes": [],
+        "methods": []
+    },
+    {
+        "name": "Source",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_defaults.py",
+        "base_classes": [
+            "ParamType"
+        ],
+        "methods": [
+            "convert"
+        ]
+    },
+    {
+        "name": "CustomContext",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_defaults.py",
+        "base_classes": [
+            "Context"
+        ],
+        "methods": [
+            "lookup_default"
+        ]
+    },
+    {
+        "name": "MyType",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_formatting.py",
+        "base_classes": [
+            "ParamType"
+        ],
+        "methods": [
+            "get_metavar"
+        ]
+    },
+    {
+        "name": "TestType",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_info_dict.py",
+        "base_classes": [
+            "ParamType"
+        ],
+        "methods": []
+    },
+    {
+        "name": "_StrictEq",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_options.py",
+        "base_classes": [],
+        "methods": [
+            "__eq__",
+            "__str__"
+        ]
+    },
+    {
+        "name": "HashType",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_options.py",
+        "base_classes": [
+            "Enum"
+        ],
+        "methods": []
+    },
+    {
+        "name": "Number",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_options.py",
+        "base_classes": [
+            "IntEnum"
+        ],
+        "methods": []
+    },
+    {
+        "name": "Letter",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_options.py",
+        "base_classes": [
+            "StrEnum"
+        ],
+        "methods": []
+    },
+    {
+        "name": "Color",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_options.py",
+        "base_classes": [
+            "Flag"
+        ],
+        "methods": []
+    },
+    {
+        "name": "ColorInt",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_options.py",
+        "base_classes": [
+            "IntFlag"
+        ],
+        "methods": []
+    },
+    {
+        "name": "EnumSentinel",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_options.py",
+        "base_classes": [
+            "Enum"
+        ],
+        "methods": [
+            "__bool__"
+        ]
+    },
+    {
+        "name": "EngineType",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_options.py",
+        "base_classes": [
+            "Enum"
+        ],
+        "methods": []
+    },
+    {
+        "name": "Class1",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_options.py",
+        "base_classes": [],
+        "methods": []
+    },
+    {
+        "name": "Class2",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_options.py",
+        "base_classes": [],
+        "methods": []
+    },
+    {
+        "name": "Value",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_options.py",
+        "base_classes": [],
+        "methods": [
+            "__call__",
+            "__str__"
+        ]
+    },
+    {
+        "name": "CustomArgument",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_options.py",
+        "base_classes": [
+            "Argument"
+        ],
+        "methods": [
+            "get_default"
+        ]
+    },
+    {
+        "name": "CustomOption",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_options.py",
+        "base_classes": [
+            "Option"
+        ],
+        "methods": [
+            "get_help_record"
+        ]
+    },
+    {
+        "name": "CustomOption",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_options.py",
+        "base_classes": [
+            "Option"
+        ],
+        "methods": [
+            "type_cast_value"
+        ]
+    },
+    {
+        "name": "CustomOption",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_options.py",
+        "base_classes": [
+            "Option"
+        ],
+        "methods": [
+            "get_help_record"
+        ]
+    },
+    {
+        "name": "CustomHelpOption",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_options.py",
+        "base_classes": [
+            "Option"
+        ],
+        "methods": []
+    },
+    {
+        "name": "NonNegatable",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_options.py",
+        "base_classes": [],
+        "methods": [
+            "__bool__"
+        ]
+    },
+    {
+        "name": "ConfigParamType",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_options.py",
+        "base_classes": [
+            "ParamType"
+        ],
+        "methods": [
+            "convert"
+        ]
+    },
+    {
+        "name": "MyshComplete",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_shell_completion.py",
+        "base_classes": [
+            "ShellComplete"
+        ],
+        "methods": []
+    },
+    {
+        "name": "MyshComplete",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_shell_completion.py",
+        "base_classes": [
+            "ShellComplete"
+        ],
+        "methods": []
+    },
+    {
+        "name": "MyshComplete",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_shell_completion.py",
+        "base_classes": [
+            "ShellComplete"
+        ],
+        "methods": []
+    },
+    {
+        "name": "FakeClock",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_termui.py",
+        "base_classes": [],
+        "methods": [
+            "__init__",
+            "advance_time",
+            "time"
+        ]
+    },
+    {
+        "name": "_CustomTypeNoValue",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_termui.py",
+        "base_classes": [
+            "ParamType"
+        ],
+        "methods": [
+            "convert"
+        ]
+    },
+    {
+        "name": "_CustomTypeWithRawValue",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_termui.py",
+        "base_classes": [
+            "ParamType"
+        ],
+        "methods": [
+            "convert"
+        ]
+    },
+    {
+        "name": "_PasswordLengthType",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_termui.py",
+        "base_classes": [
+            "ParamType"
+        ],
+        "methods": [
+            "convert"
+        ]
+    },
+    {
+        "name": "_MixedQuotedAndRawType",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_termui.py",
+        "base_classes": [
+            "ParamType"
+        ],
+        "methods": [
+            "convert"
+        ]
+    },
+    {
+        "name": "_StaticMessageType",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_termui.py",
+        "base_classes": [
+            "ParamType"
+        ],
+        "methods": [
+            "convert"
+        ]
+    },
+    {
+        "name": "_RejectAllRawType",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_termui.py",
+        "base_classes": [
+            "ParamType"
+        ],
+        "methods": [
+            "convert"
+        ]
+    },
+    {
+        "name": "_MultiRawType",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_termui.py",
+        "base_classes": [
+            "ParamType"
+        ],
+        "methods": [
+            "convert"
+        ]
+    },
+    {
+        "name": "_MultiReprType",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_termui.py",
+        "base_classes": [
+            "ParamType"
+        ],
+        "methods": [
+            "convert"
+        ]
+    },
+    {
+        "name": "_ApostropheReprType",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_termui.py",
+        "base_classes": [
+            "ParamType"
+        ],
+        "methods": [
+            "convert"
+        ]
+    },
+    {
+        "name": "Hinted",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_termui.py",
+        "base_classes": [],
+        "methods": [
+            "__init__",
+            "__length_hint__",
+            "__iter__",
+            "__next__"
+        ]
+    },
+    {
+        "name": "RecordingStream",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_termui.py",
+        "base_classes": [
+            "StringIO"
+        ],
+        "methods": [
+            "__init__",
+            "write",
+            "flush"
+        ]
+    },
+    {
+        "name": "FlushableTextStream",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_termui.py",
+        "base_classes": [
+            "StringIO"
+        ],
+        "methods": [
+            "__init__",
+            "flush"
+        ]
+    },
+    {
+        "name": "CustomError",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_testing.py",
+        "base_classes": [
+            "Exception"
+        ],
+        "methods": []
+    },
+    {
+        "name": "CustomError",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_testing.py",
+        "base_classes": [
+            "Exception"
+        ],
+        "methods": []
+    },
+    {
+        "name": "CLIError",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_testing.py",
+        "base_classes": [
+            "ClickException"
+        ],
+        "methods": [
+            "format_message"
+        ]
+    },
+    {
+        "name": "MockMain",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_utils.py",
+        "base_classes": [],
+        "methods": [
+            "__init__"
+        ]
+    },
+    {
+        "name": "AliasedGroup",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\typing\\typing_aliased_group.py",
+        "base_classes": [
+            "Group"
+        ],
+        "methods": [
+            "get_command",
+            "resolve_command"
+        ]
+    }
+]

@@ -1,72 +1,1394 @@
 [
     {
-        "file_path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmps6ubxufo\\api\\main.py",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\docs\\conf.py",
         "imports": [
             {
-                "module": "fastapi",
-                "name": "FastAPI",
+                "module": "pallets_sphinx_themes",
+                "name": "get_version",
+                "alias": null
+            },
+            {
+                "module": "pallets_sphinx_themes",
+                "name": "ProjectLink",
                 "alias": null
             }
         ],
         "import_map": {
-            "FastAPI": "fastapi.FastAPI"
+            "get_version": "pallets_sphinx_themes.get_version",
+            "ProjectLink": "pallets_sphinx_themes.ProjectLink"
         }
     },
     {
-        "file_path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmps6ubxufo\\api\\__init__.py",
-        "imports": [],
-        "import_map": {}
-    },
-    {
-        "file_path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmps6ubxufo\\graph\\neo4j_test.py",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\examples\\aliases\\aliases.py",
         "imports": [
             {
-                "module": "neo4j",
-                "name": "GraphDatabase",
+                "module": "configparser",
+                "name": null,
                 "alias": null
-            }
-        ],
-        "import_map": {
-            "GraphDatabase": "neo4j.GraphDatabase"
-        }
-    },
-    {
-        "file_path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmps6ubxufo\\graph\\__init__.py",
-        "imports": [],
-        "import_map": {}
-    },
-    {
-        "file_path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmps6ubxufo\\ingestion\\ast_parser.py",
-        "imports": [
+            },
             {
-                "module": "ast",
+                "module": "os",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "click",
                 "name": null,
                 "alias": null
             }
         ],
         "import_map": {
-            "ast": "ast"
+            "configparser": "configparser",
+            "os": "os",
+            "click": "click"
         }
     },
     {
-        "file_path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmps6ubxufo\\ingestion\\class_extractor.py",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\examples\\colors\\colors.py",
         "imports": [
             {
-                "module": "ast",
+                "module": "click",
                 "name": null,
                 "alias": null
             }
         ],
         "import_map": {
-            "ast": "ast"
+            "click": "click"
         }
     },
     {
-        "file_path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmps6ubxufo\\ingestion\\clone_repo.py",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\examples\\completion\\completion.py",
         "imports": [
             {
-                "module": "git",
-                "name": "Repo",
+                "module": "os",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "click",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "click.shell_completion",
+                "name": "CompletionItem",
+                "alias": null
+            }
+        ],
+        "import_map": {
+            "os": "os",
+            "click": "click",
+            "CompletionItem": "click.shell_completion.CompletionItem"
+        }
+    },
+    {
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\examples\\complex\\complex\\cli.py",
+        "imports": [
+            {
+                "module": "os",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "sys",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "click",
+                "name": null,
+                "alias": null
+            }
+        ],
+        "import_map": {
+            "os": "os",
+            "sys": "sys",
+            "click": "click"
+        }
+    },
+    {
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\examples\\complex\\complex\\__init__.py",
+        "imports": [],
+        "import_map": {}
+    },
+    {
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\examples\\complex\\complex\\commands\\cmd_init.py",
+        "imports": [
+            {
+                "module": "complex.cli",
+                "name": "pass_environment",
+                "alias": null
+            },
+            {
+                "module": "click",
+                "name": null,
+                "alias": null
+            }
+        ],
+        "import_map": {
+            "pass_environment": "complex.cli.pass_environment",
+            "click": "click"
+        }
+    },
+    {
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\examples\\complex\\complex\\commands\\cmd_status.py",
+        "imports": [
+            {
+                "module": "complex.cli",
+                "name": "pass_environment",
+                "alias": null
+            },
+            {
+                "module": "click",
+                "name": null,
+                "alias": null
+            }
+        ],
+        "import_map": {
+            "pass_environment": "complex.cli.pass_environment",
+            "click": "click"
+        }
+    },
+    {
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\examples\\complex\\complex\\commands\\__init__.py",
+        "imports": [],
+        "import_map": {}
+    },
+    {
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\examples\\imagepipe\\imagepipe.py",
+        "imports": [
+            {
+                "module": "functools",
+                "name": "update_wrapper",
+                "alias": null
+            },
+            {
+                "module": "PIL",
+                "name": "Image",
+                "alias": null
+            },
+            {
+                "module": "PIL",
+                "name": "ImageEnhance",
+                "alias": null
+            },
+            {
+                "module": "PIL",
+                "name": "ImageFilter",
+                "alias": null
+            },
+            {
+                "module": "click",
+                "name": null,
+                "alias": null
+            }
+        ],
+        "import_map": {
+            "update_wrapper": "functools.update_wrapper",
+            "Image": "PIL.Image",
+            "ImageEnhance": "PIL.ImageEnhance",
+            "ImageFilter": "PIL.ImageFilter",
+            "click": "click"
+        }
+    },
+    {
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\examples\\inout\\inout.py",
+        "imports": [
+            {
+                "module": "click",
+                "name": null,
+                "alias": null
+            }
+        ],
+        "import_map": {
+            "click": "click"
+        }
+    },
+    {
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\examples\\naval\\naval.py",
+        "imports": [
+            {
+                "module": "click",
+                "name": null,
+                "alias": null
+            }
+        ],
+        "import_map": {
+            "click": "click"
+        }
+    },
+    {
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\examples\\repo\\repo.py",
+        "imports": [
+            {
+                "module": "os",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "posixpath",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "sys",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "click",
+                "name": null,
+                "alias": null
+            }
+        ],
+        "import_map": {
+            "os": "os",
+            "posixpath": "posixpath",
+            "sys": "sys",
+            "click": "click"
+        }
+    },
+    {
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\examples\\termui\\termui.py",
+        "imports": [
+            {
+                "module": "math",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "random",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "time",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "click",
+                "name": null,
+                "alias": null
+            }
+        ],
+        "import_map": {
+            "math": "math",
+            "random": "random",
+            "time": "time",
+            "click": "click"
+        }
+    },
+    {
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\examples\\validation\\validation.py",
+        "imports": [
+            {
+                "module": "urllib",
+                "name": "parse",
+                "alias": "urlparse"
+            },
+            {
+                "module": "click",
+                "name": null,
+                "alias": null
+            }
+        ],
+        "import_map": {
+            "urlparse": "urllib.parse",
+            "click": "click"
+        }
+    },
+    {
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\core.py",
+        "imports": [
+            {
+                "module": "__future__",
+                "name": "annotations",
+                "alias": null
+            },
+            {
+                "module": "collections.abc",
+                "name": null,
+                "alias": "cabc"
+            },
+            {
+                "module": "enum",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "errno",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "inspect",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "os",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "sys",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "typing",
+                "name": null,
+                "alias": "t"
+            },
+            {
+                "module": "abc",
+                "name": "ABC",
+                "alias": null
+            },
+            {
+                "module": "abc",
+                "name": "abstractmethod",
+                "alias": null
+            },
+            {
+                "module": "collections",
+                "name": "abc",
+                "alias": null
+            },
+            {
+                "module": "collections",
+                "name": "Counter",
+                "alias": null
+            },
+            {
+                "module": "contextlib",
+                "name": "AbstractContextManager",
+                "alias": null
+            },
+            {
+                "module": "contextlib",
+                "name": "contextmanager",
+                "alias": null
+            },
+            {
+                "module": "contextlib",
+                "name": "ExitStack",
+                "alias": null
+            },
+            {
+                "module": "functools",
+                "name": "update_wrapper",
+                "alias": null
+            },
+            {
+                "module": "gettext",
+                "name": "gettext",
+                "alias": "_"
+            },
+            {
+                "module": "gettext",
+                "name": "ngettext",
+                "alias": null
+            },
+            {
+                "module": "itertools",
+                "name": "repeat",
+                "alias": null
+            },
+            {
+                "module": "types",
+                "name": "TracebackType",
+                "alias": null
+            },
+            {
+                "module": null,
+                "name": "types",
+                "alias": null
+            },
+            {
+                "module": "_utils",
+                "name": "FLAG_NEEDS_VALUE",
+                "alias": null
+            },
+            {
+                "module": "_utils",
+                "name": "UNSET",
+                "alias": null
+            },
+            {
+                "module": "exceptions",
+                "name": "Abort",
+                "alias": null
+            },
+            {
+                "module": "exceptions",
+                "name": "BadParameter",
+                "alias": null
+            },
+            {
+                "module": "exceptions",
+                "name": "ClickException",
+                "alias": null
+            },
+            {
+                "module": "exceptions",
+                "name": "Exit",
+                "alias": null
+            },
+            {
+                "module": "exceptions",
+                "name": "MissingParameter",
+                "alias": null
+            },
+            {
+                "module": "exceptions",
+                "name": "NoArgsIsHelpError",
+                "alias": null
+            },
+            {
+                "module": "exceptions",
+                "name": "NoSuchCommand",
+                "alias": null
+            },
+            {
+                "module": "exceptions",
+                "name": "UsageError",
+                "alias": null
+            },
+            {
+                "module": "formatting",
+                "name": "HelpFormatter",
+                "alias": null
+            },
+            {
+                "module": "formatting",
+                "name": "join_options",
+                "alias": null
+            },
+            {
+                "module": "globals",
+                "name": "pop_context",
+                "alias": null
+            },
+            {
+                "module": "globals",
+                "name": "push_context",
+                "alias": null
+            },
+            {
+                "module": "parser",
+                "name": "_OptionParser",
+                "alias": null
+            },
+            {
+                "module": "parser",
+                "name": "_split_opt",
+                "alias": null
+            },
+            {
+                "module": "termui",
+                "name": "confirm",
+                "alias": null
+            },
+            {
+                "module": "termui",
+                "name": "prompt",
+                "alias": null
+            },
+            {
+                "module": "termui",
+                "name": "style",
+                "alias": null
+            },
+            {
+                "module": "utils",
+                "name": "_detect_program_name",
+                "alias": null
+            },
+            {
+                "module": "utils",
+                "name": "_expand_args",
+                "alias": null
+            },
+            {
+                "module": "utils",
+                "name": "echo",
+                "alias": null
+            },
+            {
+                "module": "utils",
+                "name": "make_default_short_help",
+                "alias": null
+            },
+            {
+                "module": "utils",
+                "name": "make_str",
+                "alias": null
+            },
+            {
+                "module": "utils",
+                "name": "PacifyFlushWrapper",
+                "alias": null
+            },
+            {
+                "module": "typing_extensions",
+                "name": "Self",
+                "alias": null
+            },
+            {
+                "module": "shell_completion",
+                "name": "CompletionItem",
+                "alias": null
+            },
+            {
+                "module": "warnings",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "warnings",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "click.shell_completion",
+                "name": "CompletionItem",
+                "alias": null
+            },
+            {
+                "module": "shell_completion",
+                "name": "shell_complete",
+                "alias": null
+            },
+            {
+                "module": "decorators",
+                "name": "command",
+                "alias": null
+            },
+            {
+                "module": "decorators",
+                "name": "group",
+                "alias": null
+            },
+            {
+                "module": "click.shell_completion",
+                "name": "CompletionItem",
+                "alias": null
+            },
+            {
+                "module": "warnings",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "decorators",
+                "name": "help_option",
+                "alias": null
+            },
+            {
+                "module": "click.shell_completion",
+                "name": "CompletionItem",
+                "alias": null
+            }
+        ],
+        "import_map": {
+            "annotations": "__future__.annotations",
+            "cabc": "collections.abc",
+            "enum": "enum",
+            "errno": "errno",
+            "inspect": "inspect",
+            "os": "os",
+            "sys": "sys",
+            "t": "typing",
+            "ABC": "abc.ABC",
+            "abstractmethod": "abc.abstractmethod",
+            "abc": "collections.abc",
+            "Counter": "collections.Counter",
+            "AbstractContextManager": "contextlib.AbstractContextManager",
+            "contextmanager": "contextlib.contextmanager",
+            "ExitStack": "contextlib.ExitStack",
+            "update_wrapper": "functools.update_wrapper",
+            "_": "gettext.gettext",
+            "ngettext": "gettext.ngettext",
+            "repeat": "itertools.repeat",
+            "TracebackType": "types.TracebackType",
+            "types": "None.types",
+            "FLAG_NEEDS_VALUE": "_utils.FLAG_NEEDS_VALUE",
+            "UNSET": "_utils.UNSET",
+            "Abort": "exceptions.Abort",
+            "BadParameter": "exceptions.BadParameter",
+            "ClickException": "exceptions.ClickException",
+            "Exit": "exceptions.Exit",
+            "MissingParameter": "exceptions.MissingParameter",
+            "NoArgsIsHelpError": "exceptions.NoArgsIsHelpError",
+            "NoSuchCommand": "exceptions.NoSuchCommand",
+            "UsageError": "exceptions.UsageError",
+            "HelpFormatter": "formatting.HelpFormatter",
+            "join_options": "formatting.join_options",
+            "pop_context": "globals.pop_context",
+            "push_context": "globals.push_context",
+            "_OptionParser": "parser._OptionParser",
+            "_split_opt": "parser._split_opt",
+            "confirm": "termui.confirm",
+            "prompt": "termui.prompt",
+            "style": "termui.style",
+            "_detect_program_name": "utils._detect_program_name",
+            "_expand_args": "utils._expand_args",
+            "echo": "utils.echo",
+            "make_default_short_help": "utils.make_default_short_help",
+            "make_str": "utils.make_str",
+            "PacifyFlushWrapper": "utils.PacifyFlushWrapper",
+            "Self": "typing_extensions.Self",
+            "CompletionItem": "click.shell_completion.CompletionItem",
+            "warnings": "warnings",
+            "shell_complete": "shell_completion.shell_complete",
+            "command": "decorators.command",
+            "group": "decorators.group",
+            "help_option": "decorators.help_option"
+        }
+    },
+    {
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\decorators.py",
+        "imports": [
+            {
+                "module": "__future__",
+                "name": "annotations",
+                "alias": null
+            },
+            {
+                "module": "inspect",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "typing",
+                "name": null,
+                "alias": "t"
+            },
+            {
+                "module": "functools",
+                "name": "update_wrapper",
+                "alias": null
+            },
+            {
+                "module": "gettext",
+                "name": "gettext",
+                "alias": "_"
+            },
+            {
+                "module": "core",
+                "name": "Argument",
+                "alias": null
+            },
+            {
+                "module": "core",
+                "name": "Command",
+                "alias": null
+            },
+            {
+                "module": "core",
+                "name": "Context",
+                "alias": null
+            },
+            {
+                "module": "core",
+                "name": "Group",
+                "alias": null
+            },
+            {
+                "module": "core",
+                "name": "Option",
+                "alias": null
+            },
+            {
+                "module": "core",
+                "name": "Parameter",
+                "alias": null
+            },
+            {
+                "module": "globals",
+                "name": "get_current_context",
+                "alias": null
+            },
+            {
+                "module": "utils",
+                "name": "echo",
+                "alias": null
+            },
+            {
+                "module": "typing_extensions",
+                "name": null,
+                "alias": "te"
+            },
+            {
+                "module": "importlib.metadata",
+                "name": null,
+                "alias": null
+            }
+        ],
+        "import_map": {
+            "annotations": "__future__.annotations",
+            "inspect": "inspect",
+            "t": "typing",
+            "update_wrapper": "functools.update_wrapper",
+            "_": "gettext.gettext",
+            "Argument": "core.Argument",
+            "Command": "core.Command",
+            "Context": "core.Context",
+            "Group": "core.Group",
+            "Option": "core.Option",
+            "Parameter": "core.Parameter",
+            "get_current_context": "globals.get_current_context",
+            "echo": "utils.echo",
+            "te": "typing_extensions",
+            "importlib.metadata": "importlib.metadata"
+        }
+    },
+    {
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\exceptions.py",
+        "imports": [
+            {
+                "module": "__future__",
+                "name": "annotations",
+                "alias": null
+            },
+            {
+                "module": "collections.abc",
+                "name": null,
+                "alias": "cabc"
+            },
+            {
+                "module": "typing",
+                "name": null,
+                "alias": "t"
+            },
+            {
+                "module": "gettext",
+                "name": "gettext",
+                "alias": "_"
+            },
+            {
+                "module": "gettext",
+                "name": "ngettext",
+                "alias": null
+            },
+            {
+                "module": "_compat",
+                "name": "get_text_stderr",
+                "alias": null
+            },
+            {
+                "module": "globals",
+                "name": "resolve_color_default",
+                "alias": null
+            },
+            {
+                "module": "utils",
+                "name": "echo",
+                "alias": null
+            },
+            {
+                "module": "utils",
+                "name": "format_filename",
+                "alias": null
+            },
+            {
+                "module": "core",
+                "name": "Command",
+                "alias": null
+            },
+            {
+                "module": "core",
+                "name": "Context",
+                "alias": null
+            },
+            {
+                "module": "core",
+                "name": "Parameter",
+                "alias": null
+            },
+            {
+                "module": "difflib",
+                "name": "get_close_matches",
+                "alias": null
+            },
+            {
+                "module": "difflib",
+                "name": "get_close_matches",
+                "alias": null
+            }
+        ],
+        "import_map": {
+            "annotations": "__future__.annotations",
+            "cabc": "collections.abc",
+            "t": "typing",
+            "_": "gettext.gettext",
+            "ngettext": "gettext.ngettext",
+            "get_text_stderr": "_compat.get_text_stderr",
+            "resolve_color_default": "globals.resolve_color_default",
+            "echo": "utils.echo",
+            "format_filename": "utils.format_filename",
+            "Command": "core.Command",
+            "Context": "core.Context",
+            "Parameter": "core.Parameter",
+            "get_close_matches": "difflib.get_close_matches"
+        }
+    },
+    {
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\formatting.py",
+        "imports": [
+            {
+                "module": "__future__",
+                "name": "annotations",
+                "alias": null
+            },
+            {
+                "module": "collections.abc",
+                "name": null,
+                "alias": "cabc"
+            },
+            {
+                "module": "contextlib",
+                "name": "contextmanager",
+                "alias": null
+            },
+            {
+                "module": "gettext",
+                "name": "gettext",
+                "alias": "_"
+            },
+            {
+                "module": "_compat",
+                "name": "term_len",
+                "alias": null
+            },
+            {
+                "module": "parser",
+                "name": "_split_opt",
+                "alias": null
+            },
+            {
+                "module": "_textwrap",
+                "name": "TextWrapper",
+                "alias": null
+            },
+            {
+                "module": "shutil",
+                "name": null,
+                "alias": null
+            }
+        ],
+        "import_map": {
+            "annotations": "__future__.annotations",
+            "cabc": "collections.abc",
+            "contextmanager": "contextlib.contextmanager",
+            "_": "gettext.gettext",
+            "term_len": "_compat.term_len",
+            "_split_opt": "parser._split_opt",
+            "TextWrapper": "_textwrap.TextWrapper",
+            "shutil": "shutil"
+        }
+    },
+    {
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\globals.py",
+        "imports": [
+            {
+                "module": "__future__",
+                "name": "annotations",
+                "alias": null
+            },
+            {
+                "module": "typing",
+                "name": null,
+                "alias": "t"
+            },
+            {
+                "module": "threading",
+                "name": "local",
+                "alias": null
+            },
+            {
+                "module": "core",
+                "name": "Context",
+                "alias": null
+            }
+        ],
+        "import_map": {
+            "annotations": "__future__.annotations",
+            "t": "typing",
+            "local": "threading.local",
+            "Context": "core.Context"
+        }
+    },
+    {
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\parser.py",
+        "imports": [
+            {
+                "module": "__future__",
+                "name": "annotations",
+                "alias": null
+            },
+            {
+                "module": "collections.abc",
+                "name": null,
+                "alias": "cabc"
+            },
+            {
+                "module": "typing",
+                "name": null,
+                "alias": "t"
+            },
+            {
+                "module": "collections",
+                "name": "deque",
+                "alias": null
+            },
+            {
+                "module": "gettext",
+                "name": "gettext",
+                "alias": "_"
+            },
+            {
+                "module": "gettext",
+                "name": "ngettext",
+                "alias": null
+            },
+            {
+                "module": "_utils",
+                "name": "FLAG_NEEDS_VALUE",
+                "alias": null
+            },
+            {
+                "module": "_utils",
+                "name": "UNSET",
+                "alias": null
+            },
+            {
+                "module": "exceptions",
+                "name": "BadArgumentUsage",
+                "alias": null
+            },
+            {
+                "module": "exceptions",
+                "name": "BadOptionUsage",
+                "alias": null
+            },
+            {
+                "module": "exceptions",
+                "name": "NoSuchOption",
+                "alias": null
+            },
+            {
+                "module": "exceptions",
+                "name": "UsageError",
+                "alias": null
+            },
+            {
+                "module": "_utils",
+                "name": "T_FLAG_NEEDS_VALUE",
+                "alias": null
+            },
+            {
+                "module": "_utils",
+                "name": "T_UNSET",
+                "alias": null
+            },
+            {
+                "module": "core",
+                "name": "Argument",
+                "alias": "CoreArgument"
+            },
+            {
+                "module": "core",
+                "name": "Context",
+                "alias": null
+            },
+            {
+                "module": "core",
+                "name": "Option",
+                "alias": "CoreOption"
+            },
+            {
+                "module": "core",
+                "name": "Parameter",
+                "alias": "CoreParameter"
+            },
+            {
+                "module": "warnings",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "shell_completion",
+                "name": "split_arg_string",
+                "alias": null
+            }
+        ],
+        "import_map": {
+            "annotations": "__future__.annotations",
+            "cabc": "collections.abc",
+            "t": "typing",
+            "deque": "collections.deque",
+            "_": "gettext.gettext",
+            "ngettext": "gettext.ngettext",
+            "FLAG_NEEDS_VALUE": "_utils.FLAG_NEEDS_VALUE",
+            "UNSET": "_utils.UNSET",
+            "BadArgumentUsage": "exceptions.BadArgumentUsage",
+            "BadOptionUsage": "exceptions.BadOptionUsage",
+            "NoSuchOption": "exceptions.NoSuchOption",
+            "UsageError": "exceptions.UsageError",
+            "T_FLAG_NEEDS_VALUE": "_utils.T_FLAG_NEEDS_VALUE",
+            "T_UNSET": "_utils.T_UNSET",
+            "CoreArgument": "core.Argument",
+            "Context": "core.Context",
+            "CoreOption": "core.Option",
+            "CoreParameter": "core.Parameter",
+            "warnings": "warnings",
+            "split_arg_string": "shell_completion.split_arg_string"
+        }
+    },
+    {
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\shell_completion.py",
+        "imports": [
+            {
+                "module": "__future__",
+                "name": "annotations",
+                "alias": null
+            },
+            {
+                "module": "collections.abc",
+                "name": null,
+                "alias": "cabc"
+            },
+            {
+                "module": "os",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "re",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "typing",
+                "name": null,
+                "alias": "t"
+            },
+            {
+                "module": "gettext",
+                "name": "gettext",
+                "alias": "_"
+            },
+            {
+                "module": "core",
+                "name": "Argument",
+                "alias": null
+            },
+            {
+                "module": "core",
+                "name": "Command",
+                "alias": null
+            },
+            {
+                "module": "core",
+                "name": "Context",
+                "alias": null
+            },
+            {
+                "module": "core",
+                "name": "Group",
+                "alias": null
+            },
+            {
+                "module": "core",
+                "name": "Option",
+                "alias": null
+            },
+            {
+                "module": "core",
+                "name": "Parameter",
+                "alias": null
+            },
+            {
+                "module": "core",
+                "name": "ParameterSource",
+                "alias": null
+            },
+            {
+                "module": "utils",
+                "name": "echo",
+                "alias": null
+            },
+            {
+                "module": "typing_extensions",
+                "name": "TypeVar",
+                "alias": null
+            },
+            {
+                "module": "shlex",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "shutil",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "subprocess",
+                "name": null,
+                "alias": null
+            }
+        ],
+        "import_map": {
+            "annotations": "__future__.annotations",
+            "cabc": "collections.abc",
+            "os": "os",
+            "re": "re",
+            "t": "typing",
+            "_": "gettext.gettext",
+            "Argument": "core.Argument",
+            "Command": "core.Command",
+            "Context": "core.Context",
+            "Group": "core.Group",
+            "Option": "core.Option",
+            "Parameter": "core.Parameter",
+            "ParameterSource": "core.ParameterSource",
+            "echo": "utils.echo",
+            "TypeVar": "typing_extensions.TypeVar",
+            "shlex": "shlex",
+            "shutil": "shutil",
+            "subprocess": "subprocess"
+        }
+    },
+    {
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\termui.py",
+        "imports": [
+            {
+                "module": "__future__",
+                "name": "annotations",
+                "alias": null
+            },
+            {
+                "module": "collections.abc",
+                "name": null,
+                "alias": "cabc"
+            },
+            {
+                "module": "inspect",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "io",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "itertools",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "re",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "sys",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "typing",
+                "name": null,
+                "alias": "t"
+            },
+            {
+                "module": "contextlib",
+                "name": "AbstractContextManager",
+                "alias": null
+            },
+            {
+                "module": "contextlib",
+                "name": "redirect_stdout",
+                "alias": null
+            },
+            {
+                "module": "gettext",
+                "name": "gettext",
+                "alias": "_"
+            },
+            {
+                "module": null,
+                "name": "_compat",
+                "alias": null
+            },
+            {
+                "module": "_compat",
+                "name": "isatty",
+                "alias": null
+            },
+            {
+                "module": "_compat",
+                "name": "strip_ansi",
+                "alias": null
+            },
+            {
+                "module": "exceptions",
+                "name": "Abort",
+                "alias": null
+            },
+            {
+                "module": "exceptions",
+                "name": "UsageError",
+                "alias": null
+            },
+            {
+                "module": "globals",
+                "name": "resolve_color_default",
+                "alias": null
+            },
+            {
+                "module": "types",
+                "name": "Choice",
+                "alias": null
+            },
+            {
+                "module": "types",
+                "name": "convert_type",
+                "alias": null
+            },
+            {
+                "module": "types",
+                "name": "ParamType",
+                "alias": null
+            },
+            {
+                "module": "utils",
+                "name": "echo",
+                "alias": null
+            },
+            {
+                "module": "utils",
+                "name": "LazyFile",
+                "alias": null
+            },
+            {
+                "module": "_termui_impl",
+                "name": "ProgressBar",
+                "alias": null
+            },
+            {
+                "module": "getpass",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "_termui_impl",
+                "name": "get_pager_file",
+                "alias": null
+            },
+            {
+                "module": "_termui_impl",
+                "name": "ProgressBar",
+                "alias": null
+            },
+            {
+                "module": "_termui_impl",
+                "name": "Editor",
+                "alias": null
+            },
+            {
+                "module": "_termui_impl",
+                "name": "open_url",
+                "alias": null
+            },
+            {
+                "module": "_termui_impl",
+                "name": "raw_terminal",
+                "alias": "f"
+            },
+            {
+                "module": "_termui_impl",
+                "name": "getchar",
+                "alias": "f"
+            }
+        ],
+        "import_map": {
+            "annotations": "__future__.annotations",
+            "cabc": "collections.abc",
+            "inspect": "inspect",
+            "io": "io",
+            "itertools": "itertools",
+            "re": "re",
+            "sys": "sys",
+            "t": "typing",
+            "AbstractContextManager": "contextlib.AbstractContextManager",
+            "redirect_stdout": "contextlib.redirect_stdout",
+            "_": "gettext.gettext",
+            "_compat": "None._compat",
+            "isatty": "_compat.isatty",
+            "strip_ansi": "_compat.strip_ansi",
+            "Abort": "exceptions.Abort",
+            "UsageError": "exceptions.UsageError",
+            "resolve_color_default": "globals.resolve_color_default",
+            "Choice": "types.Choice",
+            "convert_type": "types.convert_type",
+            "ParamType": "types.ParamType",
+            "echo": "utils.echo",
+            "LazyFile": "utils.LazyFile",
+            "ProgressBar": "_termui_impl.ProgressBar",
+            "getpass": "getpass",
+            "get_pager_file": "_termui_impl.get_pager_file",
+            "Editor": "_termui_impl.Editor",
+            "open_url": "_termui_impl.open_url",
+            "f": "_termui_impl.getchar"
+        }
+    },
+    {
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\testing.py",
+        "imports": [
+            {
+                "module": "__future__",
+                "name": "annotations",
+                "alias": null
+            },
+            {
+                "module": "collections.abc",
+                "name": null,
+                "alias": "cabc"
+            },
+            {
+                "module": "contextlib",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "io",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "os",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "pdb",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "shlex",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "sys",
+                "name": null,
                 "alias": null
             },
             {
@@ -75,58 +1397,1795 @@
                 "alias": null
             },
             {
-                "module": "os",
+                "module": "typing",
+                "name": null,
+                "alias": "t"
+            },
+            {
+                "module": "types",
+                "name": "TracebackType",
+                "alias": null
+            },
+            {
+                "module": null,
+                "name": "_compat",
+                "alias": null
+            },
+            {
+                "module": null,
+                "name": "formatting",
+                "alias": null
+            },
+            {
+                "module": null,
+                "name": "termui",
+                "alias": null
+            },
+            {
+                "module": null,
+                "name": "utils",
+                "alias": null
+            },
+            {
+                "module": "_compat",
+                "name": "_find_binary_reader",
+                "alias": null
+            },
+            {
+                "module": "_typeshed",
+                "name": "ReadableBuffer",
+                "alias": null
+            },
+            {
+                "module": "core",
+                "name": "Command",
+                "alias": null
+            },
+            {
+                "module": "shutil",
                 "name": null,
                 "alias": null
             }
         ],
         "import_map": {
-            "Repo": "git.Repo",
+            "annotations": "__future__.annotations",
+            "cabc": "collections.abc",
+            "contextlib": "contextlib",
+            "io": "io",
+            "os": "os",
+            "pdb": "pdb",
+            "shlex": "shlex",
+            "sys": "sys",
             "tempfile": "tempfile",
-            "os": "os"
+            "t": "typing",
+            "TracebackType": "types.TracebackType",
+            "_compat": "None._compat",
+            "formatting": "None.formatting",
+            "termui": "None.termui",
+            "utils": "None.utils",
+            "_find_binary_reader": "_compat._find_binary_reader",
+            "ReadableBuffer": "_typeshed.ReadableBuffer",
+            "Command": "core.Command",
+            "shutil": "shutil"
         }
     },
     {
-        "file_path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmps6ubxufo\\ingestion\\file_scanner.py",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\types.py",
+        "imports": [
+            {
+                "module": "__future__",
+                "name": "annotations",
+                "alias": null
+            },
+            {
+                "module": "abc",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "collections.abc",
+                "name": null,
+                "alias": "cabc"
+            },
+            {
+                "module": "enum",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "os",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "stat",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "sys",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "typing",
+                "name": null,
+                "alias": "t"
+            },
+            {
+                "module": "uuid",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "datetime",
+                "name": "datetime",
+                "alias": null
+            },
+            {
+                "module": "gettext",
+                "name": "gettext",
+                "alias": "_"
+            },
+            {
+                "module": "gettext",
+                "name": "ngettext",
+                "alias": null
+            },
+            {
+                "module": "_compat",
+                "name": "_get_argv_encoding",
+                "alias": null
+            },
+            {
+                "module": "_compat",
+                "name": "open_stream",
+                "alias": null
+            },
+            {
+                "module": "exceptions",
+                "name": "BadParameter",
+                "alias": null
+            },
+            {
+                "module": "utils",
+                "name": "format_filename",
+                "alias": null
+            },
+            {
+                "module": "utils",
+                "name": "LazyFile",
+                "alias": null
+            },
+            {
+                "module": "utils",
+                "name": "safecall",
+                "alias": null
+            },
+            {
+                "module": "typing_extensions",
+                "name": null,
+                "alias": "te"
+            },
+            {
+                "module": "core",
+                "name": "Context",
+                "alias": null
+            },
+            {
+                "module": "core",
+                "name": "Parameter",
+                "alias": null
+            },
+            {
+                "module": "shell_completion",
+                "name": "CompletionItem",
+                "alias": null
+            },
+            {
+                "module": "click.shell_completion",
+                "name": "CompletionItem",
+                "alias": null
+            },
+            {
+                "module": "operator",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "click.shell_completion",
+                "name": "CompletionItem",
+                "alias": null
+            },
+            {
+                "module": "click.shell_completion",
+                "name": "CompletionItem",
+                "alias": null
+            }
+        ],
+        "import_map": {
+            "annotations": "__future__.annotations",
+            "abc": "abc",
+            "cabc": "collections.abc",
+            "enum": "enum",
+            "os": "os",
+            "stat": "stat",
+            "sys": "sys",
+            "t": "typing",
+            "uuid": "uuid",
+            "datetime": "datetime.datetime",
+            "_": "gettext.gettext",
+            "ngettext": "gettext.ngettext",
+            "_get_argv_encoding": "_compat._get_argv_encoding",
+            "open_stream": "_compat.open_stream",
+            "BadParameter": "exceptions.BadParameter",
+            "format_filename": "utils.format_filename",
+            "LazyFile": "utils.LazyFile",
+            "safecall": "utils.safecall",
+            "te": "typing_extensions",
+            "Context": "core.Context",
+            "Parameter": "core.Parameter",
+            "CompletionItem": "click.shell_completion.CompletionItem",
+            "operator": "operator"
+        }
+    },
+    {
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\utils.py",
+        "imports": [
+            {
+                "module": "__future__",
+                "name": "annotations",
+                "alias": null
+            },
+            {
+                "module": "collections.abc",
+                "name": null,
+                "alias": "cabc"
+            },
+            {
+                "module": "os",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "re",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "sys",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "typing",
+                "name": null,
+                "alias": "t"
+            },
+            {
+                "module": "functools",
+                "name": "update_wrapper",
+                "alias": null
+            },
+            {
+                "module": "gettext",
+                "name": "gettext",
+                "alias": "_"
+            },
+            {
+                "module": "types",
+                "name": "ModuleType",
+                "alias": null
+            },
+            {
+                "module": "types",
+                "name": "TracebackType",
+                "alias": null
+            },
+            {
+                "module": "_compat",
+                "name": "_default_text_stderr",
+                "alias": null
+            },
+            {
+                "module": "_compat",
+                "name": "_default_text_stdout",
+                "alias": null
+            },
+            {
+                "module": "_compat",
+                "name": "_find_binary_writer",
+                "alias": null
+            },
+            {
+                "module": "_compat",
+                "name": "binary_streams",
+                "alias": null
+            },
+            {
+                "module": "_compat",
+                "name": "open_stream",
+                "alias": null
+            },
+            {
+                "module": "_compat",
+                "name": "should_strip_ansi",
+                "alias": null
+            },
+            {
+                "module": "_compat",
+                "name": "strip_ansi",
+                "alias": null
+            },
+            {
+                "module": "_compat",
+                "name": "text_streams",
+                "alias": null
+            },
+            {
+                "module": "_compat",
+                "name": "WIN",
+                "alias": null
+            },
+            {
+                "module": "globals",
+                "name": "resolve_color_default",
+                "alias": null
+            },
+            {
+                "module": "typing_extensions",
+                "name": null,
+                "alias": "te"
+            },
+            {
+                "module": "glob",
+                "name": "glob",
+                "alias": null
+            },
+            {
+                "module": "exceptions",
+                "name": "FileError",
+                "alias": null
+            },
+            {
+                "module": "errno",
+                "name": null,
+                "alias": null
+            }
+        ],
+        "import_map": {
+            "annotations": "__future__.annotations",
+            "cabc": "collections.abc",
+            "os": "os",
+            "re": "re",
+            "sys": "sys",
+            "t": "typing",
+            "update_wrapper": "functools.update_wrapper",
+            "_": "gettext.gettext",
+            "ModuleType": "types.ModuleType",
+            "TracebackType": "types.TracebackType",
+            "_default_text_stderr": "_compat._default_text_stderr",
+            "_default_text_stdout": "_compat._default_text_stdout",
+            "_find_binary_writer": "_compat._find_binary_writer",
+            "binary_streams": "_compat.binary_streams",
+            "open_stream": "_compat.open_stream",
+            "should_strip_ansi": "_compat.should_strip_ansi",
+            "strip_ansi": "_compat.strip_ansi",
+            "text_streams": "_compat.text_streams",
+            "WIN": "_compat.WIN",
+            "resolve_color_default": "globals.resolve_color_default",
+            "te": "typing_extensions",
+            "glob": "glob.glob",
+            "FileError": "exceptions.FileError",
+            "errno": "errno"
+        }
+    },
+    {
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\_compat.py",
+        "imports": [
+            {
+                "module": "__future__",
+                "name": "annotations",
+                "alias": null
+            },
+            {
+                "module": "codecs",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "collections.abc",
+                "name": null,
+                "alias": "cabc"
+            },
+            {
+                "module": "io",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "os",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "re",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "sys",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "typing",
+                "name": null,
+                "alias": "t"
+            },
+            {
+                "module": "types",
+                "name": "TracebackType",
+                "alias": null
+            },
+            {
+                "module": "weakref",
+                "name": "WeakKeyDictionary",
+                "alias": null
+            },
+            {
+                "module": "errno",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "random",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "_winconsole",
+                "name": "_get_windows_console_stream",
+                "alias": null
+            },
+            {
+                "module": "locale",
+                "name": null,
+                "alias": null
+            }
+        ],
+        "import_map": {
+            "annotations": "__future__.annotations",
+            "codecs": "codecs",
+            "cabc": "collections.abc",
+            "io": "io",
+            "os": "os",
+            "re": "re",
+            "sys": "sys",
+            "t": "typing",
+            "TracebackType": "types.TracebackType",
+            "WeakKeyDictionary": "weakref.WeakKeyDictionary",
+            "errno": "errno",
+            "random": "random",
+            "_get_windows_console_stream": "_winconsole._get_windows_console_stream",
+            "locale": "locale"
+        }
+    },
+    {
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\_termui_impl.py",
+        "imports": [
+            {
+                "module": "__future__",
+                "name": "annotations",
+                "alias": null
+            },
+            {
+                "module": "collections.abc",
+                "name": null,
+                "alias": "cabc"
+            },
+            {
+                "module": "contextlib",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "io",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "math",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "os",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "shlex",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "sys",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "time",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "typing",
+                "name": null,
+                "alias": "t"
+            },
+            {
+                "module": "gettext",
+                "name": "gettext",
+                "alias": "_"
+            },
+            {
+                "module": "io",
+                "name": "StringIO",
+                "alias": null
+            },
+            {
+                "module": "pathlib",
+                "name": "Path",
+                "alias": null
+            },
+            {
+                "module": "types",
+                "name": "TracebackType",
+                "alias": null
+            },
+            {
+                "module": "_compat",
+                "name": "_default_text_stdout",
+                "alias": null
+            },
+            {
+                "module": "_compat",
+                "name": "CYGWIN",
+                "alias": null
+            },
+            {
+                "module": "_compat",
+                "name": "get_best_encoding",
+                "alias": null
+            },
+            {
+                "module": "_compat",
+                "name": "isatty",
+                "alias": null
+            },
+            {
+                "module": "_compat",
+                "name": "strip_ansi",
+                "alias": null
+            },
+            {
+                "module": "_compat",
+                "name": "term_len",
+                "alias": null
+            },
+            {
+                "module": "_compat",
+                "name": "WIN",
+                "alias": null
+            },
+            {
+                "module": "exceptions",
+                "name": "ClickException",
+                "alias": null
+            },
+            {
+                "module": "utils",
+                "name": "echo",
+                "alias": null
+            },
+            {
+                "module": "utils",
+                "name": "KeepOpenFile",
+                "alias": null
+            },
+            {
+                "module": "shutil",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "subprocess",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "shutil",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "subprocess",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "tempfile",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "subprocess",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "msvcrt",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "termios",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "tty",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "shutil",
+                "name": "which",
+                "alias": null
+            },
+            {
+                "module": "shlex",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "subprocess",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "tempfile",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "urllib.parse",
+                "name": "unquote",
+                "alias": null
+            },
+            {
+                "module": "operator",
+                "name": "length_hint",
+                "alias": null
+            },
+            {
+                "module": "shutil",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "webbrowser",
+                "name": null,
+                "alias": null
+            }
+        ],
+        "import_map": {
+            "annotations": "__future__.annotations",
+            "cabc": "collections.abc",
+            "contextlib": "contextlib",
+            "io": "io",
+            "math": "math",
+            "os": "os",
+            "shlex": "shlex",
+            "sys": "sys",
+            "time": "time",
+            "t": "typing",
+            "_": "gettext.gettext",
+            "StringIO": "io.StringIO",
+            "Path": "pathlib.Path",
+            "TracebackType": "types.TracebackType",
+            "_default_text_stdout": "_compat._default_text_stdout",
+            "CYGWIN": "_compat.CYGWIN",
+            "get_best_encoding": "_compat.get_best_encoding",
+            "isatty": "_compat.isatty",
+            "strip_ansi": "_compat.strip_ansi",
+            "term_len": "_compat.term_len",
+            "WIN": "_compat.WIN",
+            "ClickException": "exceptions.ClickException",
+            "echo": "utils.echo",
+            "KeepOpenFile": "utils.KeepOpenFile",
+            "shutil": "shutil",
+            "subprocess": "subprocess",
+            "tempfile": "tempfile",
+            "msvcrt": "msvcrt",
+            "termios": "termios",
+            "tty": "tty",
+            "which": "shutil.which",
+            "unquote": "urllib.parse.unquote",
+            "length_hint": "operator.length_hint",
+            "webbrowser": "webbrowser"
+        }
+    },
+    {
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\_textwrap.py",
+        "imports": [
+            {
+                "module": "__future__",
+                "name": "annotations",
+                "alias": null
+            },
+            {
+                "module": "collections.abc",
+                "name": null,
+                "alias": "cabc"
+            },
+            {
+                "module": "textwrap",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "contextlib",
+                "name": "contextmanager",
+                "alias": null
+            },
+            {
+                "module": "_compat",
+                "name": "_ansi_re",
+                "alias": null
+            },
+            {
+                "module": "_compat",
+                "name": "term_len",
+                "alias": null
+            }
+        ],
+        "import_map": {
+            "annotations": "__future__.annotations",
+            "cabc": "collections.abc",
+            "textwrap": "textwrap",
+            "contextmanager": "contextlib.contextmanager",
+            "_ansi_re": "_compat._ansi_re",
+            "term_len": "_compat.term_len"
+        }
+    },
+    {
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\_utils.py",
+        "imports": [
+            {
+                "module": "__future__",
+                "name": "annotations",
+                "alias": null
+            },
+            {
+                "module": "enum",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "typing",
+                "name": null,
+                "alias": "t"
+            }
+        ],
+        "import_map": {
+            "annotations": "__future__.annotations",
+            "enum": "enum",
+            "t": "typing"
+        }
+    },
+    {
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\_winconsole.py",
+        "imports": [
+            {
+                "module": "__future__",
+                "name": "annotations",
+                "alias": null
+            },
+            {
+                "module": "collections.abc",
+                "name": null,
+                "alias": "cabc"
+            },
+            {
+                "module": "io",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "sys",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "time",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "typing",
+                "name": null,
+                "alias": "t"
+            },
+            {
+                "module": "ctypes",
+                "name": "Array",
+                "alias": null
+            },
+            {
+                "module": "ctypes",
+                "name": "byref",
+                "alias": null
+            },
+            {
+                "module": "ctypes",
+                "name": "c_char",
+                "alias": null
+            },
+            {
+                "module": "ctypes",
+                "name": "c_char_p",
+                "alias": null
+            },
+            {
+                "module": "ctypes",
+                "name": "c_int",
+                "alias": null
+            },
+            {
+                "module": "ctypes",
+                "name": "c_ssize_t",
+                "alias": null
+            },
+            {
+                "module": "ctypes",
+                "name": "c_ulong",
+                "alias": null
+            },
+            {
+                "module": "ctypes",
+                "name": "c_void_p",
+                "alias": null
+            },
+            {
+                "module": "ctypes",
+                "name": "POINTER",
+                "alias": null
+            },
+            {
+                "module": "ctypes",
+                "name": "py_object",
+                "alias": null
+            },
+            {
+                "module": "ctypes",
+                "name": "Structure",
+                "alias": null
+            },
+            {
+                "module": "ctypes.wintypes",
+                "name": "DWORD",
+                "alias": null
+            },
+            {
+                "module": "ctypes.wintypes",
+                "name": "HANDLE",
+                "alias": null
+            },
+            {
+                "module": "ctypes.wintypes",
+                "name": "LPCWSTR",
+                "alias": null
+            },
+            {
+                "module": "ctypes.wintypes",
+                "name": "LPWSTR",
+                "alias": null
+            },
+            {
+                "module": "gettext",
+                "name": "gettext",
+                "alias": "_"
+            },
+            {
+                "module": "_compat",
+                "name": "_NonClosingTextIOWrapper",
+                "alias": null
+            },
+            {
+                "module": "msvcrt",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "ctypes",
+                "name": "windll",
+                "alias": null
+            },
+            {
+                "module": "ctypes",
+                "name": "WINFUNCTYPE",
+                "alias": null
+            },
+            {
+                "module": "ctypes",
+                "name": "pythonapi",
+                "alias": null
+            },
+            {
+                "module": "collections.abc",
+                "name": "Buffer",
+                "alias": null
+            },
+            {
+                "module": "typing_extensions",
+                "name": "Buffer",
+                "alias": null
+            }
+        ],
+        "import_map": {
+            "annotations": "__future__.annotations",
+            "cabc": "collections.abc",
+            "io": "io",
+            "sys": "sys",
+            "time": "time",
+            "t": "typing",
+            "Array": "ctypes.Array",
+            "byref": "ctypes.byref",
+            "c_char": "ctypes.c_char",
+            "c_char_p": "ctypes.c_char_p",
+            "c_int": "ctypes.c_int",
+            "c_ssize_t": "ctypes.c_ssize_t",
+            "c_ulong": "ctypes.c_ulong",
+            "c_void_p": "ctypes.c_void_p",
+            "POINTER": "ctypes.POINTER",
+            "py_object": "ctypes.py_object",
+            "Structure": "ctypes.Structure",
+            "DWORD": "ctypes.wintypes.DWORD",
+            "HANDLE": "ctypes.wintypes.HANDLE",
+            "LPCWSTR": "ctypes.wintypes.LPCWSTR",
+            "LPWSTR": "ctypes.wintypes.LPWSTR",
+            "_": "gettext.gettext",
+            "_NonClosingTextIOWrapper": "_compat._NonClosingTextIOWrapper",
+            "msvcrt": "msvcrt",
+            "windll": "ctypes.windll",
+            "WINFUNCTYPE": "ctypes.WINFUNCTYPE",
+            "pythonapi": "ctypes.pythonapi",
+            "Buffer": "typing_extensions.Buffer"
+        }
+    },
+    {
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\__init__.py",
+        "imports": [
+            {
+                "module": "__future__",
+                "name": "annotations",
+                "alias": null
+            },
+            {
+                "module": "core",
+                "name": "Argument",
+                "alias": "Argument"
+            },
+            {
+                "module": "core",
+                "name": "Command",
+                "alias": "Command"
+            },
+            {
+                "module": "core",
+                "name": "CommandCollection",
+                "alias": "CommandCollection"
+            },
+            {
+                "module": "core",
+                "name": "Context",
+                "alias": "Context"
+            },
+            {
+                "module": "core",
+                "name": "Group",
+                "alias": "Group"
+            },
+            {
+                "module": "core",
+                "name": "Option",
+                "alias": "Option"
+            },
+            {
+                "module": "core",
+                "name": "Parameter",
+                "alias": "Parameter"
+            },
+            {
+                "module": "core",
+                "name": "ParameterSource",
+                "alias": "ParameterSource"
+            },
+            {
+                "module": "decorators",
+                "name": "argument",
+                "alias": "argument"
+            },
+            {
+                "module": "decorators",
+                "name": "command",
+                "alias": "command"
+            },
+            {
+                "module": "decorators",
+                "name": "confirmation_option",
+                "alias": "confirmation_option"
+            },
+            {
+                "module": "decorators",
+                "name": "group",
+                "alias": "group"
+            },
+            {
+                "module": "decorators",
+                "name": "help_option",
+                "alias": "help_option"
+            },
+            {
+                "module": "decorators",
+                "name": "make_pass_decorator",
+                "alias": "make_pass_decorator"
+            },
+            {
+                "module": "decorators",
+                "name": "option",
+                "alias": "option"
+            },
+            {
+                "module": "decorators",
+                "name": "pass_context",
+                "alias": "pass_context"
+            },
+            {
+                "module": "decorators",
+                "name": "pass_obj",
+                "alias": "pass_obj"
+            },
+            {
+                "module": "decorators",
+                "name": "password_option",
+                "alias": "password_option"
+            },
+            {
+                "module": "decorators",
+                "name": "version_option",
+                "alias": "version_option"
+            },
+            {
+                "module": "exceptions",
+                "name": "Abort",
+                "alias": "Abort"
+            },
+            {
+                "module": "exceptions",
+                "name": "BadArgumentUsage",
+                "alias": "BadArgumentUsage"
+            },
+            {
+                "module": "exceptions",
+                "name": "BadOptionUsage",
+                "alias": "BadOptionUsage"
+            },
+            {
+                "module": "exceptions",
+                "name": "BadParameter",
+                "alias": "BadParameter"
+            },
+            {
+                "module": "exceptions",
+                "name": "ClickException",
+                "alias": "ClickException"
+            },
+            {
+                "module": "exceptions",
+                "name": "FileError",
+                "alias": "FileError"
+            },
+            {
+                "module": "exceptions",
+                "name": "MissingParameter",
+                "alias": "MissingParameter"
+            },
+            {
+                "module": "exceptions",
+                "name": "NoSuchCommand",
+                "alias": "NoSuchCommand"
+            },
+            {
+                "module": "exceptions",
+                "name": "NoSuchOption",
+                "alias": "NoSuchOption"
+            },
+            {
+                "module": "exceptions",
+                "name": "UsageError",
+                "alias": "UsageError"
+            },
+            {
+                "module": "formatting",
+                "name": "HelpFormatter",
+                "alias": "HelpFormatter"
+            },
+            {
+                "module": "formatting",
+                "name": "wrap_text",
+                "alias": "wrap_text"
+            },
+            {
+                "module": "globals",
+                "name": "get_current_context",
+                "alias": "get_current_context"
+            },
+            {
+                "module": "termui",
+                "name": "clear",
+                "alias": "clear"
+            },
+            {
+                "module": "termui",
+                "name": "confirm",
+                "alias": "confirm"
+            },
+            {
+                "module": "termui",
+                "name": "echo_via_pager",
+                "alias": "echo_via_pager"
+            },
+            {
+                "module": "termui",
+                "name": "edit",
+                "alias": "edit"
+            },
+            {
+                "module": "termui",
+                "name": "get_pager_file",
+                "alias": "get_pager_file"
+            },
+            {
+                "module": "termui",
+                "name": "getchar",
+                "alias": "getchar"
+            },
+            {
+                "module": "termui",
+                "name": "launch",
+                "alias": "launch"
+            },
+            {
+                "module": "termui",
+                "name": "pause",
+                "alias": "pause"
+            },
+            {
+                "module": "termui",
+                "name": "progressbar",
+                "alias": "progressbar"
+            },
+            {
+                "module": "termui",
+                "name": "prompt",
+                "alias": "prompt"
+            },
+            {
+                "module": "termui",
+                "name": "secho",
+                "alias": "secho"
+            },
+            {
+                "module": "termui",
+                "name": "style",
+                "alias": "style"
+            },
+            {
+                "module": "termui",
+                "name": "unstyle",
+                "alias": "unstyle"
+            },
+            {
+                "module": "types",
+                "name": "BOOL",
+                "alias": "BOOL"
+            },
+            {
+                "module": "types",
+                "name": "Choice",
+                "alias": "Choice"
+            },
+            {
+                "module": "types",
+                "name": "DateTime",
+                "alias": "DateTime"
+            },
+            {
+                "module": "types",
+                "name": "File",
+                "alias": "File"
+            },
+            {
+                "module": "types",
+                "name": "FLOAT",
+                "alias": "FLOAT"
+            },
+            {
+                "module": "types",
+                "name": "FloatRange",
+                "alias": "FloatRange"
+            },
+            {
+                "module": "types",
+                "name": "INT",
+                "alias": "INT"
+            },
+            {
+                "module": "types",
+                "name": "IntRange",
+                "alias": "IntRange"
+            },
+            {
+                "module": "types",
+                "name": "ParamType",
+                "alias": "ParamType"
+            },
+            {
+                "module": "types",
+                "name": "Path",
+                "alias": "Path"
+            },
+            {
+                "module": "types",
+                "name": "STRING",
+                "alias": "STRING"
+            },
+            {
+                "module": "types",
+                "name": "Tuple",
+                "alias": "Tuple"
+            },
+            {
+                "module": "types",
+                "name": "UNPROCESSED",
+                "alias": "UNPROCESSED"
+            },
+            {
+                "module": "types",
+                "name": "UUID",
+                "alias": "UUID"
+            },
+            {
+                "module": "utils",
+                "name": "echo",
+                "alias": "echo"
+            },
+            {
+                "module": "utils",
+                "name": "format_filename",
+                "alias": "format_filename"
+            },
+            {
+                "module": "utils",
+                "name": "get_app_dir",
+                "alias": "get_app_dir"
+            },
+            {
+                "module": "utils",
+                "name": "get_binary_stream",
+                "alias": "get_binary_stream"
+            },
+            {
+                "module": "utils",
+                "name": "get_text_stream",
+                "alias": "get_text_stream"
+            },
+            {
+                "module": "utils",
+                "name": "open_file",
+                "alias": "open_file"
+            },
+            {
+                "module": "warnings",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "core",
+                "name": "_BaseCommand",
+                "alias": null
+            },
+            {
+                "module": "core",
+                "name": "_MultiCommand",
+                "alias": null
+            },
+            {
+                "module": "parser",
+                "name": "_OptionParser",
+                "alias": null
+            },
+            {
+                "module": "importlib.metadata",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "warnings",
+                "name": null,
+                "alias": null
+            }
+        ],
+        "import_map": {
+            "annotations": "__future__.annotations",
+            "Argument": "core.Argument",
+            "Command": "core.Command",
+            "CommandCollection": "core.CommandCollection",
+            "Context": "core.Context",
+            "Group": "core.Group",
+            "Option": "core.Option",
+            "Parameter": "core.Parameter",
+            "ParameterSource": "core.ParameterSource",
+            "argument": "decorators.argument",
+            "command": "decorators.command",
+            "confirmation_option": "decorators.confirmation_option",
+            "group": "decorators.group",
+            "help_option": "decorators.help_option",
+            "make_pass_decorator": "decorators.make_pass_decorator",
+            "option": "decorators.option",
+            "pass_context": "decorators.pass_context",
+            "pass_obj": "decorators.pass_obj",
+            "password_option": "decorators.password_option",
+            "version_option": "decorators.version_option",
+            "Abort": "exceptions.Abort",
+            "BadArgumentUsage": "exceptions.BadArgumentUsage",
+            "BadOptionUsage": "exceptions.BadOptionUsage",
+            "BadParameter": "exceptions.BadParameter",
+            "ClickException": "exceptions.ClickException",
+            "FileError": "exceptions.FileError",
+            "MissingParameter": "exceptions.MissingParameter",
+            "NoSuchCommand": "exceptions.NoSuchCommand",
+            "NoSuchOption": "exceptions.NoSuchOption",
+            "UsageError": "exceptions.UsageError",
+            "HelpFormatter": "formatting.HelpFormatter",
+            "wrap_text": "formatting.wrap_text",
+            "get_current_context": "globals.get_current_context",
+            "clear": "termui.clear",
+            "confirm": "termui.confirm",
+            "echo_via_pager": "termui.echo_via_pager",
+            "edit": "termui.edit",
+            "get_pager_file": "termui.get_pager_file",
+            "getchar": "termui.getchar",
+            "launch": "termui.launch",
+            "pause": "termui.pause",
+            "progressbar": "termui.progressbar",
+            "prompt": "termui.prompt",
+            "secho": "termui.secho",
+            "style": "termui.style",
+            "unstyle": "termui.unstyle",
+            "BOOL": "types.BOOL",
+            "Choice": "types.Choice",
+            "DateTime": "types.DateTime",
+            "File": "types.File",
+            "FLOAT": "types.FLOAT",
+            "FloatRange": "types.FloatRange",
+            "INT": "types.INT",
+            "IntRange": "types.IntRange",
+            "ParamType": "types.ParamType",
+            "Path": "types.Path",
+            "STRING": "types.STRING",
+            "Tuple": "types.Tuple",
+            "UNPROCESSED": "types.UNPROCESSED",
+            "UUID": "types.UUID",
+            "echo": "utils.echo",
+            "format_filename": "utils.format_filename",
+            "get_app_dir": "utils.get_app_dir",
+            "get_binary_stream": "utils.get_binary_stream",
+            "get_text_stream": "utils.get_text_stream",
+            "open_file": "utils.open_file",
+            "warnings": "warnings",
+            "_BaseCommand": "core._BaseCommand",
+            "_MultiCommand": "core._MultiCommand",
+            "_OptionParser": "parser._OptionParser",
+            "importlib.metadata": "importlib.metadata"
+        }
+    },
+    {
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\conftest.py",
+        "imports": [
+            {
+                "module": "pytest",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "click.testing",
+                "name": "CliRunner",
+                "alias": null
+            }
+        ],
+        "import_map": {
+            "pytest": "pytest",
+            "CliRunner": "click.testing.CliRunner"
+        }
+    },
+    {
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_arguments.py",
+        "imports": [
+            {
+                "module": "sys",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "unittest",
+                "name": "mock",
+                "alias": null
+            },
+            {
+                "module": "pytest",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "click",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "click._utils",
+                "name": "UNSET",
+                "alias": null
+            }
+        ],
+        "import_map": {
+            "sys": "sys",
+            "mock": "unittest.mock",
+            "pytest": "pytest",
+            "click": "click",
+            "UNSET": "click._utils.UNSET"
+        }
+    },
+    {
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_basic.py",
+        "imports": [
+            {
+                "module": "__future__",
+                "name": "annotations",
+                "alias": null
+            },
+            {
+                "module": "enum",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "os",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "pytest",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "click",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "click._utils",
+                "name": "UNSET",
+                "alias": null
+            },
+            {
+                "module": "importlib.metadata",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "importlib.metadata",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "importlib.metadata",
+                "name": null,
+                "alias": null
+            }
+        ],
+        "import_map": {
+            "annotations": "__future__.annotations",
+            "enum": "enum",
+            "os": "os",
+            "pytest": "pytest",
+            "click": "click",
+            "UNSET": "click._utils.UNSET",
+            "importlib.metadata": "importlib.metadata"
+        }
+    },
+    {
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_chain.py",
+        "imports": [
+            {
+                "module": "sys",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "pytest",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "click",
+                "name": null,
+                "alias": null
+            }
+        ],
+        "import_map": {
+            "sys": "sys",
+            "pytest": "pytest",
+            "click": "click"
+        }
+    },
+    {
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_commands.py",
+        "imports": [
+            {
+                "module": "re",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "pytest",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "click",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "optparse",
+                "name": null,
+                "alias": null
+            }
+        ],
+        "import_map": {
+            "re": "re",
+            "pytest": "pytest",
+            "click": "click",
+            "optparse": "optparse"
+        }
+    },
+    {
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_command_decorators.py",
+        "imports": [
+            {
+                "module": "pytest",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "click",
+                "name": null,
+                "alias": null
+            }
+        ],
+        "import_map": {
+            "pytest": "pytest",
+            "click": "click"
+        }
+    },
+    {
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_compat.py",
+        "imports": [
+            {
+                "module": "__future__",
+                "name": "annotations",
+                "alias": null
+            },
+            {
+                "module": "sys",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "pytest",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "click",
+                "name": null,
+                "alias": null
+            }
+        ],
+        "import_map": {
+            "annotations": "__future__.annotations",
+            "sys": "sys",
+            "pytest": "pytest",
+            "click": "click"
+        }
+    },
+    {
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_context.py",
+        "imports": [
+            {
+                "module": "logging",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "contextlib",
+                "name": "AbstractContextManager",
+                "alias": null
+            },
+            {
+                "module": "contextlib",
+                "name": "contextmanager",
+                "alias": null
+            },
+            {
+                "module": "types",
+                "name": "TracebackType",
+                "alias": null
+            },
+            {
+                "module": "pytest",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "click",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "click",
+                "name": "Context",
+                "alias": null
+            },
+            {
+                "module": "click",
+                "name": "Option",
+                "alias": null
+            },
+            {
+                "module": "click",
+                "name": "Parameter",
+                "alias": null
+            },
+            {
+                "module": "click.core",
+                "name": "ParameterSource",
+                "alias": null
+            },
+            {
+                "module": "click.decorators",
+                "name": "help_option",
+                "alias": null
+            },
+            {
+                "module": "click.decorators",
+                "name": "pass_meta_key",
+                "alias": null
+            }
+        ],
+        "import_map": {
+            "logging": "logging",
+            "AbstractContextManager": "contextlib.AbstractContextManager",
+            "contextmanager": "contextlib.contextmanager",
+            "TracebackType": "types.TracebackType",
+            "pytest": "pytest",
+            "click": "click",
+            "Context": "click.Context",
+            "Option": "click.Option",
+            "Parameter": "click.Parameter",
+            "ParameterSource": "click.core.ParameterSource",
+            "help_option": "click.decorators.help_option",
+            "pass_meta_key": "click.decorators.pass_meta_key"
+        }
+    },
+    {
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_custom_classes.py",
+        "imports": [
+            {
+                "module": "click",
+                "name": null,
+                "alias": null
+            }
+        ],
+        "import_map": {
+            "click": "click"
+        }
+    },
+    {
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_defaults.py",
         "imports": [
             {
                 "module": "os",
                 "name": null,
                 "alias": null
-            }
-        ],
-        "import_map": {
-            "os": "os"
-        }
-    },
-    {
-        "file_path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmps6ubxufo\\ingestion\\function_extractor.py",
-        "imports": [
+            },
             {
-                "module": "ast",
+                "module": "pytest",
                 "name": null,
+                "alias": null
+            },
+            {
+                "module": "click",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "click",
+                "name": "UNPROCESSED",
+                "alias": null
+            },
+            {
+                "module": "click._utils",
+                "name": "UNSET",
+                "alias": null
+            },
+            {
+                "module": "click.core",
+                "name": "ParameterSource",
                 "alias": null
             }
         ],
         "import_map": {
-            "ast": "ast"
+            "os": "os",
+            "pytest": "pytest",
+            "click": "click",
+            "UNPROCESSED": "click.UNPROCESSED",
+            "UNSET": "click._utils.UNSET",
+            "ParameterSource": "click.core.ParameterSource"
         }
     },
     {
-        "file_path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmps6ubxufo\\ingestion\\import_extractor.py",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_formatting.py",
         "imports": [
             {
-                "module": "ast",
+                "module": "pytest",
                 "name": null,
+                "alias": null
+            },
+            {
+                "module": "click",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "click._compat",
+                "name": "strip_ansi",
                 "alias": null
             }
         ],
         "import_map": {
-            "ast": "ast"
+            "pytest": "pytest",
+            "click": "click",
+            "strip_ansi": "click._compat.strip_ansi"
         }
     },
     {
-        "file_path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmps6ubxufo\\ingestion\\test_ingestion.py",
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_imports.py",
         "imports": [
             {
                 "module": "json",
@@ -134,36 +3193,933 @@
                 "alias": null
             },
             {
-                "module": "ingestion.clone_repo",
-                "name": "clone_repository",
+                "module": "subprocess",
+                "name": null,
                 "alias": null
             },
             {
-                "module": "ingestion.file_scanner",
-                "name": "scan_python_files",
+                "module": "sys",
+                "name": null,
                 "alias": null
             },
             {
-                "module": "ingestion.import_extractor",
-                "name": "extract_imports",
+                "module": "click._compat",
+                "name": "WIN",
                 "alias": null
             }
         ],
         "import_map": {
             "json": "json",
-            "clone_repository": "ingestion.clone_repo.clone_repository",
-            "scan_python_files": "ingestion.file_scanner.scan_python_files",
-            "extract_imports": "ingestion.import_extractor.extract_imports"
+            "subprocess": "subprocess",
+            "sys": "sys",
+            "WIN": "click._compat.WIN"
         }
     },
     {
-        "file_path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmps6ubxufo\\ingestion\\__init__.py",
-        "imports": [],
-        "import_map": {}
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_info_dict.py",
+        "imports": [
+            {
+                "module": "pytest",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "click.types",
+                "name": null,
+                "alias": null
+            }
+        ],
+        "import_map": {
+            "pytest": "pytest",
+            "click.types": "click.types"
+        }
     },
     {
-        "file_path": "C:\\Users\\DHEEEM~1\\AppData\\Local\\Temp\\tmps6ubxufo\\vector\\__init__.py",
-        "imports": [],
-        "import_map": {}
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_normalization.py",
+        "imports": [
+            {
+                "module": "click",
+                "name": null,
+                "alias": null
+            }
+        ],
+        "import_map": {
+            "click": "click"
+        }
+    },
+    {
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_options.py",
+        "imports": [
+            {
+                "module": "enum",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "os",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "re",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "sys",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "tempfile",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "contextlib",
+                "name": "nullcontext",
+                "alias": null
+            },
+            {
+                "module": "typing",
+                "name": "Literal",
+                "alias": null
+            },
+            {
+                "module": "pytest",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "click",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "click",
+                "name": "Option",
+                "alias": null
+            },
+            {
+                "module": "click",
+                "name": "UNPROCESSED",
+                "alias": null
+            },
+            {
+                "module": "click._utils",
+                "name": "UNSET",
+                "alias": null
+            },
+            {
+                "module": "click.testing",
+                "name": "CliRunner",
+                "alias": null
+            }
+        ],
+        "import_map": {
+            "enum": "enum",
+            "os": "os",
+            "re": "re",
+            "sys": "sys",
+            "tempfile": "tempfile",
+            "nullcontext": "contextlib.nullcontext",
+            "Literal": "typing.Literal",
+            "pytest": "pytest",
+            "click": "click",
+            "Option": "click.Option",
+            "UNPROCESSED": "click.UNPROCESSED",
+            "UNSET": "click._utils.UNSET",
+            "CliRunner": "click.testing.CliRunner"
+        }
+    },
+    {
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_parser.py",
+        "imports": [
+            {
+                "module": "pytest",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "click",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "click.parser",
+                "name": "_OptionParser",
+                "alias": null
+            },
+            {
+                "module": "click.shell_completion",
+                "name": "split_arg_string",
+                "alias": null
+            }
+        ],
+        "import_map": {
+            "pytest": "pytest",
+            "click": "click",
+            "_OptionParser": "click.parser._OptionParser",
+            "split_arg_string": "click.shell_completion.split_arg_string"
+        }
+    },
+    {
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_shell_completion.py",
+        "imports": [
+            {
+                "module": "io",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "textwrap",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "warnings",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "collections.abc",
+                "name": "Mapping",
+                "alias": null
+            },
+            {
+                "module": "pytest",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "click.shell_completion",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "click.core",
+                "name": "Argument",
+                "alias": null
+            },
+            {
+                "module": "click.core",
+                "name": "Command",
+                "alias": null
+            },
+            {
+                "module": "click.core",
+                "name": "Group",
+                "alias": null
+            },
+            {
+                "module": "click.core",
+                "name": "Option",
+                "alias": null
+            },
+            {
+                "module": "click.shell_completion",
+                "name": "add_completion_class",
+                "alias": null
+            },
+            {
+                "module": "click.shell_completion",
+                "name": "CompletionItem",
+                "alias": null
+            },
+            {
+                "module": "click.shell_completion",
+                "name": "FishComplete",
+                "alias": null
+            },
+            {
+                "module": "click.shell_completion",
+                "name": "shell_complete",
+                "alias": null
+            },
+            {
+                "module": "click.shell_completion",
+                "name": "ShellComplete",
+                "alias": null
+            },
+            {
+                "module": "click.types",
+                "name": "Choice",
+                "alias": null
+            },
+            {
+                "module": "click.types",
+                "name": "File",
+                "alias": null
+            },
+            {
+                "module": "click.types",
+                "name": "Path",
+                "alias": null
+            }
+        ],
+        "import_map": {
+            "io": "io",
+            "textwrap": "textwrap",
+            "warnings": "warnings",
+            "Mapping": "collections.abc.Mapping",
+            "pytest": "pytest",
+            "click.shell_completion": "click.shell_completion",
+            "Argument": "click.core.Argument",
+            "Command": "click.core.Command",
+            "Group": "click.core.Group",
+            "Option": "click.core.Option",
+            "add_completion_class": "click.shell_completion.add_completion_class",
+            "CompletionItem": "click.shell_completion.CompletionItem",
+            "FishComplete": "click.shell_completion.FishComplete",
+            "shell_complete": "click.shell_completion.shell_complete",
+            "ShellComplete": "click.shell_completion.ShellComplete",
+            "Choice": "click.types.Choice",
+            "File": "click.types.File",
+            "Path": "click.types.Path"
+        }
+    },
+    {
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_stream_lifecycle.py",
+        "imports": [
+            {
+                "module": "__future__",
+                "name": "annotations",
+                "alias": null
+            },
+            {
+                "module": "gc",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "io",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "logging",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "sys",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "threading",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "concurrent.futures",
+                "name": "ThreadPoolExecutor",
+                "alias": null
+            },
+            {
+                "module": "pytest",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "click",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "click.testing",
+                "name": "_NamedTextIOWrapper",
+                "alias": null
+            },
+            {
+                "module": "click.testing",
+                "name": "BytesIOCopy",
+                "alias": null
+            },
+            {
+                "module": "click.testing",
+                "name": "CliRunner",
+                "alias": null
+            },
+            {
+                "module": "click.testing",
+                "name": "StreamMixer",
+                "alias": null
+            }
+        ],
+        "import_map": {
+            "annotations": "__future__.annotations",
+            "gc": "gc",
+            "io": "io",
+            "logging": "logging",
+            "sys": "sys",
+            "threading": "threading",
+            "ThreadPoolExecutor": "concurrent.futures.ThreadPoolExecutor",
+            "pytest": "pytest",
+            "click": "click",
+            "_NamedTextIOWrapper": "click.testing._NamedTextIOWrapper",
+            "BytesIOCopy": "click.testing.BytesIOCopy",
+            "CliRunner": "click.testing.CliRunner",
+            "StreamMixer": "click.testing.StreamMixer"
+        }
+    },
+    {
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_termui.py",
+        "imports": [
+            {
+                "module": "contextlib",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "gc",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "io",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "platform",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "shlex",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "shutil",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "sys",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "tempfile",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "time",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "unittest.mock",
+                "name": "patch",
+                "alias": null
+            },
+            {
+                "module": "pytest",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "click",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "click._termui_impl",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "click._compat",
+                "name": "WIN",
+                "alias": null
+            },
+            {
+                "module": "click._termui_impl",
+                "name": "Editor",
+                "alias": null
+            },
+            {
+                "module": "click._utils",
+                "name": "UNSET",
+                "alias": null
+            },
+            {
+                "module": "click.exceptions",
+                "name": "BadParameter",
+                "alias": null
+            },
+            {
+                "module": "click.exceptions",
+                "name": "MissingParameter",
+                "alias": null
+            }
+        ],
+        "import_map": {
+            "contextlib": "contextlib",
+            "gc": "gc",
+            "io": "io",
+            "platform": "platform",
+            "shlex": "shlex",
+            "shutil": "shutil",
+            "sys": "sys",
+            "tempfile": "tempfile",
+            "time": "time",
+            "patch": "unittest.mock.patch",
+            "pytest": "pytest",
+            "click": "click",
+            "click._termui_impl": "click._termui_impl",
+            "WIN": "click._compat.WIN",
+            "Editor": "click._termui_impl.Editor",
+            "UNSET": "click._utils.UNSET",
+            "BadParameter": "click.exceptions.BadParameter",
+            "MissingParameter": "click.exceptions.MissingParameter"
+        }
+    },
+    {
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_testing.py",
+        "imports": [
+            {
+                "module": "faulthandler",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "io",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "os",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "pdb",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "sys",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "io",
+                "name": "BytesIO",
+                "alias": null
+            },
+            {
+                "module": "pytest",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "click",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "click.exceptions",
+                "name": "ClickException",
+                "alias": null
+            },
+            {
+                "module": "click.testing",
+                "name": "CliRunner",
+                "alias": null
+            },
+            {
+                "module": "logging",
+                "name": null,
+                "alias": null
+            }
+        ],
+        "import_map": {
+            "faulthandler": "faulthandler",
+            "io": "io",
+            "os": "os",
+            "pdb": "pdb",
+            "sys": "sys",
+            "BytesIO": "io.BytesIO",
+            "pytest": "pytest",
+            "click": "click",
+            "ClickException": "click.exceptions.ClickException",
+            "CliRunner": "click.testing.CliRunner",
+            "logging": "logging"
+        }
+    },
+    {
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_types.py",
+        "imports": [
+            {
+                "module": "os.path",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "pathlib",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "platform",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "subprocess",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "sys",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "tempfile",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "pytest",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "click",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "click",
+                "name": "FileError",
+                "alias": null
+            }
+        ],
+        "import_map": {
+            "os.path": "os.path",
+            "pathlib": "pathlib",
+            "platform": "platform",
+            "subprocess": "subprocess",
+            "sys": "sys",
+            "tempfile": "tempfile",
+            "pytest": "pytest",
+            "click": "click",
+            "FileError": "click.FileError"
+        }
+    },
+    {
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_utils.py",
+        "imports": [
+            {
+                "module": "os",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "pathlib",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "stat",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "subprocess",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "sys",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "collections",
+                "name": "namedtuple",
+                "alias": null
+            },
+            {
+                "module": "contextlib",
+                "name": "nullcontext",
+                "alias": null
+            },
+            {
+                "module": "decimal",
+                "name": "Decimal",
+                "alias": null
+            },
+            {
+                "module": "fractions",
+                "name": "Fraction",
+                "alias": null
+            },
+            {
+                "module": "functools",
+                "name": "partial",
+                "alias": null
+            },
+            {
+                "module": "io",
+                "name": "BytesIO",
+                "alias": null
+            },
+            {
+                "module": "io",
+                "name": "StringIO",
+                "alias": null
+            },
+            {
+                "module": "unittest.mock",
+                "name": "patch",
+                "alias": null
+            },
+            {
+                "module": "pytest",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "click._termui_impl",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "click.utils",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "click._compat",
+                "name": "WIN",
+                "alias": null
+            },
+            {
+                "module": "click._utils",
+                "name": "UNSET",
+                "alias": null
+            }
+        ],
+        "import_map": {
+            "os": "os",
+            "pathlib": "pathlib",
+            "stat": "stat",
+            "subprocess": "subprocess",
+            "sys": "sys",
+            "namedtuple": "collections.namedtuple",
+            "nullcontext": "contextlib.nullcontext",
+            "Decimal": "decimal.Decimal",
+            "Fraction": "fractions.Fraction",
+            "partial": "functools.partial",
+            "BytesIO": "io.BytesIO",
+            "StringIO": "io.StringIO",
+            "patch": "unittest.mock.patch",
+            "pytest": "pytest",
+            "click._termui_impl": "click._termui_impl",
+            "click.utils": "click.utils",
+            "WIN": "click._compat.WIN",
+            "UNSET": "click._utils.UNSET"
+        }
+    },
+    {
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\typing\\typing_aliased_group.py",
+        "imports": [
+            {
+                "module": "__future__",
+                "name": "annotations",
+                "alias": null
+            },
+            {
+                "module": "typing_extensions",
+                "name": "assert_type",
+                "alias": null
+            },
+            {
+                "module": "click",
+                "name": null,
+                "alias": null
+            }
+        ],
+        "import_map": {
+            "annotations": "__future__.annotations",
+            "assert_type": "typing_extensions.assert_type",
+            "click": "click"
+        }
+    },
+    {
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\typing\\typing_confirmation_option.py",
+        "imports": [
+            {
+                "module": "typing_extensions",
+                "name": "assert_type",
+                "alias": null
+            },
+            {
+                "module": "click",
+                "name": null,
+                "alias": null
+            }
+        ],
+        "import_map": {
+            "assert_type": "typing_extensions.assert_type",
+            "click": "click"
+        }
+    },
+    {
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\typing\\typing_group_kw_options.py",
+        "imports": [
+            {
+                "module": "typing_extensions",
+                "name": "assert_type",
+                "alias": null
+            },
+            {
+                "module": "click",
+                "name": null,
+                "alias": null
+            }
+        ],
+        "import_map": {
+            "assert_type": "typing_extensions.assert_type",
+            "click": "click"
+        }
+    },
+    {
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\typing\\typing_help_option.py",
+        "imports": [
+            {
+                "module": "typing_extensions",
+                "name": "assert_type",
+                "alias": null
+            },
+            {
+                "module": "click",
+                "name": null,
+                "alias": null
+            }
+        ],
+        "import_map": {
+            "assert_type": "typing_extensions.assert_type",
+            "click": "click"
+        }
+    },
+    {
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\typing\\typing_options.py",
+        "imports": [
+            {
+                "module": "typing_extensions",
+                "name": "assert_type",
+                "alias": null
+            },
+            {
+                "module": "click",
+                "name": null,
+                "alias": null
+            }
+        ],
+        "import_map": {
+            "assert_type": "typing_extensions.assert_type",
+            "click": "click"
+        }
+    },
+    {
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\typing\\typing_password_option.py",
+        "imports": [
+            {
+                "module": "codecs",
+                "name": null,
+                "alias": null
+            },
+            {
+                "module": "typing_extensions",
+                "name": "assert_type",
+                "alias": null
+            },
+            {
+                "module": "click",
+                "name": null,
+                "alias": null
+            }
+        ],
+        "import_map": {
+            "codecs": "codecs",
+            "assert_type": "typing_extensions.assert_type",
+            "click": "click"
+        }
+    },
+    {
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\typing\\typing_progressbar.py",
+        "imports": [
+            {
+                "module": "__future__",
+                "name": "annotations",
+                "alias": null
+            },
+            {
+                "module": "typing_extensions",
+                "name": "assert_type",
+                "alias": null
+            },
+            {
+                "module": "click",
+                "name": "progressbar",
+                "alias": null
+            },
+            {
+                "module": "click._termui_impl",
+                "name": "ProgressBar",
+                "alias": null
+            }
+        ],
+        "import_map": {
+            "annotations": "__future__.annotations",
+            "assert_type": "typing_extensions.assert_type",
+            "progressbar": "click.progressbar",
+            "ProgressBar": "click._termui_impl.ProgressBar"
+        }
+    },
+    {
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\typing\\typing_simple_example.py",
+        "imports": [
+            {
+                "module": "typing_extensions",
+                "name": "assert_type",
+                "alias": null
+            },
+            {
+                "module": "click",
+                "name": null,
+                "alias": null
+            }
+        ],
+        "import_map": {
+            "assert_type": "typing_extensions.assert_type",
+            "click": "click"
+        }
+    },
+    {
+        "file_path": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\typing\\typing_version_option.py",
+        "imports": [
+            {
+                "module": "typing_extensions",
+                "name": "assert_type",
+                "alias": null
+            },
+            {
+                "module": "click",
+                "name": null,
+                "alias": null
+            }
+        ],
+        "import_map": {
+            "assert_type": "typing_extensions.assert_type",
+            "click": "click"
+        }
     }
 ]

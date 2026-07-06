@@ -5,8 +5,11 @@ import chromadb
 from vector.embedding_model import get_embedding
 
 
-client = chromadb.PersistentClient(path="./chroma_db")
+from config.settings import CHROMA_DIR
 
+client = chromadb.PersistentClient(
+    path=str(CHROMA_DIR)
+)
 collection = client.get_or_create_collection(
     name="repomind"
 )

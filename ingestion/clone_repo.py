@@ -1,21 +1,30 @@
 from git import Repo
-import tempfile
-import os
+
+from config.settings import REPOS_DIR
+from config.logging_config import logger
 
 
 def clone_repository(repo_url: str) -> str:
     """
-    Clone a GitHub repository into a temporary directory.
+    Clone a GitHub repository into the local repos folder.
 
     Returns:
-        Local path of cloned repository.
+        Local path of the cloned repository.
     """
 
-    temp_dir = tempfile.mkdtemp()
+    repo_name = repo_url.rstrip("/").split("/")[-1]
 
-    Repo.clone_from(repo_url, temp_dir)
+    repo_path = REPOS_DIR / repo_name
 
-    print(f"Repository cloned successfully.")
-    print(f"Location: {temp_dir}")
+    # Repository already cloned
+    if repo_path.exists():
+        logger.info(f"Repository already exists: {repo_path}")
+        return str(repo_path)
 
-    return temp_dir
+    # Clone repository
+    Repo.clone_from(repo_url, str(repo_path))
+
+    logger.info("Repository cloned successfully.")
+    logger.info(f"Location: {repo_path}")
+
+    return str(repo_path)
