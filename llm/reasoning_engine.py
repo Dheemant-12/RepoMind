@@ -1,4 +1,5 @@
 from llm.memory import ConversationMemory
+from llm.client import ask_llm
 from vector.retrieval_engine import RetrievalEngine
 
 
@@ -15,103 +16,66 @@ class RepoMindAssistant:
 
     def generate_answer(self, question):
 
-        # Resolve follow-up questions like "What calls it?"
+        # Resolve follow-up questions
         question = self.memory.resolve_question(question)
 
+        # Retrieve repository context
         context = self.build_context(question)
 
-        route = context["route"]
+        # System prompt
+        system_prompt = """
+You are RepoMind, an AI Software Architect.
 
-        if route == "SEMANTIC":
+You answer questions about source code repositories.
 
-            result = context["results"][0]
+Use ONLY the repository context provided.
 
-            self.memory.update(
-                question,
-                result["source"],
-                result["function"]
-            )
+If the answer cannot be determined from the context,
+say that the repository does not contain enough information.
 
-            return f"""
-Question:
-{question}
-
-Answer:
-
-The most relevant function is '{result["function"]}'.
-
-Location:
-{result["file"]}
-
-This function appears to be the best match based on semantic similarity.
-
-Similarity Distance:
-{result["distance"]:.4f}
-
-Summary:
-
-{result["source"][:350]}
+Be concise, accurate, and professional.
 """
 
-        elif route == "GRAPH":
+        # User prompt
+        user_prompt = f"""
+User Question:
 
-            graph = context["results"]
-
-            self.memory.update(
-                question,
-                str(graph),
-                graph["function"]
-            )
-
-            return f"""
-Question:
 {question}
 
-Impact Analysis
+Repository Context:
 
-Target Function:
-{graph["function"]}
+{context}
 
-Direct Callers:
-{graph["direct_callers"]}
-
-Affected Files:
-{graph["affected_files"]}
-
-Estimated Risk:
-{graph["risk"]}
+Generate a helpful answer for the developer.
 """
 
-        else:
+        # Get AI response
+        answer = ask_llm(
+            system_prompt=system_prompt,
+            user_prompt=user_prompt
+        )
 
-            semantic = context["semantic"][0]
-            graph = context["graph"]
+        # Store memory
+        function_name = None
 
-            self.memory.update(
-                question,
-                str(context),
-                semantic["function"]
-            )
+        try:
 
-            return f"""
-Question:
-{question}
+            if context["route"] == "SEMANTIC":
+                function_name = context["results"][0]["function"]
 
-Hybrid Analysis
+            elif context["route"] == "GRAPH":
+                function_name = context["results"]["function"]
 
-Relevant Function:
-{semantic["function"]}
+            elif context["route"] == "HYBRID":
+                function_name = context["semantic"][0]["function"]
 
-Location:
-{semantic["file"]}
+        except Exception:
+            pass
 
-Risk:
-{graph["risk"]}
+        self.memory.update(
+            question=question,
+            answer=answer,
+            function_name=function_name
+        )
 
-Affected Files:
-{graph["affected_files"]}
-
-Code Preview:
-
-{semantic["source"][:300]}
-"""
+        return answer
