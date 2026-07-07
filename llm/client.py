@@ -16,23 +16,34 @@ MODEL = os.getenv("MODEL_NAME")
 def ask_llm(system_prompt, user_prompt):
 
     response = client.chat.completions.create(
-
         model=MODEL,
-
         messages=[
-            {
-                "role": "system",
-                "content": system_prompt
-            },
-            {
-                "role": "user",
-                "content": user_prompt
-            }
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": user_prompt},
         ],
-
         temperature=0.2,
-
-        max_tokens=700
+        max_tokens=700,
     )
 
     return response.choices[0].message.content
+
+
+def stream_llm(system_prompt, user_prompt):
+
+    stream = client.chat.completions.create(
+        model=MODEL,
+        messages=[
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": user_prompt},
+        ],
+        temperature=0.2,
+        max_tokens=700,
+        stream=True,
+    )
+
+    for chunk in stream:
+
+        delta = chunk.choices[0].delta.content
+
+        if delta:
+            yield delta
