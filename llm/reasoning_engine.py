@@ -1,5 +1,6 @@
-from llm.memory import ConversationMemory
 from llm.client import ask_llm
+from llm.context_builder import ContextBuilder
+from llm.memory import ConversationMemory
 from vector.retrieval_engine import RetrievalEngine
 
 
@@ -10,52 +11,34 @@ class RepoMindAssistant:
         self.retriever = RetrievalEngine()
         self.memory = ConversationMemory()
 
-    def build_context(self, question):
-
-        return self.retriever.retrieve(question)
-
     def generate_answer(self, question):
 
-        # Resolve follow-up questions
         question = self.memory.resolve_question(question)
 
-        # Retrieve repository context
-        context = self.build_context(question)
+        context = self.retriever.retrieve(question)
 
-        # System prompt
-        system_prompt = """
-You are RepoMind, an AI Software Architect.
-
-You answer questions about source code repositories.
-
-Use ONLY the repository context provided.
-
-If the answer cannot be determined from the context,
-say that the repository does not contain enough information.
-
-Be concise, accurate, and professional.
-"""
-
-        # User prompt
-        user_prompt = f"""
-User Question:
-
-{question}
-
-Repository Context:
-
-{context}
-
-Generate a helpful answer for the developer.
-"""
-
-        # Get AI response
-        answer = ask_llm(
-            system_prompt=system_prompt,
-            user_prompt=user_prompt
+        prompt = ContextBuilder.build(
+            question,
+            context
         )
 
-        # Store memory
+        system_prompt = """
+You are RepoMind.
+
+You are an expert software architect.
+
+Answer ONLY from the supplied repository context.
+
+If the context is insufficient, clearly say so.
+
+Keep answers concise and technically accurate.
+"""
+
+        answer = ask_llm(
+            system_prompt,
+            prompt
+        )
+
         function_name = None
 
         try:
@@ -73,9 +56,9 @@ Generate a helpful answer for the developer.
             pass
 
         self.memory.update(
-            question=question,
-            answer=answer,
-            function_name=function_name
+            question,
+            answer,
+            function_name
         )
 
         return answer
