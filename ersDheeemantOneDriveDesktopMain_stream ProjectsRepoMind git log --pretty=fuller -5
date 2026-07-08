@@ -1,0 +1,39 @@
+[33mcommit 899576c8da2f3ff939048e3a8b7d62f6f99b079f[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author:     Dheemant <dheemantcode@gmail.com>
+AuthorDate: Wed Jul 8 10:00:00 2026 +0530
+Commit:     Dheemant <dheemantcode@gmail.com>
+CommitDate: Wed Jul 8 10:00:00 2026 +0530
+
+    Day 26: Add AI-powered repository summarization
+
+[33mcommit 1f8ac8a640a3df5ab4d24f65a4ef395802c0b8b7[m
+Author:     Dheemant <dheemantcode@gmail.com>
+AuthorDate: Tue Jul 7 20:09:33 2026 +0530
+Commit:     Dheemant <dheemantcode@gmail.com>
+CommitDate: Tue Jul 7 20:09:33 2026 +0530
+
+    Day 25: Add streaming support for AI responses
+
+[33mcommit 399b23f2f307805367971ea00c06bc4b4fb58b30[m
+Author:     Dheemant <dheemantcode@gmail.com>
+AuthorDate: Tue Jul 7 20:01:52 2026 +0530
+Commit:     Dheemant <dheemantcode@gmail.com>
+CommitDate: Tue Jul 7 20:01:52 2026 +0530
+
+    Day 24: Add context builder for structured RAG prompts
+
+[33mcommit 925ed9a958fd21dbb8f69d8078baa4e78dfc4034[m
+Author:     Dheemant <dheemantcode@gmail.com>
+AuthorDate: Tue Jul 7 19:59:40 2026 +0530
+Commit:     Dheemant <dheemantcode@gmail.com>
+CommitDate: Tue Jul 7 19:59:40 2026 +0530
+
+    Day 23: Integrate NVIDIA LLM for AI-powered repository reasoning
+
+[33mcommit 5c1445df9b62d2e6b88e439116433e6a6637e3ed[m
+Author:     Dheemant <dheemantcode@gmail.com>
+AuthorDate: Mon Jul 6 20:28:12 2026 +0530
+Commit:     Dheemant <dheemantcode@gmail.com>
+CommitDate: Mon Jul 6 20:28:12 2026 +0530
+
+    Day 22: Add conversation memory and contextual follow-up support
