@@ -1,0 +1,30 @@
+{
+    "summary": {
+        "total_functions": 1689,
+        "total_classes": 171,
+        "total_python_files": 63,
+        "total_imports": 618
+    },
+    "top_files": [
+        {
+            "file": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_options.py",
+            "functions": 192
+        },
+        {
+            "file": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\src\\click\\core.py",
+            "functions": 146
+        },
+        {
+            "file": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_termui.py",
+            "functions": 105
+        },
+        {
+            "file": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_basic.py",
+            "functions": 90
+        },
+        {
+            "file": "C:\\Users\\Dheeemant\\OneDrive\\Desktop\\Main_stream Projects\\RepoMind\\repos\\click\\tests\\test_testing.py",
+            "functions": 81
+        }
+    ]
+}
