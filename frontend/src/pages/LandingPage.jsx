@@ -1,67 +1,75 @@
-import { Github } from "lucide-react";
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { analyzeRepository } from "../services/api";
 
 function LandingPage() {
+  const [repoUrl, setRepoUrl] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const navigate = useNavigate();
+
+  const handleAnalyze = async () => {
+    if (!repoUrl.trim()) {
+      alert("Enter a GitHub Repository URL");
+      return;
+    }
+
+    try {
+      setLoading(true);
+
+      await analyzeRepository(repoUrl);
+
+      alert("Repository analyzed successfully!");
+
+      navigate("/chat");
+    } catch (err) {
+      console.error(err);
+      alert("Analysis failed.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
-    <div className="min-h-screen bg-slate-950 text-white">
+    <div
+      style={{
+        background: "#111827",
+        color: "white",
+        minHeight: "100vh",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      <h1 style={{ fontSize: "48px" }}>RepoMind</h1>
 
-      {/* Navbar */}
+      <p>AI Repository Assistant</p>
 
-      <nav className="flex items-center justify-between px-10 py-6 border-b border-slate-800">
+      <input
+        value={repoUrl}
+        onChange={(e) => setRepoUrl(e.target.value)}
+        placeholder="https://github.com/user/repository"
+        style={{
+          width: "500px",
+          padding: "15px",
+          marginTop: "30px",
+          borderRadius: "8px",
+          border: "none",
+        }}
+      />
 
-        <h1 className="text-3xl font-bold text-blue-400">
-          RepoMind
-        </h1>
-
-        <button className="bg-blue-600 hover:bg-blue-700 px-5 py-2 rounded-lg transition">
-
-          GitHub
-
-        </button>
-
-      </nav>
-
-      {/* Hero */}
-
-      <section className="flex flex-col items-center justify-center text-center mt-28">
-
-        <motion.h1
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          className="text-6xl font-extrabold"
-        >
-          Chat With Any
-          <br />
-          GitHub Repository
-        </motion.h1>
-
-        <p className="text-slate-400 text-xl mt-6 max-w-2xl">
-
-          Upload or paste a GitHub repository URL and ask AI
-          anything about the codebase.
-
-        </p>
-
-        <div className="flex gap-3 mt-12 w-full max-w-4xl px-6">
-
-          <input
-            className="flex-1 rounded-xl border border-slate-700 bg-slate-900 px-6 py-4 outline-none focus:border-blue-500"
-            placeholder="https://github.com/user/repository"
-          />
-
-          <button className="bg-blue-600 hover:bg-blue-700 rounded-xl px-8 flex items-center gap-2 transition">
-
-            <Github size={20} />
-
-            Analyze
-
-          </button>
-
-        </div>
-
-      </section>
-
+      <button
+        onClick={handleAnalyze}
+        style={{
+          marginTop: "20px",
+          padding: "15px 40px",
+          fontSize: "18px",
+          cursor: "pointer",
+        }}
+      >
+        {loading ? "Analyzing..." : "Analyze Repository"}
+      </button>
     </div>
   );
 }
