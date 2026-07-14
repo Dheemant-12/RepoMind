@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ChatInput from "../components/ChatInput";
 import MessageBubble from "../components/MessageBubble";
+import { askRepository } from "../services/api";
 
 function ChatPage() {
   const [messages, setMessages] = useState([
@@ -11,7 +12,8 @@ function ChatPage() {
     },
   ]);
 
-  const handleSend = (message) => {
+  const handleSend = async (message) => {
+    // Show user message immediately
     setMessages((prev) => [
       ...prev,
       {
@@ -20,10 +22,39 @@ function ChatPage() {
       },
       {
         role: "assistant",
-        message:
-          "This is a placeholder response.\nTomorrow we'll connect this to the RepoMind AI backend.",
+        message: "Thinking...",
       },
     ]);
+
+    try {
+      const response = await askRepository(message);
+
+      setMessages((prev) => {
+        const updated = [...prev];
+
+        // Replace "Thinking..." with the AI answer
+        updated[updated.length - 1] = {
+          role: "assistant",
+          message: response.answer,
+        };
+
+        return updated;
+      });
+    } catch (error) {
+      console.error(error);
+
+      setMessages((prev) => {
+        const updated = [...prev];
+
+        updated[updated.length - 1] = {
+          role: "assistant",
+          message:
+            "❌ Failed to get a response from RepoMind. Please make sure the backend is running.",
+        };
+
+        return updated;
+      });
+    }
   };
 
   return (
@@ -61,10 +92,10 @@ function ChatPage() {
 
         <h3>Repositories</h3>
 
-        <p>📁 Flask</p>
+        <p>📁 Current Repository</p>
       </div>
 
-      {/* Chat Section */}
+      {/* Chat Area */}
       <div
         style={{
           flex: 1,
@@ -101,7 +132,7 @@ function ChatPage() {
           ))}
         </div>
 
-        {/* Chat Input */}
+        {/* Input */}
         <ChatInput onSend={handleSend} />
       </div>
     </div>

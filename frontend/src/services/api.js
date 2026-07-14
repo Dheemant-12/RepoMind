@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://localhost:8000",
+  baseURL: "http://127.0.0.1:8000",
   headers: {
     "Content-Type": "application/json",
   },
@@ -10,6 +10,14 @@ const api = axios.create({
 export const analyzeRepository = async (repoUrl) => {
   const response = await api.post("/analyze", {
     repo_url: repoUrl,
+  });
+
+  return response.data;
+};
+
+export const askRepository = async (question) => {
+  const response = await api.post("/ask", {
+    question,
   });
 
   return response.data;
