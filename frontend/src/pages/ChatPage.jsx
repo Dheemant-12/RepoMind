@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import ChatInput from "../components/ChatInput";
 import MessageBubble from "../components/MessageBubble";
 import { askRepository } from "../services/api";
@@ -12,8 +12,15 @@ function ChatPage() {
     },
   ]);
 
+  const messagesEndRef = useRef(null);
+
+  useEffect(() => {
+    messagesEndRef.current?.scrollIntoView({
+      behavior: "smooth",
+    });
+  }, [messages]);
+
   const handleSend = async (message) => {
-    // Show user message immediately
     setMessages((prev) => [
       ...prev,
       {
@@ -22,7 +29,7 @@ function ChatPage() {
       },
       {
         role: "assistant",
-        message: "Thinking...",
+        message: "🤖 RepoMind is thinking...",
       },
     ]);
 
@@ -32,7 +39,6 @@ function ChatPage() {
       setMessages((prev) => {
         const updated = [...prev];
 
-        // Replace "Thinking..." with the AI answer
         updated[updated.length - 1] = {
           role: "assistant",
           message: response.answer,
@@ -40,16 +46,14 @@ function ChatPage() {
 
         return updated;
       });
-    } catch (error) {
-      console.error(error);
-
+    } catch (err) {
       setMessages((prev) => {
         const updated = [...prev];
 
         updated[updated.length - 1] = {
           role: "assistant",
           message:
-            "❌ Failed to get a response from RepoMind. Please make sure the backend is running.",
+            "❌ Unable to contact the backend. Please make sure FastAPI is running.",
         };
 
         return updated;
@@ -66,13 +70,12 @@ function ChatPage() {
         color: "white",
       }}
     >
-      {/* Sidebar */}
       <div
         style={{
           width: "260px",
+          background: "#111827",
           borderRight: "1px solid #1e293b",
           padding: "20px",
-          background: "#111827",
         }}
       >
         <h2>RepoMind</h2>
@@ -82,7 +85,6 @@ function ChatPage() {
             width: "100%",
             marginTop: "20px",
             padding: "12px",
-            cursor: "pointer",
           }}
         >
           + New Chat
@@ -90,12 +92,9 @@ function ChatPage() {
 
         <hr style={{ margin: "20px 0" }} />
 
-        <h3>Repositories</h3>
-
         <p>📁 Current Repository</p>
       </div>
 
-      {/* Chat Area */}
       <div
         style={{
           flex: 1,
@@ -103,19 +102,17 @@ function ChatPage() {
           flexDirection: "column",
         }}
       >
-        {/* Header */}
         <div
           style={{
             padding: "20px",
             borderBottom: "1px solid #1e293b",
-            fontSize: "24px",
             fontWeight: "bold",
+            fontSize: "24px",
           }}
         >
           RepoMind AI
         </div>
 
-        {/* Messages */}
         <div
           style={{
             flex: 1,
@@ -130,9 +127,10 @@ function ChatPage() {
               message={msg.message}
             />
           ))}
+
+          <div ref={messagesEndRef} />
         </div>
 
-        {/* Input */}
         <ChatInput onSend={handleSend} />
       </div>
     </div>
