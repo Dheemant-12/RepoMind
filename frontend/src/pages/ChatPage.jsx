@@ -12,6 +12,10 @@ function ChatPage() {
     },
   ]);
 
+  const [chatHistory, setChatHistory] = useState([
+    "Repository Overview",
+  ]);
+
   const messagesEndRef = useRef(null);
 
   useEffect(() => {
@@ -19,6 +23,20 @@ function ChatPage() {
       behavior: "smooth",
     });
   }, [messages]);
+
+  const handleNewChat = () => {
+    const chatName = `Chat ${chatHistory.length + 1}`;
+
+    setChatHistory((prev) => [...prev, chatName]);
+
+    setMessages([
+      {
+        role: "assistant",
+        message:
+          "👋 New chat started.\n\nAsk me anything about the repository.",
+      },
+    ]);
+  };
 
   const handleSend = async (message) => {
     setMessages((prev) => [
@@ -70,6 +88,7 @@ function ChatPage() {
         color: "white",
       }}
     >
+      {/* Sidebar */}
       <div
         style={{
           width: "260px",
@@ -81,10 +100,12 @@ function ChatPage() {
         <h2>RepoMind</h2>
 
         <button
+          onClick={handleNewChat}
           style={{
             width: "100%",
             marginTop: "20px",
             padding: "12px",
+            cursor: "pointer",
           }}
         >
           + New Chat
@@ -92,9 +113,20 @@ function ChatPage() {
 
         <hr style={{ margin: "20px 0" }} />
 
-        <p>📁 Current Repository</p>
+        <h3>Chat History</h3>
+
+        {chatHistory.map((chat, index) => (
+          <p key={index}>💬 {chat}</p>
+        ))}
+
+        <hr style={{ margin: "20px 0" }} />
+
+        <h3>Repository</h3>
+
+        <p>📁 Flask</p>
       </div>
 
+      {/* Chat Area */}
       <div
         style={{
           flex: 1,
