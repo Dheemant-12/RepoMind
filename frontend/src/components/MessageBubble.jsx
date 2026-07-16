@@ -1,3 +1,8 @@
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
+
 function MessageBubble({ role, message }) {
   const isUser = role === "user";
 
@@ -11,15 +16,49 @@ function MessageBubble({ role, message }) {
     >
       <div
         style={{
+          maxWidth: "75%",
+          padding: "16px",
+          borderRadius: "12px",
           background: isUser ? "#2563eb" : "#1f2937",
           color: "white",
-          padding: "15px",
-          borderRadius: "12px",
-          maxWidth: "70%",
-          whiteSpace: "pre-wrap",
         }}
       >
-        {message}
+        {isUser ? (
+          message
+        ) : (
+          <ReactMarkdown
+            remarkPlugins={[remarkGfm]}
+            components={{
+              code({ inline, className, children, ...props }) {
+                const match = /language-(\w+)/.exec(className || "");
+
+                return !inline && match ? (
+                  <SyntaxHighlighter
+                    style={oneDark}
+                    language={match[1]}
+                    PreTag="div"
+                    {...props}
+                  >
+                    {String(children).replace(/\n$/, "")}
+                  </SyntaxHighlighter>
+                ) : (
+                  <code
+                    style={{
+                      background: "#111827",
+                      padding: "2px 6px",
+                      borderRadius: "4px",
+                    }}
+                    {...props}
+                  >
+                    {children}
+                  </code>
+                );
+              },
+            }}
+          >
+            {message}
+          </ReactMarkdown>
+        )}
       </div>
     </div>
   );
