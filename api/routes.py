@@ -12,6 +12,8 @@ from api.models import (
 
 from ingestion.clone_repo import clone_repository
 from llm.reasoning_engine import RepoMindAssistant
+from ingestion.ast_parser import get_repository_statistics
+
 
 router = APIRouter()
 
