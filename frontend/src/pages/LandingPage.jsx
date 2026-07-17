@@ -21,7 +21,7 @@ function LandingPage() {
 
       alert("Repository analyzed successfully!");
 
-      navigate("/chat");
+      navigate("/dashboard");
     } catch (err) {
       console.error(err);
       alert("Analysis failed.");
