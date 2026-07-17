@@ -1,9 +1,45 @@
+import { useEffect, useState } from "react";
+import { getDashboard } from "../services/api";
+
 function Dashboard() {
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    async function loadDashboard() {
+      try {
+        const result = await getDashboard();
+        setData(result);
+      } catch (error) {
+        console.error("Failed to load dashboard:", error);
+      }
+    }
+
+    loadDashboard();
+  }, []);
+
+  if (!data) {
+    return (
+      <div
+        style={{
+          background: "#0b1120",
+          color: "white",
+          minHeight: "100vh",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          fontSize: "24px",
+        }}
+      >
+        Loading dashboard...
+      </div>
+    );
+  }
+
   const stats = [
-    { title: "Python Files", value: 42 },
-    { title: "Functions", value: 318 },
-    { title: "Classes", value: 61 },
-    { title: "Imports", value: 425 },
+    { title: "Python Files", value: data.python_files },
+    { title: "Functions", value: data.functions },
+    { title: "Classes", value: data.classes },
+    { title: "Imports", value: data.imports },
   ];
 
   return (
@@ -25,8 +61,7 @@ function Dashboard() {
           marginTop: "25px",
         }}
       >
-        <h2>Repository</h2>
-        <p>Flask</p>
+        <h2>{data.repository}</h2>
 
         <h3 style={{ marginTop: "20px" }}>
           ✅ Repository Status
@@ -38,7 +73,7 @@ function Dashboard() {
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(2,1fr)",
+          gridTemplateColumns: "repeat(2, 1fr)",
           gap: "20px",
           marginTop: "30px",
         }}
@@ -68,12 +103,7 @@ function Dashboard() {
       >
         <h2>AI Summary</h2>
 
-        <p>
-          Flask is a lightweight Python web framework.
-          The repository contains modular routing,
-          request handling, template rendering,
-          and extension support.
-        </p>
+        <p>{data.summary}</p>
       </div>
     </div>
   );

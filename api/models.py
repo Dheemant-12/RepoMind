@@ -1,6 +1,15 @@
 from pydantic import BaseModel
 
 
+class DashboardResponse(BaseModel):
+    repository: str
+    python_files: int
+    functions: int
+    classes: int
+    imports: int
+    summary: str
+
+
 class AskRequest(BaseModel):
     question: str
 
