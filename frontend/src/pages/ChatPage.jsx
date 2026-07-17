@@ -8,7 +8,7 @@ function ChatPage() {
     {
       role: "assistant",
       message:
-        "👋 Hello! Your repository has been analyzed successfully.\n\nAsk me anything about the codebase.",
+        "👋 Welcome to RepoMind.\n\nYour repository has been indexed successfully.\nAsk me anything about the codebase.",
     },
   ]);
 
@@ -25,15 +25,16 @@ function ChatPage() {
   }, [messages]);
 
   const handleNewChat = () => {
-    const chatName = `Chat ${chatHistory.length + 1}`;
-
-    setChatHistory((prev) => [...prev, chatName]);
+    setChatHistory((prev) => [
+      ...prev,
+      `Chat ${prev.length + 1}`,
+    ]);
 
     setMessages([
       {
         role: "assistant",
         message:
-          "👋 New chat started.\n\nAsk me anything about the repository.",
+          "👋 New conversation started.\n\nWhat would you like to know about this repository?",
       },
     ]);
   };
@@ -64,14 +65,14 @@ function ChatPage() {
 
         return updated;
       });
-    } catch (err) {
+    } catch {
       setMessages((prev) => {
         const updated = [...prev];
 
         updated[updated.length - 1] = {
           role: "assistant",
           message:
-            "❌ Unable to contact the backend. Please make sure FastAPI is running.",
+            "Unable to reach the backend. Please ensure FastAPI is running.",
         };
 
         return updated;
@@ -84,49 +85,77 @@ function ChatPage() {
       style={{
         display: "flex",
         height: "100vh",
-        background: "#0f172a",
+        background: "#0b1120",
         color: "white",
       }}
     >
       {/* Sidebar */}
       <div
         style={{
-          width: "260px",
+          width: "280px",
           background: "#111827",
-          borderRight: "1px solid #1e293b",
+          display: "flex",
+          flexDirection: "column",
           padding: "20px",
+          borderRight: "1px solid #1e293b",
         }}
       >
-        <h2>RepoMind</h2>
+        <h2 style={{ marginBottom: "25px" }}>
+          🧠 RepoMind
+        </h2>
 
         <button
           onClick={handleNewChat}
           style={{
-            width: "100%",
-            marginTop: "20px",
-            padding: "12px",
+            padding: "14px",
+            background: "#2563eb",
+            color: "white",
+            border: "none",
+            borderRadius: "8px",
             cursor: "pointer",
+            marginBottom: "25px",
           }}
         >
           + New Chat
         </button>
 
-        <hr style={{ margin: "20px 0" }} />
+        <h3>Recent Chats</h3>
 
-        <h3>Chat History</h3>
-
-        {chatHistory.map((chat, index) => (
-          <p key={index}>💬 {chat}</p>
-        ))}
-
-        <hr style={{ margin: "20px 0" }} />
+        <div style={{ marginBottom: "30px" }}>
+          {chatHistory.map((chat, index) => (
+            <div
+              key={index}
+              style={{
+                padding: "10px",
+                marginTop: "8px",
+                background: "#1f2937",
+                borderRadius: "8px",
+              }}
+            >
+              💬 {chat}
+            </div>
+          ))}
+        </div>
 
         <h3>Repository</h3>
 
-        <p>📁 Flask</p>
+        <div
+          style={{
+            background: "#1f2937",
+            padding: "15px",
+            borderRadius: "10px",
+            marginTop: "10px",
+          }}
+        >
+          <strong>Flask</strong>
+
+          <p style={{ color: "#9ca3af" }}>
+            Repository indexed successfully.
+          </p>
+        </div>
       </div>
 
-      {/* Chat Area */}
+      {/* Chat Section */}
       <div
         style={{
           flex: 1,
@@ -138,18 +167,18 @@ function ChatPage() {
           style={{
             padding: "20px",
             borderBottom: "1px solid #1e293b",
-            fontWeight: "bold",
             fontSize: "24px",
+            fontWeight: "bold",
           }}
         >
-          RepoMind AI
+          RepoMind AI Assistant
         </div>
 
         <div
           style={{
             flex: 1,
             overflowY: "auto",
-            padding: "20px",
+            padding: "25px",
           }}
         >
           {messages.map((msg, index) => (
