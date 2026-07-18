@@ -1,7 +1,6 @@
 from pathlib import Path
 
 from fastapi import APIRouter
-
 from api.models import (
     AskRequest,
     AskResponse,
@@ -14,17 +13,22 @@ from ingestion.clone_repo import clone_repository
 from llm.reasoning_engine import RepoMindAssistant
 from ingestion.ast_parser import get_repository_statistics
 
-
 router = APIRouter()
 
 assistant = RepoMindAssistant()
 
+# Store the last analyzed repository name
+LAST_REPOSITORY_NAME = "No Repository"
+
 
 @router.post("/analyze", response_model=AnalyzeResponse)
 def analyze_repository(request: AnalyzeRequest):
+    global LAST_REPOSITORY_NAME
+
     repo_path = clone_repository(request.repo_url)
 
     repository_name = Path(repo_path).name
+    LAST_REPOSITORY_NAME = repository_name
 
     return AnalyzeResponse(
         status="success",
@@ -48,19 +52,18 @@ def dashboard():
 
     python_files = len(list(repo_path.rglob("*.py")))
 
-    # Temporary placeholder values
-    functions = 318
-    classes = 61
-    imports = 425
+    stats = get_repository_statistics(repo_path)
 
     return DashboardResponse(
-        repository="Current Repository",
+        repository=LAST_REPOSITORY_NAME,
         python_files=python_files,
-        functions=functions,
-        classes=classes,
-        imports=imports,
+        functions=stats["functions"],
+        classes=stats["classes"],
+        imports=stats["imports"],
         summary=(
-            "Repository indexed successfully. "
-            "Dashboard metrics are now served from the backend."
+            f"Repository contains {python_files} Python files, "
+            f"{stats['functions']} functions, "
+            f"{stats['classes']} classes and "
+            f"{stats['imports']} imports."
         ),
     )
