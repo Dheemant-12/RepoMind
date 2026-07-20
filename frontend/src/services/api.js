@@ -28,4 +28,9 @@ export const getDashboard = async () => {
   return response.data;
 };
 
+export const getRepositoryTree = async () => {
+  const response = await api.get("/repository-tree");
+  return response.data;
+};
+
 export default api;

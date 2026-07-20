@@ -7,7 +7,15 @@ class DashboardResponse(BaseModel):
     functions: int
     classes: int
     imports: int
+    avg_functions_per_file: float
+    health_score: int
+    health_status: str
     summary: str
+
+
+class RepositoryTreeResponse(BaseModel):
+    repository: str
+    files: list[str]
 
 
 class AskRequest(BaseModel):
