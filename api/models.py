@@ -18,6 +18,11 @@ class RepositoryTreeResponse(BaseModel):
     files: list[str]
 
 
+class FileContentResponse(BaseModel):
+    file_path: str
+    content: str
+
+
 class AskRequest(BaseModel):
     question: str
 

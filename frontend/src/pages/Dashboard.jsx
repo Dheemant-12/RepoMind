@@ -2,11 +2,14 @@ import { useEffect, useState } from "react";
 import {
   getDashboard,
   getRepositoryTree,
+  getFileContent,
 } from "../services/api";
 
 function Dashboard() {
   const [data, setData] = useState(null);
   const [tree, setTree] = useState([]);
+  const [selectedFile, setSelectedFile] = useState("");
+  const [fileContent, setFileContent] = useState("Select a file to view its contents.");
 
   useEffect(() => {
     async function loadDashboard() {
@@ -23,6 +26,19 @@ function Dashboard() {
 
     loadDashboard();
   }, []);
+
+  async function openFile(path) {
+    try {
+      setSelectedFile(path);
+
+      const result = await getFileContent(path);
+
+      setFileContent(result.content);
+    } catch (error) {
+      console.error(error);
+      setFileContent("Unable to load file.");
+    }
+  }
 
   if (!data) {
     return (
@@ -81,7 +97,7 @@ function Dashboard() {
             background: "#1f2937",
             borderRadius: "12px",
             padding: "20px",
-            maxHeight: "80vh",
+            maxHeight: "85vh",
             overflowY: "auto",
           }}
         >
@@ -102,10 +118,16 @@ function Dashboard() {
             tree.map((file, index) => (
               <div
                 key={index}
+                onClick={() => openFile(file)}
                 style={{
-                  padding: "6px 0",
-                  borderBottom: "1px solid #374151",
-                  fontSize: "14px",
+                  padding: "8px",
+                  marginBottom: "4px",
+                  borderRadius: "6px",
+                  cursor: "pointer",
+                  background:
+                    selectedFile === file
+                      ? "#2563eb"
+                      : "transparent",
                 }}
               >
                 📄 {file}
@@ -114,7 +136,7 @@ function Dashboard() {
           )}
         </div>
 
-        {/* Main Dashboard */}
+        {/* Right Side */}
 
         <div>
           {/* Repository Card */}
@@ -170,7 +192,7 @@ function Dashboard() {
             ))}
           </div>
 
-          {/* Health */}
+          {/* Repository Health */}
 
           <div
             style={{
@@ -195,7 +217,7 @@ function Dashboard() {
             <h2>{data.health_status}</h2>
           </div>
 
-          {/* Summary */}
+          {/* AI Summary */}
 
           <div
             style={{
@@ -215,6 +237,43 @@ function Dashboard() {
             >
               {data.summary}
             </p>
+          </div>
+
+          {/* Code Viewer */}
+
+          <div
+            style={{
+              background: "#111827",
+              padding: "25px",
+              marginTop: "25px",
+              borderRadius: "12px",
+            }}
+          >
+            <h2>📄 File Viewer</h2>
+
+            <p
+              style={{
+                color: "#9ca3af",
+                marginBottom: "15px",
+              }}
+            >
+              {selectedFile || "No file selected"}
+            </p>
+
+            <pre
+              style={{
+                overflowX: "auto",
+                whiteSpace: "pre-wrap",
+                background: "#030712",
+                padding: "20px",
+                borderRadius: "8px",
+                maxHeight: "600px",
+                overflowY: "auto",
+                fontSize: "14px",
+              }}
+            >
+              <code>{fileContent}</code>
+            </pre>
           </div>
         </div>
       </div>

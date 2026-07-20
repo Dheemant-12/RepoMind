@@ -33,4 +33,14 @@ export const getRepositoryTree = async () => {
   return response.data;
 };
 
+export const getFileContent = async (path) => {
+  const response = await api.get("/file-content", {
+    params: {
+      path,
+    },
+  });
+
+  return response.data;
+};
+
 export default api;

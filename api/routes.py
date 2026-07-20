@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from fastapi import APIRouter
+from fastapi import APIRouter, HTTPException
 from api.models import (
     AskRequest,
     AskResponse,
@@ -8,6 +8,7 @@ from api.models import (
     AnalyzeResponse,
     DashboardResponse,
     RepositoryTreeResponse,
+    FileContentResponse,
 )
 
 from ingestion.clone_repo import clone_repository
@@ -117,4 +118,31 @@ def repository_tree():
     return RepositoryTreeResponse(
         repository=LAST_REPOSITORY_NAME,
         files=files,
+    )
+
+
+@router.get("/file-content", response_model=FileContentResponse)
+def file_content(path: str):
+    repo_root = Path("repositories")
+    file_path = repo_root / path
+
+    if not file_path.exists() or not file_path.is_file():
+        raise HTTPException(status_code=404, detail="File not found")
+
+    try:
+        content = file_path.read_text(encoding="utf-8")
+    except UnicodeDecodeError:
+        content = file_path.read_text(
+            encoding="latin-1",
+            errors="ignore"
+        )
+    except Exception:
+        raise HTTPException(
+            status_code=500,
+            detail="Unable to read file",
+        )
+
+    return FileContentResponse(
+        file_path=path,
+        content=content,
     )
