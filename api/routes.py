@@ -11,6 +11,7 @@ from api.models import (
     FileContentResponse,
 )
 
+from config.settings import REPOS_DIR
 from ingestion.clone_repo import clone_repository
 from llm.reasoning_engine import RepoMindAssistant
 from ingestion.ast_parser import get_repository_statistics
@@ -48,7 +49,7 @@ def ask_repo(request: AskRequest):
 
 @router.get("/dashboard", response_model=DashboardResponse)
 def dashboard():
-    repo_path = Path("repositories")
+    repo_path = REPOS_DIR
 
     python_files = len(list(repo_path.rglob("*.py")))
 
@@ -104,7 +105,7 @@ def dashboard():
 
 @router.get("/repository-tree", response_model=RepositoryTreeResponse)
 def repository_tree():
-    repo_root = Path("repositories")
+    repo_root = REPOS_DIR
 
     files = []
 
@@ -123,7 +124,7 @@ def repository_tree():
 
 @router.get("/file-content", response_model=FileContentResponse)
 def file_content(path: str):
-    repo_root = Path("repositories")
+    repo_root = REPOS_DIR
     file_path = repo_root / path
 
     if not file_path.exists() or not file_path.is_file():
