@@ -9,6 +9,8 @@ from api.models import (
     DashboardResponse,
     RepositoryTreeResponse,
     FileContentResponse,
+    ExplainFileRequest,
+    ExplainFileResponse,
 )
 
 from config.settings import REPOS_DIR
@@ -45,6 +47,37 @@ def ask_repo(request: AskRequest):
     answer = assistant.generate_answer(request.question)
 
     return AskResponse(answer=answer)
+
+
+@router.post("/explain-file", response_model=ExplainFileResponse)
+def explain_file(request: ExplainFileRequest):
+    repo_root = REPOS_DIR
+    file_path = repo_root / request.file_path
+
+    if not file_path.exists() or not file_path.is_file():
+        raise HTTPException(
+            status_code=404,
+            detail="File not found",
+        )
+
+    try:
+        content = file_path.read_text(
+            encoding="utf-8"
+        )
+    except UnicodeDecodeError:
+        content = file_path.read_text(
+            encoding="latin-1",
+            errors="ignore",
+        )
+
+    explanation = assistant.explain_file(
+        request.file_path,
+        content,
+    )
+
+    return ExplainFileResponse(
+        explanation=explanation
+    )
 
 
 @router.get("/dashboard", response_model=DashboardResponse)
@@ -112,7 +145,9 @@ def repository_tree():
     if repo_root.exists():
         for file in repo_root.rglob("*"):
             if file.is_file():
-                files.append(str(file.relative_to(repo_root)))
+                files.append(
+                    str(file.relative_to(repo_root))
+                )
 
     files.sort()
 
@@ -128,14 +163,19 @@ def file_content(path: str):
     file_path = repo_root / path
 
     if not file_path.exists() or not file_path.is_file():
-        raise HTTPException(status_code=404, detail="File not found")
+        raise HTTPException(
+            status_code=404,
+            detail="File not found",
+        )
 
     try:
-        content = file_path.read_text(encoding="utf-8")
+        content = file_path.read_text(
+            encoding="utf-8"
+        )
     except UnicodeDecodeError:
         content = file_path.read_text(
             encoding="latin-1",
-            errors="ignore"
+            errors="ignore",
         )
     except Exception:
         raise HTTPException(

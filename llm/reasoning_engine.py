@@ -62,3 +62,42 @@ Keep answers concise and technically accurate.
         )
 
         return answer
+
+    def explain_file(self, file_path: str, file_content: str):
+
+        prompt = f"""
+Explain the following source code file to a beginner.
+
+File Name:
+{file_path}
+
+Source Code:
+{file_content}
+
+Your response should include:
+
+1. Purpose of the file
+2. Important classes
+3. Important functions
+4. External libraries used
+5. Simple explanation suitable for beginners
+
+Keep the explanation under 250 words.
+"""
+
+        system_prompt = """
+You are RepoMind.
+
+You are an expert Python software architect.
+
+Explain code in a beginner-friendly way.
+
+Avoid unnecessary jargon.
+
+Use bullet points whenever appropriate.
+"""
+
+        return ask_llm(
+            system_prompt,
+            prompt
+        )

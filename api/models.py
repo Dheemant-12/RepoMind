@@ -23,6 +23,14 @@ class FileContentResponse(BaseModel):
     content: str
 
 
+class ExplainFileRequest(BaseModel):
+    file_path: str
+
+
+class ExplainFileResponse(BaseModel):
+    explanation: str
+
+
 class AskRequest(BaseModel):
     question: str
 

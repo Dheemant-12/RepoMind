@@ -43,4 +43,12 @@ export const getFileContent = async (path) => {
   return response.data;
 };
 
+export const explainFile = async (filePath) => {
+  const response = await api.post("/explain-file", {
+    file_path: filePath,
+  });
+
+  return response.data;
+};
+
 export default api;

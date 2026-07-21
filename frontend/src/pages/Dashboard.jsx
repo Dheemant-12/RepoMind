@@ -3,13 +3,19 @@ import {
   getDashboard,
   getRepositoryTree,
   getFileContent,
+  explainFile,
 } from "../services/api";
 
 function Dashboard() {
   const [data, setData] = useState(null);
   const [tree, setTree] = useState([]);
   const [selectedFile, setSelectedFile] = useState("");
-  const [fileContent, setFileContent] = useState("Select a file to view its contents.");
+  const [fileContent, setFileContent] = useState(
+    "Select a file to view its contents."
+  );
+
+  const [explanation, setExplanation] = useState("");
+  const [loadingExplanation, setLoadingExplanation] = useState(false);
 
   useEffect(() => {
     async function loadDashboard() {
@@ -34,9 +40,27 @@ function Dashboard() {
       const result = await getFileContent(path);
 
       setFileContent(result.content);
+      setExplanation("");
     } catch (error) {
       console.error(error);
       setFileContent("Unable to load file.");
+    }
+  }
+
+  async function handleExplainFile() {
+    if (!selectedFile) return;
+
+    try {
+      setLoadingExplanation(true);
+
+      const result = await explainFile(selectedFile);
+
+      setExplanation(result.explanation);
+    } catch (error) {
+      console.error(error);
+      setExplanation("Unable to generate explanation.");
+    } finally {
+      setLoadingExplanation(false);
     }
   }
 
@@ -239,7 +263,7 @@ function Dashboard() {
             </p>
           </div>
 
-          {/* Code Viewer */}
+          {/* File Viewer */}
 
           <div
             style={{
@@ -260,6 +284,24 @@ function Dashboard() {
               {selectedFile || "No file selected"}
             </p>
 
+            <button
+              onClick={handleExplainFile}
+              disabled={!selectedFile || loadingExplanation}
+              style={{
+                padding: "10px 18px",
+                marginBottom: "20px",
+                background: "#2563eb",
+                color: "white",
+                border: "none",
+                borderRadius: "6px",
+                cursor: "pointer",
+              }}
+            >
+              {loadingExplanation
+                ? "Generating..."
+                : "🤖 Explain This File"}
+            </button>
+
             <pre
               style={{
                 overflowX: "auto",
@@ -267,13 +309,37 @@ function Dashboard() {
                 background: "#030712",
                 padding: "20px",
                 borderRadius: "8px",
-                maxHeight: "600px",
+                maxHeight: "500px",
                 overflowY: "auto",
                 fontSize: "14px",
               }}
             >
               <code>{fileContent}</code>
             </pre>
+          </div>
+
+          {/* AI Explanation */}
+
+          <div
+            style={{
+              background: "#1f2937",
+              padding: "25px",
+              marginTop: "25px",
+              borderRadius: "12px",
+            }}
+          >
+            <h2>🧠 AI File Explanation</h2>
+
+            <p
+              style={{
+                whiteSpace: "pre-wrap",
+                lineHeight: "1.8",
+                marginTop: "15px",
+              }}
+            >
+              {explanation ||
+                "Select a file and click 'Explain This File'."}
+            </p>
           </div>
         </div>
       </div>
