@@ -4,6 +4,7 @@ import {
   getRepositoryTree,
   getFileContent,
   explainFile,
+  reviewFile,
 } from "../services/api";
 
 function Dashboard() {
@@ -15,7 +16,10 @@ function Dashboard() {
   );
 
   const [explanation, setExplanation] = useState("");
+  const [review, setReview] = useState("");
+
   const [loadingExplanation, setLoadingExplanation] = useState(false);
+  const [loadingReview, setLoadingReview] = useState(false);
 
   useEffect(() => {
     async function loadDashboard() {
@@ -40,7 +44,9 @@ function Dashboard() {
       const result = await getFileContent(path);
 
       setFileContent(result.content);
+
       setExplanation("");
+      setReview("");
     } catch (error) {
       console.error(error);
       setFileContent("Unable to load file.");
@@ -61,6 +67,23 @@ function Dashboard() {
       setExplanation("Unable to generate explanation.");
     } finally {
       setLoadingExplanation(false);
+    }
+  }
+
+  async function handleReviewFile() {
+    if (!selectedFile) return;
+
+    try {
+      setLoadingReview(true);
+
+      const result = await reviewFile(selectedFile);
+
+      setReview(result.review);
+    } catch (error) {
+      console.error(error);
+      setReview("Unable to generate review.");
+    } finally {
+      setLoadingReview(false);
     }
   }
 
@@ -159,8 +182,6 @@ function Dashboard() {
             ))
           )}
         </div>
-
-        {/* Right Side */}
 
         <div>
           {/* Repository Card */}
@@ -284,23 +305,47 @@ function Dashboard() {
               {selectedFile || "No file selected"}
             </p>
 
-            <button
-              onClick={handleExplainFile}
-              disabled={!selectedFile || loadingExplanation}
+            <div
               style={{
-                padding: "10px 18px",
+                display: "flex",
+                gap: "10px",
                 marginBottom: "20px",
-                background: "#2563eb",
-                color: "white",
-                border: "none",
-                borderRadius: "6px",
-                cursor: "pointer",
               }}
             >
-              {loadingExplanation
-                ? "Generating..."
-                : "🤖 Explain This File"}
-            </button>
+              <button
+                onClick={handleExplainFile}
+                disabled={!selectedFile || loadingExplanation}
+                style={{
+                  padding: "10px 18px",
+                  background: "#2563eb",
+                  color: "white",
+                  border: "none",
+                  borderRadius: "6px",
+                  cursor: "pointer",
+                }}
+              >
+                {loadingExplanation
+                  ? "Generating..."
+                  : "🤖 Explain This File"}
+              </button>
+
+              <button
+                onClick={handleReviewFile}
+                disabled={!selectedFile || loadingReview}
+                style={{
+                  padding: "10px 18px",
+                  background: "#16a34a",
+                  color: "white",
+                  border: "none",
+                  borderRadius: "6px",
+                  cursor: "pointer",
+                }}
+              >
+                {loadingReview
+                  ? "Reviewing..."
+                  : "🔍 Review This File"}
+              </button>
+            </div>
 
             <pre
               style={{
@@ -339,6 +384,30 @@ function Dashboard() {
             >
               {explanation ||
                 "Select a file and click 'Explain This File'."}
+            </p>
+          </div>
+
+          {/* AI Code Review */}
+
+          <div
+            style={{
+              background: "#1f2937",
+              padding: "25px",
+              marginTop: "25px",
+              borderRadius: "12px",
+            }}
+          >
+            <h2>🔍 AI Code Review</h2>
+
+            <p
+              style={{
+                whiteSpace: "pre-wrap",
+                lineHeight: "1.8",
+                marginTop: "15px",
+              }}
+            >
+              {review ||
+                "Select a file and click 'Review This File'."}
             </p>
           </div>
         </div>

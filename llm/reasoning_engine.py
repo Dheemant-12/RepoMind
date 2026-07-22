@@ -101,3 +101,48 @@ Use bullet points whenever appropriate.
             system_prompt,
             prompt
         )
+
+    def review_file(self, file_path: str, file_content: str):
+
+        prompt = f"""
+Review the following source code.
+
+File:
+{file_path}
+
+Source Code:
+{file_content}
+
+Provide your review in the following format:
+
+✅ Strengths
+- ...
+
+⚠️ Issues
+- ...
+
+💡 Suggestions
+- ...
+
+⭐ Overall Score
+Give a score out of 10.
+
+Keep the review concise and under 300 words.
+"""
+
+        system_prompt = """
+You are RepoMind.
+
+You are a senior software engineer performing a professional code review.
+
+Review readability, maintainability, naming,
+code organization, Python best practices,
+performance and possible improvements.
+
+Be constructive and beginner-friendly.
+"""
+
+        return ask_llm(
+            system_prompt,
+            prompt
+        )

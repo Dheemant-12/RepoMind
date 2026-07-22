@@ -31,6 +31,14 @@ class ExplainFileResponse(BaseModel):
     explanation: str
 
 
+class ReviewFileRequest(BaseModel):
+    file_path: str
+
+
+class ReviewFileResponse(BaseModel):
+    review: str
+
+
 class AskRequest(BaseModel):
     question: str
 

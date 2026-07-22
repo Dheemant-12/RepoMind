@@ -11,6 +11,8 @@ from api.models import (
     FileContentResponse,
     ExplainFileRequest,
     ExplainFileResponse,
+    ReviewFileRequest,
+    ReviewFileResponse,
 )
 
 from config.settings import REPOS_DIR
@@ -77,6 +79,37 @@ def explain_file(request: ExplainFileRequest):
 
     return ExplainFileResponse(
         explanation=explanation
+    )
+
+
+@router.post("/review-file", response_model=ReviewFileResponse)
+def review_file(request: ReviewFileRequest):
+    repo_root = REPOS_DIR
+    file_path = repo_root / request.file_path
+
+    if not file_path.exists() or not file_path.is_file():
+        raise HTTPException(
+            status_code=404,
+            detail="File not found",
+        )
+
+    try:
+        content = file_path.read_text(
+            encoding="utf-8"
+        )
+    except UnicodeDecodeError:
+        content = file_path.read_text(
+            encoding="latin-1",
+            errors="ignore",
+        )
+
+    review = assistant.review_file(
+        request.file_path,
+        content,
+    )
+
+    return ReviewFileResponse(
+        review=review
     )
 
 

@@ -51,4 +51,12 @@ export const explainFile = async (filePath) => {
   return response.data;
 };
 
+export const reviewFile = async (filePath) => {
+  const response = await api.post("/review-file", {
+    file_path: filePath,
+  });
+
+  return response.data;
+};
+
 export default api;
