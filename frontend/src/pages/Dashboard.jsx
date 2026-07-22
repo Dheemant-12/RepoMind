@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import {
   getDashboard,
   getRepositoryTree,
+  getDependencyGraph,
   getFileContent,
   explainFile,
   reviewFile,
@@ -10,6 +11,11 @@ import {
 function Dashboard() {
   const [data, setData] = useState(null);
   const [tree, setTree] = useState([]);
+  const [graph, setGraph] = useState({
+    nodes: [],
+    edges: [],
+  });
+
   const [selectedFile, setSelectedFile] = useState("");
   const [fileContent, setFileContent] = useState(
     "Select a file to view its contents."
@@ -29,6 +35,9 @@ function Dashboard() {
 
         const repository = await getRepositoryTree();
         setTree(repository.files);
+
+        const dependencyGraph = await getDependencyGraph();
+        setGraph(dependencyGraph);
       } catch (error) {
         console.error(error);
       }
@@ -116,6 +125,17 @@ function Dashboard() {
     },
   ];
 
+  const graphStats = [
+    {
+      title: "📄 Files",
+      value: graph.nodes.length,
+    },
+    {
+      title: "🔗 Dependencies",
+      value: graph.edges.length,
+    },
+  ];
+
   return (
     <div
       style={{
@@ -137,7 +157,7 @@ function Dashboard() {
           alignItems: "start",
         }}
       >
-        {/* Repository Explorer */}
+                {/* Repository Explorer */}
 
         <div
           style={{
@@ -409,6 +429,101 @@ function Dashboard() {
               {review ||
                 "Select a file and click 'Review This File'."}
             </p>
+          </div>
+
+          {/* Repository Dependency Graph */}
+
+          <div
+            style={{
+              background: "#1f2937",
+              padding: "25px",
+              marginTop: "25px",
+              borderRadius: "12px",
+            }}
+          >
+            <h2>🌐 Repository Dependency Graph</h2>
+
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns:
+                  "repeat(auto-fit, minmax(220px, 1fr))",
+                gap: "20px",
+                marginTop: "20px",
+              }}
+            >
+              {graphStats.map((card) => (
+                <div
+                  key={card.title}
+                  style={{
+                    background: "#111827",
+                    padding: "20px",
+                    borderRadius: "10px",
+                    textAlign: "center",
+                  }}
+                >
+                  <h3>{card.title}</h3>
+
+                  <h1
+                    style={{
+                      fontSize: "42px",
+                      marginTop: "10px",
+                    }}
+                  >
+                    {card.value}
+                  </h1>
+                </div>
+              ))}
+            </div>
+
+            <div
+              style={{
+                background: "#111827",
+                marginTop: "25px",
+                padding: "20px",
+                borderRadius: "10px",
+                maxHeight: "350px",
+                overflowY: "auto",
+              }}
+            >
+              <h3 style={{ marginBottom: "15px" }}>
+                📌 Import Relationships
+              </h3>
+
+              {graph.edges.length === 0 ? (
+                <p>No dependencies found.</p>
+              ) : (
+                graph.edges.map((edge, index) => (
+                  <div
+                    key={index}
+                    style={{
+                      padding: "12px",
+                      marginBottom: "10px",
+                      background: "#1f2937",
+                      borderRadius: "8px",
+                      borderLeft: "4px solid #2563eb",
+                    }}
+                  >
+                    <div>
+                      <strong>📄 From:</strong> {edge.from_node}
+                    </div>
+
+                    <div
+                      style={{
+                        margin: "8px 0",
+                        color: "#60a5fa",
+                      }}
+                    >
+                      ⬇ imports
+                    </div>
+
+                    <div>
+                      <strong>📦 To:</strong> {edge.to_node}
+                    </div>
+                  </div>
+                ))
+              )}
+            </div>
           </div>
         </div>
       </div>

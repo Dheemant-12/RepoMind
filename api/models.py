@@ -23,6 +23,16 @@ class FileContentResponse(BaseModel):
     content: str
 
 
+class DependencyEdge(BaseModel):
+    from_node: str
+    to_node: str
+
+
+class DependencyGraphResponse(BaseModel):
+    nodes: list[str]
+    edges: list[DependencyEdge]
+
+
 class ExplainFileRequest(BaseModel):
     file_path: str
 

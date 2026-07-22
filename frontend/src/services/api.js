@@ -33,6 +33,11 @@ export const getRepositoryTree = async () => {
   return response.data;
 };
 
+export const getDependencyGraph = async () => {
+  const response = await api.get("/dependency-graph");
+  return response.data;
+};
+
 export const getFileContent = async (path) => {
   const response = await api.get("/file-content", {
     params: {

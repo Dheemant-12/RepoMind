@@ -13,18 +13,19 @@ from api.models import (
     ExplainFileResponse,
     ReviewFileRequest,
     ReviewFileResponse,
+    DependencyGraphResponse,
 )
 
 from config.settings import REPOS_DIR
 from ingestion.clone_repo import clone_repository
-from llm.reasoning_engine import RepoMindAssistant
 from ingestion.ast_parser import get_repository_statistics
+from ingestion.dependency_graph import build_dependency_graph
+from llm.reasoning_engine import RepoMindAssistant
 
 router = APIRouter()
 
 assistant = RepoMindAssistant()
 
-# Store the last analyzed repository name
 LAST_REPOSITORY_NAME = "No Repository"
 
 
@@ -47,7 +48,6 @@ def analyze_repository(request: AnalyzeRequest):
 @router.post("/ask", response_model=AskResponse)
 def ask_repo(request: AskRequest):
     answer = assistant.generate_answer(request.question)
-
     return AskResponse(answer=answer)
 
 
@@ -63,9 +63,7 @@ def explain_file(request: ExplainFileRequest):
         )
 
     try:
-        content = file_path.read_text(
-            encoding="utf-8"
-        )
+        content = file_path.read_text(encoding="utf-8")
     except UnicodeDecodeError:
         content = file_path.read_text(
             encoding="latin-1",
@@ -94,9 +92,7 @@ def review_file(request: ReviewFileRequest):
         )
 
     try:
-        content = file_path.read_text(
-            encoding="utf-8"
-        )
+        content = file_path.read_text(encoding="utf-8")
     except UnicodeDecodeError:
         content = file_path.read_text(
             encoding="latin-1",
@@ -111,6 +107,14 @@ def review_file(request: ReviewFileRequest):
     return ReviewFileResponse(
         review=review
     )
+
+
+@router.get(
+    "/dependency-graph",
+    response_model=DependencyGraphResponse,
+)
+def dependency_graph():
+    return build_dependency_graph(REPOS_DIR)
 
 
 @router.get("/dashboard", response_model=DashboardResponse)
